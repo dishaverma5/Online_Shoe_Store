@@ -6,20 +6,7 @@ const Shoe = (props) => {
       className="card card-background"
       style={{ flex: "1", minWidth: "300px", maxWidth: "45%" }}
     >
-      <div className="card-body">
-        <h5 className="card-title">Shoe Details</h5>
-        <div className="card-text">Shoe Size: {props.data.shoeDetails.size}</div>
-        <div className="card-text">Shoe Color: {props.data.shoeDetails.color}</div>
-        <div className="card-text">
-          Shoe Brand: {props.data.shoeDetails.brand}
-        </div>
-        <div className="card-text">
-          Shoe Material: {props.data.shoeDetails.material}
-        </div>
-        <div className="card-text">
-          Shoe Condition: {props.data.shoeDetails.condition}
-        </div>
-      </div>
+      
       <div className="card-body">
         <h5 className="card-title">Additional Features</h5>
         <div className="card-text">

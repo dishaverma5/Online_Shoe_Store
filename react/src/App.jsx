@@ -41,7 +41,7 @@ function App() {
     try {
       // Make an API request to delete the shoe with the given shoeId
       const response = await fetch(
-        `${import.meta.env.VITE_SHOES_API_URL}/${shoeId}`,
+        `${import.meta.env.VITE_SOCKS_API_URL}/${shoeId}`,
         {
           method: "DELETE",
         }
@@ -63,7 +63,7 @@ function App() {
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
           <div className="container-fluid">
             <a className="navbar-brand" href="#">
-              TSE
+              The Step Up Shoe Shop
             </a>
             <button
               className="navbar-toggler"
