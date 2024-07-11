@@ -9,7 +9,7 @@ const Header = () => {
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container">
           <Link className="navbar-brand" to="/">
-            Step Up Shoe Store
+           STEP UP SHOE STORE
           </Link>
           <button
             className="navbar-toggler"
@@ -26,22 +26,22 @@ const Header = () => {
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
                 <Link className="nav-link" to="/">
-                  Home
+                  HOME
                 </Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/products">
-                  Products
+                  PRODUCTS
                 </Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/cart">
-                  Cart
+                  CART
                 </Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/checkout">
-                  Checkout
+                  CHECKOUT
                 </Link>
               </li>
             </ul>

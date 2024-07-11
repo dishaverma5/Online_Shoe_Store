@@ -35,7 +35,7 @@ const Search = (props) => {
         className="form-control me-2"
         type="search"
         placeholder="Search"
-        aria-label="Search"
+        aria-label="SEARCH"
         value={searchTerm}
         onChange={handleChange}
       />

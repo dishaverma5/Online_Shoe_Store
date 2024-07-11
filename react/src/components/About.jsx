@@ -1,7 +1,7 @@
 const About = () => {
   return (
     <div>
-      <h1>About</h1>
+      <h1>ABOUT</h1>
       <p>
         Welcome to <strong>The Step Up Shoe Store</strong> - the best place to sooth your sole!
         Brought to you by Retail Innovators.
