@@ -1,50 +1,44 @@
 [
   {
     "shoeDetails": {
-      "size": "Large",
-      "color": "Yellow",
-      "pattern": "Plain",
-      "material": "Bamboo",
-      "condition": "Used",
-      "forFoot": "Both"
+      "size": "13",
+      "color": "Black",
+      "brand": "Adidas",
+      "material": "Mesh",
+      "condition": "New"
     },
     "additionalFeatures": {
-      "waterResistant": false,
-      "padded": false,
-      "antiBacterial": true
+      "hasLaces": true,
+      "isAthletic": true
     },
-    "addedTimestamp": "2024-01-26T20:53:12.519940"
+    "addedTimestamp": "2024-07-11T20:53:12.519940"
   },
   {
     "shoeDetails": {
-      "size": "Small",
-      "color": "Red",
-      "pattern": "Checkered",
-      "material": "Wool",
-      "condition": "New",
-      "forFoot": "Left"
-    },
-    "additionalFeatures": {
-      "waterResistant": true,
-      "padded": false,
-      "antiBacterial": true
-    },
-    "addedTimestamp": "2024-01-27T20:53:12.519940"
-  },
-  {
-    "shoeDetails": {
-      "size": "Medium",
+      "size": "10",
       "color": "Blue",
-      "pattern": "Striped",
-      "material": "Silk",
-      "condition": "Used",
-      "forFoot": "Right"
+      "brand": "Vans",
+      "material": "Leather",
+      "condition": "New"
     },
     "additionalFeatures": {
-      "waterResistant": false,
-      "padded": false,
-      "antiBacterial": true
+      "hasLaces": true,
+      "isAthletic": false
     },
-    "addedTimestamp": "2024-01-26T20:53:12.519940"
+    "addedTimestamp": "2024-07-11T20:53:12.519940"
+  },
+  {
+    "shoeDetails": {
+      "size": "12",
+      "color": "Brown",
+      "brand": "H&M",
+      "material": "Leather",
+      "condition": "Used"
+    },
+    "additionalFeatures": {
+      "hasLaces": false,
+      "isAthletic": false
+    },
+    "addedTimestamp": "2024-07-11T20:53:12.519940"
   }
 ]
