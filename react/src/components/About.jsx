@@ -1,8 +1,8 @@
 const About = () => {
   return (
     <div>
-      <h1>ABOUT</h1>
       <p>
+      <h1 style={{color: "#FF0000"}}>ABOUT</h1>
         Welcome to <strong>The Step Up Shoe Store</strong> - the best place to sooth your sole!
         Brought to you by Retail Innovators.
       </p>
