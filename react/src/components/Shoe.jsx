@@ -8,7 +8,7 @@ const Shoe = (props) => {
     >
       
       <div className="card-body">
-        <h5 className="card-title">Additional Features</h5>
+        <h5 className="card-title">ADDITIONAL FEATURES</h5>
         <div className="card-text">
           Has Laces:{" "}
           {props.data.additionalFeatures.hasLaces ? "Yes" : "No"}
