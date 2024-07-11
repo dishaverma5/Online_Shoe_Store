@@ -1,0 +1,49 @@
+
+
+[
+  {
+    "id":"1",
+    "shoeDetails": {
+      "size": "13",
+      "color": "Black",
+      "brand": "Adidas",
+      "material": "Mesh",
+      "condition": "New"
+    },
+    "additionalFeatures": {
+      "hasLaces": true,
+      "isAthletic": true
+    },
+    "addedTimestamp": "2024-07-11T20:53:12.519940"
+  },
+  {
+    "id": "2",
+    "shoeDetails": {
+      "size": "10",
+      "color": "Blue",
+      "brand": "Vans",
+      "material": "Leather",
+      "condition": "New"
+    },
+    "additionalFeatures": {
+      "hasLaces": true,
+      "isAthletic": false
+    },
+    "addedTimestamp": "2024-07-11T20:53:12.519940"
+  },
+  {
+    "id": "3",
+    "shoeDetails": {
+      "size": "12",
+      "color": "Brown",
+      "brand": "H&M",
+      "material": "Leather",
+      "condition": "Used"
+    },
+    "additionalFeatures": {
+      "hasLaces": false,
+      "isAthletic": false
+    },
+    "addedTimestamp": "2024-07-11T20:53:12.519940"
+  }
+]

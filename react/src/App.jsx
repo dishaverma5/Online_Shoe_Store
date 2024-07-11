@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Shoe from "./components/Shoe";
-import sock_data from "./assets/sock.json";
+import shoe_data from "./assets/shoe.json";
 import promo_data from "./assets/promo.json";
 import Footer from "./components/Footer";
 import Search from "./components/Search";
@@ -10,7 +10,7 @@ import RequireAuth from "./components/RequireAuth";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import About from "./components/About";
 import Featured from "./components/Featured";
-import AddSock from "./components/AddSock";
+import AddShoe from "./components/AddShoe";
 import LoginForm from "./components/LoginForm";
 import { AuthProvider } from "./hooks/AuthContext";
 
@@ -30,30 +30,30 @@ function App() {
         const json_response = await response.json();
         setData(json_response);
       } catch (error) {
-        console.error("Error fetching socks:", error);
+        console.error("Error fetching shoes:", error);
       }
     };
 
     fetchData();
   }, [page]);
 
-  const handleDelete = async (sockId) => {
+  const handleDelete = async (shoeId) => {
     try {
-      // Make an API request to delete the sock with the given sockId
+      // Make an API request to delete the shoe with the given shoeId
       const response = await fetch(
-        `${import.meta.env.VITE_SOCKS_API_URL}/${sockId}`,
+        `${import.meta.env.VITE_SHOES_API_URL}/${shoeId}`,
         {
           method: "DELETE",
         }
       );
       if (!response.ok) {
-        throw new Error("Sock could not be deleted!");
+        throw new Error("Shoe could not be deleted!");
       }
       // Update the state or fetch the updated data from the server
-      const updatedData = data.filter((sock) => sock._id !== sockId); // Remove the deleted sock from the data array
+      const updatedData = data.filter((shoe) => shoe._id !== shoeId); // Remove the deleted shoe from the data array
       setData(updatedData); // Update the state with the updated data
     } catch (error) {
-      console.error("Error deleting sock:", error);
+      console.error("Error deleting shoe:", error);
     }
   };
 
@@ -93,7 +93,7 @@ function App() {
                 </li>
                 <li className="nav-item dropdown">
                   <Link className="nav-link" to="/add">
-                    Add Sock
+                    Add Shoe
                   </Link>
                 </li>
               </ul>
@@ -125,7 +125,7 @@ function App() {
                     path="/add"
                     element={
                       <RequireAuth>
-                        <AddSock />
+                        <AddShoe />
                       </RequireAuth>
                     }
                   />
