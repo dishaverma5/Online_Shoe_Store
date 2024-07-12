@@ -1,4 +1,4 @@
-import { MongoClient, ObjectId } from "mongodb";
+import { MongoClient } from "mongodb";
 import dotenv from "dotenv";
 import cors from "cors";
 import express from "express";
@@ -9,7 +9,14 @@ const url = process.env.MONGO_DB_URL;
 const dbName = process.env.MONGO_DB;
 
 const app = express();
-app.use(cors()); // Enable CORS for all routes
+
+// Configure CORS middleware
+app.use(cors({
+  origin: "http://localhost:5173", // Replace with your frontend URL
+  methods: ["GET", "POST", "PUT", "DELETE"], // Allow the HTTP methods you need
+  allowedHeaders: ["Content-Type", "Authorization"], // Allow headers
+}));
+
 app.use(express.json()); // Middleware to parse JSON bodies
 
 const PORT = 3000;
@@ -29,15 +36,13 @@ app.get("/shoes", async (req, res) => {
 });
 
 // Endpoint to search for shoes by criteria
-app.post("/shoes/search", async (req, res) => {
+app.post("/search", async (req, res) => {
   try {
     const client = await MongoClient.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
     const db = client.db(dbName);
     const shoesCollection = db.collection("shoes");
-    const { category, name } = req.body;
-    let query = {};
-    if (category) query.category = category;
-    if (name) query.name = { $regex: name, $options: "i" };
+    const { searchTerm } = req.body;
+    const query = { $text: { $search: searchTerm } }; // Example of text search
     const shoes = await shoesCollection.find(query).toArray();
     res.json(shoes);
   } catch (err) {
