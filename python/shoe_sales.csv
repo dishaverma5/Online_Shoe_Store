@@ -1,0 +1,1001 @@
+timestamp,shoe_id,brand,shoe_type,color,size,price
+2024-07-12 10:36:15,1,Steve Madden,athletic,gray,7,116.35
+2024-07-12 10:36:14,2,Adidas,athletic,blue,7,234.03
+2024-07-12 10:36:13,3,Reebok,formal,purple,7,83.46
+2024-07-12 10:36:12,4,Converse,formal,red,13,124.4
+2024-07-12 10:36:11,5,Toms,boots,pink,10,202.0
+2024-07-12 10:36:10,6,Nike,sandals,gray,10,287.34
+2024-07-12 10:36:09,7,Toms,sandals,black,7,97.53
+2024-07-12 10:36:08,8,Steve Madden,boots,red,12,76.77
+2024-07-12 10:36:07,9,Toms,sandals,green,11,98.46
+2024-07-12 10:36:06,10,Crocs,casual,pink,5,108.24
+2024-07-12 10:36:05,11,Adidas,sandals,red,8,207.36
+2024-07-12 10:36:04,12,Nike,formal,blue,10,219.67
+2024-07-12 10:36:03,13,Nike,athletic,gray,13,172.73
+2024-07-12 10:36:02,14,Toms,casual,pink,12,154.11
+2024-07-12 10:36:01,15,Nike,casual,green,8,258.37
+2024-07-12 10:36:00,16,Crocs,athletic,gray,13,224.82
+2024-07-12 10:35:59,17,Toms,formal,blue,11,283.56
+2024-07-12 10:35:58,18,Converse,formal,purple,9,145.08
+2024-07-12 10:35:57,19,Converse,athletic,blue,9,211.77
+2024-07-12 10:35:56,20,Nike,sandals,black,12,54.04
+2024-07-12 10:35:55,21,Toms,boots,gray,8,114.01
+2024-07-12 10:35:54,22,Toms,casual,white,6,103.61
+2024-07-12 10:35:53,23,Reebok,formal,pink,6,271.73
+2024-07-12 10:35:52,24,Puma,sandals,black,7,296.37
+2024-07-12 10:35:51,25,Converse,boots,blue,9,284.11
+2024-07-12 10:35:50,26,Converse,boots,gray,5,151.43
+2024-07-12 10:35:49,27,Nike,casual,red,5,168.24
+2024-07-12 10:35:48,28,Converse,athletic,gray,10,127.19
+2024-07-12 10:35:47,29,Nike,formal,blue,10,215.61
+2024-07-12 10:35:46,30,Converse,formal,purple,11,226.76
+2024-07-12 10:35:45,31,Adidas,formal,gray,9,293.57
+2024-07-12 10:35:44,32,Adidas,sandals,green,13,244.85
+2024-07-12 10:35:43,33,Puma,casual,blue,7,127.08
+2024-07-12 10:35:42,34,Reebok,sandals,white,10,62.0
+2024-07-12 10:35:41,35,Puma,sandals,purple,8,136.55
+2024-07-12 10:35:40,36,Puma,boots,purple,8,101.84
+2024-07-12 10:35:39,37,Puma,athletic,black,6,58.42
+2024-07-12 10:35:38,38,Converse,athletic,purple,8,127.55
+2024-07-12 10:35:37,39,Toms,athletic,green,13,247.8
+2024-07-12 10:35:36,40,Crocs,boots,red,11,272.38
+2024-07-12 10:35:35,41,Puma,sandals,red,8,277.72
+2024-07-12 10:35:34,42,Nike,casual,green,5,52.16
+2024-07-12 10:35:33,43,Converse,sandals,pink,7,225.34
+2024-07-12 10:35:32,44,Puma,formal,red,8,138.88
+2024-07-12 10:35:31,45,Converse,casual,black,5,60.58
+2024-07-12 10:35:30,46,Puma,sandals,gray,10,185.51
+2024-07-12 10:35:29,47,Reebok,athletic,pink,7,216.49
+2024-07-12 10:35:28,48,Nike,casual,green,8,154.26
+2024-07-12 10:35:27,49,Toms,athletic,blue,11,149.24
+2024-07-12 10:35:26,50,Reebok,formal,white,10,280.23
+2024-07-12 10:35:25,51,Converse,formal,white,13,132.87
+2024-07-12 10:35:24,52,Nike,casual,black,12,273.14
+2024-07-12 10:35:23,53,Converse,casual,pink,11,193.82
+2024-07-12 10:35:22,54,Nike,casual,blue,8,217.72
+2024-07-12 10:35:21,55,Reebok,boots,purple,6,165.03
+2024-07-12 10:35:20,56,Steve Madden,formal,green,6,276.44
+2024-07-12 10:35:19,57,Crocs,boots,pink,8,262.52
+2024-07-12 10:35:18,58,Crocs,boots,black,11,143.11
+2024-07-12 10:35:17,59,Adidas,athletic,white,7,137.92
+2024-07-12 10:35:16,60,Nike,boots,red,10,274.36
+2024-07-12 10:35:15,61,Reebok,boots,black,13,123.73
+2024-07-12 10:35:14,62,Steve Madden,boots,white,5,169.21
+2024-07-12 10:35:13,63,Nike,sandals,purple,10,102.04
+2024-07-12 10:35:12,64,Toms,casual,white,5,201.25
+2024-07-12 10:35:11,65,Adidas,athletic,green,6,270.01
+2024-07-12 10:35:10,66,Puma,casual,red,5,88.54
+2024-07-12 10:35:09,67,Crocs,athletic,white,12,278.6
+2024-07-12 10:35:08,68,Crocs,boots,gray,5,152.06
+2024-07-12 10:35:07,69,Toms,casual,white,13,158.3
+2024-07-12 10:35:06,70,Converse,boots,blue,8,158.93
+2024-07-12 10:35:05,71,Nike,casual,pink,7,74.58
+2024-07-12 10:35:04,72,Steve Madden,boots,black,5,175.94
+2024-07-12 10:35:03,73,Toms,boots,blue,5,195.8
+2024-07-12 10:35:02,74,Reebok,sandals,gray,5,129.25
+2024-07-12 10:35:01,75,Reebok,athletic,gray,9,249.37
+2024-07-12 10:35:00,76,Puma,formal,gray,10,249.32
+2024-07-12 10:34:59,77,Adidas,formal,red,7,160.44
+2024-07-12 10:34:58,78,Reebok,sandals,black,7,201.56
+2024-07-12 10:34:57,79,Converse,sandals,red,12,170.73
+2024-07-12 10:34:56,80,Adidas,boots,red,9,245.28
+2024-07-12 10:34:55,81,Puma,athletic,gray,12,246.91
+2024-07-12 10:34:54,82,Nike,sandals,red,8,234.09
+2024-07-12 10:34:53,83,Adidas,boots,black,5,61.06
+2024-07-12 10:34:52,84,Crocs,casual,gray,9,223.01
+2024-07-12 10:34:51,85,Nike,formal,red,5,80.94
+2024-07-12 10:34:50,86,Nike,athletic,purple,11,257.7
+2024-07-12 10:34:49,87,Crocs,athletic,gray,13,151.56
+2024-07-12 10:34:48,88,Converse,sandals,pink,9,91.15
+2024-07-12 10:34:47,89,Nike,boots,black,11,110.39
+2024-07-12 10:34:46,90,Steve Madden,athletic,black,8,165.1
+2024-07-12 10:34:45,91,Adidas,sandals,purple,11,108.55
+2024-07-12 10:34:44,92,Steve Madden,casual,green,10,295.7
+2024-07-12 10:34:43,93,Toms,boots,white,10,293.73
+2024-07-12 10:34:42,94,Adidas,casual,black,9,87.1
+2024-07-12 10:34:41,95,Steve Madden,casual,black,8,173.21
+2024-07-12 10:34:40,96,Nike,formal,green,5,115.35
+2024-07-12 10:34:39,97,Nike,formal,pink,8,286.3
+2024-07-12 10:34:38,98,Steve Madden,sandals,pink,7,278.17
+2024-07-12 10:34:37,99,Toms,sandals,white,6,154.75
+2024-07-12 10:34:36,100,Puma,formal,red,6,79.88
+2024-07-12 10:34:35,101,Toms,casual,black,7,96.78
+2024-07-12 10:34:34,102,Crocs,formal,blue,10,56.81
+2024-07-12 10:34:33,103,Toms,casual,white,8,262.92
+2024-07-12 10:34:32,104,Toms,sandals,red,13,296.02
+2024-07-12 10:34:31,105,Toms,casual,pink,13,69.14
+2024-07-12 10:34:30,106,Converse,boots,gray,7,205.35
+2024-07-12 10:34:29,107,Toms,athletic,gray,13,275.0
+2024-07-12 10:34:28,108,Adidas,boots,pink,6,248.7
+2024-07-12 10:34:27,109,Crocs,formal,purple,5,141.86
+2024-07-12 10:34:26,110,Adidas,casual,purple,6,72.65
+2024-07-12 10:34:25,111,Toms,athletic,pink,6,216.32
+2024-07-12 10:34:24,112,Steve Madden,sandals,purple,9,253.91
+2024-07-12 10:34:23,113,Nike,boots,gray,10,285.21
+2024-07-12 10:34:22,114,Steve Madden,boots,blue,8,254.84
+2024-07-12 10:34:21,115,Toms,sandals,blue,10,210.93
+2024-07-12 10:34:20,116,Toms,sandals,pink,8,204.54
+2024-07-12 10:34:19,117,Puma,boots,white,6,286.65
+2024-07-12 10:34:18,118,Toms,sandals,white,12,91.56
+2024-07-12 10:34:17,119,Nike,casual,black,9,104.07
+2024-07-12 10:34:16,120,Converse,sandals,gray,12,146.83
+2024-07-12 10:34:15,121,Puma,formal,blue,5,242.35
+2024-07-12 10:34:14,122,Nike,sandals,gray,7,58.31
+2024-07-12 10:34:13,123,Converse,athletic,gray,12,186.26
+2024-07-12 10:34:12,124,Toms,sandals,green,13,119.12
+2024-07-12 10:34:11,125,Nike,athletic,white,9,97.2
+2024-07-12 10:34:10,126,Nike,athletic,black,7,205.2
+2024-07-12 10:34:09,127,Nike,boots,white,11,63.56
+2024-07-12 10:34:08,128,Adidas,casual,black,5,218.26
+2024-07-12 10:34:07,129,Reebok,boots,pink,8,221.26
+2024-07-12 10:34:06,130,Steve Madden,boots,green,10,107.73
+2024-07-12 10:34:05,131,Adidas,boots,gray,6,135.59
+2024-07-12 10:34:04,132,Reebok,athletic,gray,8,189.3
+2024-07-12 10:34:03,133,Crocs,casual,green,13,198.49
+2024-07-12 10:34:02,134,Crocs,boots,green,9,54.28
+2024-07-12 10:34:01,135,Puma,sandals,purple,5,179.24
+2024-07-12 10:34:00,136,Crocs,casual,red,6,174.41
+2024-07-12 10:33:59,137,Toms,formal,purple,6,212.73
+2024-07-12 10:33:58,138,Adidas,casual,green,5,147.32
+2024-07-12 10:33:57,139,Toms,athletic,purple,7,78.52
+2024-07-12 10:33:56,140,Toms,casual,red,8,171.33
+2024-07-12 10:33:55,141,Crocs,casual,blue,10,125.79
+2024-07-12 10:33:54,142,Toms,sandals,black,5,159.05
+2024-07-12 10:33:53,143,Nike,boots,gray,12,90.34
+2024-07-12 10:33:52,144,Reebok,boots,green,11,141.06
+2024-07-12 10:33:51,145,Nike,sandals,black,8,99.71
+2024-07-12 10:33:50,146,Nike,casual,red,8,168.62
+2024-07-12 10:33:49,147,Reebok,athletic,red,5,62.93
+2024-07-12 10:33:48,148,Toms,athletic,black,13,144.37
+2024-07-12 10:33:47,149,Converse,boots,black,10,50.41
+2024-07-12 10:33:46,150,Adidas,casual,pink,8,155.5
+2024-07-12 10:33:45,151,Puma,formal,gray,5,150.5
+2024-07-12 10:33:44,152,Reebok,boots,blue,11,186.35
+2024-07-12 10:33:43,153,Converse,casual,blue,10,199.02
+2024-07-12 10:33:42,154,Adidas,sandals,white,5,210.73
+2024-07-12 10:33:41,155,Crocs,formal,blue,5,174.39
+2024-07-12 10:33:40,156,Adidas,formal,purple,6,169.05
+2024-07-12 10:33:39,157,Crocs,sandals,pink,11,87.53
+2024-07-12 10:33:38,158,Reebok,boots,black,11,184.9
+2024-07-12 10:33:37,159,Toms,athletic,black,6,240.18
+2024-07-12 10:33:36,160,Adidas,sandals,blue,9,75.03
+2024-07-12 10:33:35,161,Puma,boots,blue,11,241.07
+2024-07-12 10:33:34,162,Reebok,casual,purple,9,98.78
+2024-07-12 10:33:33,163,Toms,casual,black,11,126.24
+2024-07-12 10:33:32,164,Steve Madden,athletic,white,6,259.9
+2024-07-12 10:33:31,165,Adidas,boots,pink,10,232.76
+2024-07-12 10:33:30,166,Puma,sandals,pink,13,249.8
+2024-07-12 10:33:29,167,Steve Madden,formal,purple,7,125.89
+2024-07-12 10:33:28,168,Converse,casual,blue,12,64.59
+2024-07-12 10:33:27,169,Toms,athletic,gray,6,109.36
+2024-07-12 10:33:26,170,Nike,sandals,white,6,100.5
+2024-07-12 10:33:25,171,Converse,casual,blue,12,125.82
+2024-07-12 10:33:24,172,Puma,casual,gray,5,148.51
+2024-07-12 10:33:23,173,Adidas,sandals,pink,5,119.89
+2024-07-12 10:33:22,174,Crocs,boots,green,10,218.52
+2024-07-12 10:33:21,175,Puma,boots,black,5,291.27
+2024-07-12 10:33:20,176,Adidas,athletic,purple,13,100.65
+2024-07-12 10:33:19,177,Converse,sandals,white,10,229.42
+2024-07-12 10:33:18,178,Reebok,casual,purple,11,146.89
+2024-07-12 10:33:17,179,Adidas,sandals,green,12,218.8
+2024-07-12 10:33:16,180,Reebok,formal,gray,12,241.61
+2024-07-12 10:33:15,181,Puma,athletic,red,7,249.85
+2024-07-12 10:33:14,182,Puma,casual,blue,10,159.1
+2024-07-12 10:33:13,183,Toms,formal,white,7,134.23
+2024-07-12 10:33:12,184,Nike,formal,black,13,197.75
+2024-07-12 10:33:11,185,Converse,casual,white,12,203.84
+2024-07-12 10:33:10,186,Nike,sandals,pink,10,88.61
+2024-07-12 10:33:09,187,Converse,boots,red,11,95.98
+2024-07-12 10:33:08,188,Nike,sandals,pink,13,191.44
+2024-07-12 10:33:07,189,Toms,casual,gray,9,95.69
+2024-07-12 10:33:06,190,Reebok,formal,green,10,197.11
+2024-07-12 10:33:05,191,Steve Madden,casual,blue,8,298.3
+2024-07-12 10:33:04,192,Toms,formal,pink,6,74.22
+2024-07-12 10:33:03,193,Toms,casual,red,13,240.31
+2024-07-12 10:33:02,194,Puma,boots,pink,9,85.26
+2024-07-12 10:33:01,195,Steve Madden,athletic,pink,9,136.29
+2024-07-12 10:33:00,196,Nike,athletic,black,6,103.33
+2024-07-12 10:32:59,197,Toms,boots,white,8,269.43
+2024-07-12 10:32:58,198,Nike,casual,green,13,131.05
+2024-07-12 10:32:57,199,Adidas,athletic,gray,5,197.63
+2024-07-12 10:32:56,200,Reebok,formal,blue,11,67.29
+2024-07-12 10:32:55,201,Crocs,athletic,black,13,133.9
+2024-07-12 10:32:54,202,Crocs,boots,pink,6,201.29
+2024-07-12 10:32:53,203,Crocs,sandals,green,8,50.26
+2024-07-12 10:32:52,204,Converse,sandals,black,9,184.92
+2024-07-12 10:32:51,205,Puma,casual,blue,11,284.83
+2024-07-12 10:32:50,206,Converse,casual,red,6,82.01
+2024-07-12 10:32:49,207,Reebok,formal,green,12,184.29
+2024-07-12 10:32:48,208,Converse,formal,green,12,271.84
+2024-07-12 10:32:47,209,Toms,athletic,purple,10,258.43
+2024-07-12 10:32:46,210,Converse,formal,green,5,298.89
+2024-07-12 10:32:45,211,Puma,boots,red,5,50.7
+2024-07-12 10:32:44,212,Reebok,sandals,green,11,166.41
+2024-07-12 10:32:43,213,Crocs,sandals,pink,10,57.64
+2024-07-12 10:32:42,214,Crocs,formal,pink,7,257.02
+2024-07-12 10:32:41,215,Toms,formal,blue,8,80.35
+2024-07-12 10:32:40,216,Steve Madden,formal,gray,13,204.68
+2024-07-12 10:32:39,217,Nike,sandals,gray,8,223.05
+2024-07-12 10:32:38,218,Toms,athletic,pink,5,73.04
+2024-07-12 10:32:37,219,Reebok,formal,red,5,257.9
+2024-07-12 10:32:36,220,Reebok,formal,blue,6,104.8
+2024-07-12 10:32:35,221,Reebok,athletic,blue,7,115.4
+2024-07-12 10:32:34,222,Reebok,boots,white,9,190.71
+2024-07-12 10:32:33,223,Nike,casual,red,9,61.28
+2024-07-12 10:32:32,224,Reebok,sandals,blue,13,202.98
+2024-07-12 10:32:31,225,Converse,sandals,black,6,264.77
+2024-07-12 10:32:30,226,Toms,formal,purple,13,254.71
+2024-07-12 10:32:29,227,Nike,boots,blue,9,117.25
+2024-07-12 10:32:28,228,Converse,casual,pink,6,282.5
+2024-07-12 10:32:27,229,Converse,casual,pink,7,111.67
+2024-07-12 10:32:26,230,Toms,casual,purple,6,170.44
+2024-07-12 10:32:25,231,Converse,boots,white,9,176.69
+2024-07-12 10:32:24,232,Nike,formal,green,6,223.85
+2024-07-12 10:32:23,233,Converse,casual,green,13,269.74
+2024-07-12 10:32:22,234,Crocs,casual,pink,8,213.68
+2024-07-12 10:32:21,235,Nike,formal,blue,6,81.77
+2024-07-12 10:32:20,236,Puma,casual,white,11,87.64
+2024-07-12 10:32:19,237,Toms,boots,gray,13,248.56
+2024-07-12 10:32:18,238,Steve Madden,formal,white,11,61.57
+2024-07-12 10:32:17,239,Adidas,sandals,red,13,109.46
+2024-07-12 10:32:16,240,Steve Madden,formal,black,5,97.32
+2024-07-12 10:32:15,241,Toms,sandals,red,8,68.88
+2024-07-12 10:32:14,242,Converse,formal,black,11,145.86
+2024-07-12 10:32:13,243,Steve Madden,athletic,black,9,88.31
+2024-07-12 10:32:12,244,Steve Madden,casual,red,7,184.32
+2024-07-12 10:32:11,245,Puma,formal,green,9,143.72
+2024-07-12 10:32:10,246,Nike,formal,red,10,127.36
+2024-07-12 10:32:09,247,Crocs,athletic,purple,12,81.77
+2024-07-12 10:32:08,248,Reebok,formal,red,12,90.83
+2024-07-12 10:32:07,249,Puma,formal,green,9,65.88
+2024-07-12 10:32:06,250,Reebok,athletic,blue,12,50.71
+2024-07-12 10:32:05,251,Reebok,sandals,black,7,95.14
+2024-07-12 10:32:04,252,Puma,sandals,blue,12,67.61
+2024-07-12 10:32:03,253,Adidas,casual,blue,6,176.39
+2024-07-12 10:32:02,254,Steve Madden,athletic,white,8,89.67
+2024-07-12 10:32:01,255,Reebok,boots,purple,5,121.07
+2024-07-12 10:32:00,256,Steve Madden,formal,white,10,218.53
+2024-07-12 10:31:59,257,Toms,formal,green,8,132.67
+2024-07-12 10:31:58,258,Adidas,athletic,pink,13,192.5
+2024-07-12 10:31:57,259,Toms,formal,green,11,284.6
+2024-07-12 10:31:56,260,Converse,athletic,gray,10,83.36
+2024-07-12 10:31:55,261,Steve Madden,sandals,white,7,104.91
+2024-07-12 10:31:54,262,Puma,casual,gray,12,156.62
+2024-07-12 10:31:53,263,Crocs,boots,gray,8,198.5
+2024-07-12 10:31:52,264,Converse,sandals,purple,11,259.84
+2024-07-12 10:31:51,265,Crocs,casual,pink,8,231.09
+2024-07-12 10:31:50,266,Converse,boots,black,6,286.72
+2024-07-12 10:31:49,267,Puma,formal,gray,8,243.04
+2024-07-12 10:31:48,268,Reebok,athletic,black,10,265.88
+2024-07-12 10:31:47,269,Toms,athletic,pink,11,219.75
+2024-07-12 10:31:46,270,Puma,boots,pink,13,244.41
+2024-07-12 10:31:45,271,Puma,boots,purple,11,73.12
+2024-07-12 10:31:44,272,Nike,casual,black,13,132.48
+2024-07-12 10:31:43,273,Reebok,athletic,pink,10,66.06
+2024-07-12 10:31:42,274,Crocs,athletic,white,6,137.86
+2024-07-12 10:31:41,275,Crocs,sandals,pink,11,198.7
+2024-07-12 10:31:40,276,Puma,formal,green,11,53.22
+2024-07-12 10:31:39,277,Adidas,sandals,black,10,156.16
+2024-07-12 10:31:38,278,Crocs,athletic,black,7,167.78
+2024-07-12 10:31:37,279,Crocs,boots,gray,6,265.13
+2024-07-12 10:31:36,280,Puma,sandals,black,13,184.05
+2024-07-12 10:31:35,281,Reebok,sandals,white,12,149.97
+2024-07-12 10:31:34,282,Steve Madden,boots,green,12,190.44
+2024-07-12 10:31:33,283,Toms,casual,green,11,86.67
+2024-07-12 10:31:32,284,Adidas,formal,black,6,262.25
+2024-07-12 10:31:31,285,Puma,formal,red,8,164.44
+2024-07-12 10:31:30,286,Converse,sandals,gray,8,121.6
+2024-07-12 10:31:29,287,Converse,sandals,red,8,95.34
+2024-07-12 10:31:28,288,Toms,athletic,gray,13,97.06
+2024-07-12 10:31:27,289,Reebok,athletic,white,7,177.45
+2024-07-12 10:31:26,290,Converse,casual,gray,13,284.93
+2024-07-12 10:31:25,291,Reebok,sandals,pink,5,177.03
+2024-07-12 10:31:24,292,Crocs,casual,white,9,295.0
+2024-07-12 10:31:23,293,Steve Madden,athletic,white,11,233.86
+2024-07-12 10:31:22,294,Adidas,casual,green,8,123.94
+2024-07-12 10:31:21,295,Crocs,formal,white,10,199.25
+2024-07-12 10:31:20,296,Adidas,casual,red,5,155.03
+2024-07-12 10:31:19,297,Adidas,boots,white,11,278.97
+2024-07-12 10:31:18,298,Adidas,boots,black,11,215.95
+2024-07-12 10:31:17,299,Nike,formal,pink,12,145.37
+2024-07-12 10:31:16,300,Crocs,sandals,white,10,55.91
+2024-07-12 10:31:15,301,Reebok,sandals,green,5,136.18
+2024-07-12 10:31:14,302,Adidas,sandals,gray,5,171.05
+2024-07-12 10:31:13,303,Adidas,boots,pink,9,83.64
+2024-07-12 10:31:12,304,Toms,sandals,green,10,230.16
+2024-07-12 10:31:11,305,Puma,boots,white,8,109.06
+2024-07-12 10:31:10,306,Nike,sandals,purple,7,202.34
+2024-07-12 10:31:09,307,Adidas,athletic,gray,6,104.91
+2024-07-12 10:31:08,308,Adidas,sandals,blue,10,70.79
+2024-07-12 10:31:07,309,Reebok,athletic,gray,8,169.9
+2024-07-12 10:31:06,310,Steve Madden,boots,green,7,94.01
+2024-07-12 10:31:05,311,Crocs,formal,purple,5,116.67
+2024-07-12 10:31:04,312,Reebok,sandals,black,11,75.46
+2024-07-12 10:31:03,313,Toms,formal,red,10,152.35
+2024-07-12 10:31:02,314,Converse,athletic,black,10,169.73
+2024-07-12 10:31:01,315,Toms,boots,white,11,106.28
+2024-07-12 10:31:00,316,Nike,casual,black,7,290.3
+2024-07-12 10:30:59,317,Nike,sandals,white,12,175.5
+2024-07-12 10:30:58,318,Puma,athletic,blue,12,259.67
+2024-07-12 10:30:57,319,Adidas,casual,pink,5,163.39
+2024-07-12 10:30:56,320,Reebok,sandals,black,6,296.89
+2024-07-12 10:30:55,321,Steve Madden,athletic,red,8,135.48
+2024-07-12 10:30:54,322,Reebok,athletic,green,7,166.08
+2024-07-12 10:30:53,323,Puma,formal,blue,13,179.09
+2024-07-12 10:30:52,324,Reebok,formal,red,6,223.53
+2024-07-12 10:30:51,325,Converse,formal,gray,9,81.6
+2024-07-12 10:30:50,326,Reebok,formal,purple,7,109.84
+2024-07-12 10:30:49,327,Steve Madden,athletic,gray,5,211.69
+2024-07-12 10:30:48,328,Reebok,sandals,green,7,284.64
+2024-07-12 10:30:47,329,Reebok,boots,pink,9,201.28
+2024-07-12 10:30:46,330,Nike,formal,pink,6,245.62
+2024-07-12 10:30:45,331,Nike,athletic,white,13,264.38
+2024-07-12 10:30:44,332,Converse,boots,black,11,86.65
+2024-07-12 10:30:43,333,Steve Madden,casual,white,11,65.88
+2024-07-12 10:30:42,334,Converse,casual,white,11,249.97
+2024-07-12 10:30:41,335,Adidas,athletic,pink,5,93.85
+2024-07-12 10:30:40,336,Converse,boots,red,9,93.94
+2024-07-12 10:30:39,337,Adidas,sandals,pink,9,287.99
+2024-07-12 10:30:38,338,Adidas,sandals,gray,9,83.48
+2024-07-12 10:30:37,339,Toms,sandals,blue,8,193.6
+2024-07-12 10:30:36,340,Adidas,casual,red,6,192.71
+2024-07-12 10:30:35,341,Converse,casual,blue,8,197.34
+2024-07-12 10:30:34,342,Converse,casual,purple,9,228.98
+2024-07-12 10:30:33,343,Crocs,casual,green,11,254.43
+2024-07-12 10:30:32,344,Crocs,casual,gray,7,201.42
+2024-07-12 10:30:31,345,Reebok,casual,purple,8,165.96
+2024-07-12 10:30:30,346,Toms,formal,blue,12,165.92
+2024-07-12 10:30:29,347,Converse,athletic,black,6,279.05
+2024-07-12 10:30:28,348,Reebok,sandals,gray,10,194.57
+2024-07-12 10:30:27,349,Steve Madden,formal,blue,9,223.42
+2024-07-12 10:30:26,350,Puma,athletic,green,12,212.25
+2024-07-12 10:30:25,351,Crocs,formal,green,12,168.11
+2024-07-12 10:30:24,352,Reebok,athletic,pink,11,187.18
+2024-07-12 10:30:23,353,Reebok,athletic,pink,9,119.26
+2024-07-12 10:30:22,354,Crocs,sandals,purple,11,91.51
+2024-07-12 10:30:21,355,Converse,athletic,purple,10,295.86
+2024-07-12 10:30:20,356,Converse,casual,black,9,145.02
+2024-07-12 10:30:19,357,Reebok,formal,gray,5,72.78
+2024-07-12 10:30:18,358,Nike,athletic,red,9,157.59
+2024-07-12 10:30:17,359,Adidas,athletic,blue,10,288.4
+2024-07-12 10:30:16,360,Toms,boots,pink,13,171.06
+2024-07-12 10:30:15,361,Crocs,formal,red,8,272.1
+2024-07-12 10:30:14,362,Nike,formal,black,8,275.23
+2024-07-12 10:30:13,363,Reebok,athletic,white,8,255.38
+2024-07-12 10:30:12,364,Adidas,athletic,black,9,209.22
+2024-07-12 10:30:11,365,Converse,formal,blue,12,116.95
+2024-07-12 10:30:10,366,Crocs,athletic,green,7,263.03
+2024-07-12 10:30:09,367,Adidas,sandals,green,13,261.84
+2024-07-12 10:30:08,368,Puma,boots,red,6,276.93
+2024-07-12 10:30:07,369,Toms,athletic,blue,11,159.66
+2024-07-12 10:30:06,370,Reebok,boots,red,12,198.86
+2024-07-12 10:30:05,371,Crocs,sandals,purple,9,238.73
+2024-07-12 10:30:04,372,Converse,sandals,white,13,117.0
+2024-07-12 10:30:03,373,Nike,boots,white,6,151.98
+2024-07-12 10:30:02,374,Adidas,boots,green,13,257.92
+2024-07-12 10:30:01,375,Converse,formal,black,10,251.47
+2024-07-12 10:30:00,376,Converse,sandals,white,6,233.07
+2024-07-12 10:29:59,377,Converse,athletic,black,6,262.33
+2024-07-12 10:29:58,378,Crocs,sandals,black,8,227.5
+2024-07-12 10:29:57,379,Adidas,athletic,white,7,248.01
+2024-07-12 10:29:56,380,Nike,casual,pink,9,271.23
+2024-07-12 10:29:55,381,Puma,formal,green,8,291.04
+2024-07-12 10:29:54,382,Toms,athletic,pink,11,291.34
+2024-07-12 10:29:53,383,Nike,casual,red,10,131.65
+2024-07-12 10:29:52,384,Adidas,casual,blue,6,200.28
+2024-07-12 10:29:51,385,Adidas,athletic,purple,13,227.55
+2024-07-12 10:29:50,386,Steve Madden,athletic,white,8,141.59
+2024-07-12 10:29:49,387,Crocs,casual,white,13,196.12
+2024-07-12 10:29:48,388,Adidas,casual,pink,12,145.69
+2024-07-12 10:29:47,389,Reebok,sandals,pink,9,198.49
+2024-07-12 10:29:46,390,Nike,athletic,pink,7,164.31
+2024-07-12 10:29:45,391,Steve Madden,boots,white,12,149.48
+2024-07-12 10:29:44,392,Adidas,boots,gray,6,171.57
+2024-07-12 10:29:43,393,Steve Madden,sandals,pink,12,236.84
+2024-07-12 10:29:42,394,Adidas,boots,gray,9,143.29
+2024-07-12 10:29:41,395,Nike,sandals,pink,7,74.21
+2024-07-12 10:29:40,396,Converse,athletic,blue,5,233.48
+2024-07-12 10:29:39,397,Crocs,boots,purple,6,61.01
+2024-07-12 10:29:38,398,Nike,sandals,blue,8,129.48
+2024-07-12 10:29:37,399,Nike,casual,gray,11,229.82
+2024-07-12 10:29:36,400,Crocs,formal,white,10,81.37
+2024-07-12 10:29:35,401,Adidas,boots,green,7,249.26
+2024-07-12 10:29:34,402,Toms,casual,pink,8,241.06
+2024-07-12 10:29:33,403,Reebok,athletic,red,7,266.54
+2024-07-12 10:29:32,404,Reebok,casual,red,10,55.03
+2024-07-12 10:29:31,405,Puma,boots,gray,7,139.91
+2024-07-12 10:29:30,406,Converse,boots,gray,8,128.11
+2024-07-12 10:29:29,407,Nike,athletic,blue,6,77.71
+2024-07-12 10:29:28,408,Crocs,boots,pink,13,199.85
+2024-07-12 10:29:27,409,Adidas,formal,red,12,238.71
+2024-07-12 10:29:26,410,Nike,sandals,black,10,199.3
+2024-07-12 10:29:25,411,Crocs,athletic,gray,12,149.64
+2024-07-12 10:29:24,412,Puma,boots,black,8,138.4
+2024-07-12 10:29:23,413,Crocs,sandals,gray,8,72.45
+2024-07-12 10:29:22,414,Crocs,casual,green,6,261.29
+2024-07-12 10:29:21,415,Nike,athletic,gray,11,227.45
+2024-07-12 10:29:20,416,Nike,boots,black,10,264.12
+2024-07-12 10:29:19,417,Toms,formal,red,6,97.21
+2024-07-12 10:29:18,418,Converse,athletic,black,6,70.82
+2024-07-12 10:29:17,419,Converse,formal,gray,13,247.16
+2024-07-12 10:29:16,420,Nike,formal,purple,10,52.35
+2024-07-12 10:29:15,421,Crocs,athletic,green,8,120.29
+2024-07-12 10:29:14,422,Adidas,formal,gray,6,129.19
+2024-07-12 10:29:13,423,Reebok,boots,red,8,220.12
+2024-07-12 10:29:12,424,Toms,formal,gray,12,220.3
+2024-07-12 10:29:11,425,Toms,athletic,blue,5,143.53
+2024-07-12 10:29:10,426,Nike,boots,purple,9,295.95
+2024-07-12 10:29:09,427,Crocs,casual,gray,8,158.57
+2024-07-12 10:29:08,428,Steve Madden,athletic,white,11,54.43
+2024-07-12 10:29:07,429,Converse,sandals,red,9,252.09
+2024-07-12 10:29:06,430,Nike,boots,red,9,235.06
+2024-07-12 10:29:05,431,Converse,boots,green,11,52.18
+2024-07-12 10:29:04,432,Puma,boots,black,10,225.59
+2024-07-12 10:29:03,433,Nike,athletic,pink,5,162.91
+2024-07-12 10:29:02,434,Steve Madden,boots,red,9,280.04
+2024-07-12 10:29:01,435,Crocs,boots,purple,9,66.15
+2024-07-12 10:29:00,436,Nike,athletic,purple,7,265.02
+2024-07-12 10:28:59,437,Converse,boots,pink,12,139.36
+2024-07-12 10:28:58,438,Toms,sandals,pink,5,263.95
+2024-07-12 10:28:57,439,Crocs,boots,white,6,74.67
+2024-07-12 10:28:56,440,Reebok,sandals,gray,8,231.98
+2024-07-12 10:28:55,441,Crocs,athletic,gray,5,133.39
+2024-07-12 10:28:54,442,Adidas,boots,pink,10,100.47
+2024-07-12 10:28:53,443,Reebok,athletic,white,12,128.37
+2024-07-12 10:28:52,444,Crocs,casual,gray,11,242.52
+2024-07-12 10:28:51,445,Converse,athletic,red,13,243.82
+2024-07-12 10:28:50,446,Steve Madden,sandals,purple,12,80.93
+2024-07-12 10:28:49,447,Converse,casual,blue,11,266.55
+2024-07-12 10:28:48,448,Puma,boots,green,11,59.98
+2024-07-12 10:28:47,449,Nike,athletic,red,6,86.22
+2024-07-12 10:28:46,450,Reebok,casual,white,5,126.73
+2024-07-12 10:28:45,451,Steve Madden,formal,pink,10,205.06
+2024-07-12 10:28:44,452,Nike,athletic,red,5,235.72
+2024-07-12 10:28:43,453,Crocs,casual,gray,6,260.63
+2024-07-12 10:28:42,454,Puma,casual,pink,7,169.71
+2024-07-12 10:28:41,455,Crocs,formal,green,7,204.8
+2024-07-12 10:28:40,456,Puma,casual,green,12,266.43
+2024-07-12 10:28:39,457,Crocs,boots,gray,9,280.12
+2024-07-12 10:28:38,458,Puma,casual,blue,12,71.87
+2024-07-12 10:28:37,459,Reebok,athletic,pink,11,91.84
+2024-07-12 10:28:36,460,Nike,formal,white,12,96.35
+2024-07-12 10:28:35,461,Puma,athletic,purple,11,165.27
+2024-07-12 10:28:34,462,Converse,athletic,purple,9,232.69
+2024-07-12 10:28:33,463,Crocs,boots,white,5,96.58
+2024-07-12 10:28:32,464,Nike,casual,green,7,151.3
+2024-07-12 10:28:31,465,Crocs,casual,green,12,249.37
+2024-07-12 10:28:30,466,Toms,sandals,green,10,217.19
+2024-07-12 10:28:29,467,Adidas,boots,purple,9,241.42
+2024-07-12 10:28:28,468,Toms,boots,black,8,185.11
+2024-07-12 10:28:27,469,Puma,athletic,black,9,100.08
+2024-07-12 10:28:26,470,Steve Madden,casual,purple,7,230.33
+2024-07-12 10:28:25,471,Puma,casual,gray,10,60.48
+2024-07-12 10:28:24,472,Steve Madden,formal,purple,6,162.18
+2024-07-12 10:28:23,473,Toms,sandals,blue,9,291.97
+2024-07-12 10:28:22,474,Reebok,boots,blue,10,277.55
+2024-07-12 10:28:21,475,Puma,sandals,pink,5,253.16
+2024-07-12 10:28:20,476,Reebok,sandals,white,5,298.05
+2024-07-12 10:28:19,477,Adidas,sandals,green,7,184.89
+2024-07-12 10:28:18,478,Crocs,athletic,white,8,252.12
+2024-07-12 10:28:17,479,Nike,boots,green,11,200.97
+2024-07-12 10:28:16,480,Nike,athletic,gray,11,93.38
+2024-07-12 10:28:15,481,Steve Madden,casual,black,10,251.2
+2024-07-12 10:28:14,482,Adidas,sandals,white,7,242.33
+2024-07-12 10:28:13,483,Toms,boots,red,10,60.84
+2024-07-12 10:28:12,484,Adidas,athletic,pink,10,55.24
+2024-07-12 10:28:11,485,Reebok,casual,pink,9,137.44
+2024-07-12 10:28:10,486,Converse,formal,green,8,114.72
+2024-07-12 10:28:09,487,Nike,formal,blue,6,238.5
+2024-07-12 10:28:08,488,Reebok,formal,blue,13,58.16
+2024-07-12 10:28:07,489,Adidas,sandals,white,8,86.36
+2024-07-12 10:28:06,490,Converse,boots,pink,9,93.99
+2024-07-12 10:28:05,491,Puma,athletic,black,13,230.88
+2024-07-12 10:28:04,492,Puma,boots,blue,8,87.36
+2024-07-12 10:28:03,493,Adidas,formal,red,8,101.94
+2024-07-12 10:28:02,494,Puma,athletic,pink,9,201.52
+2024-07-12 10:28:01,495,Converse,boots,white,10,290.11
+2024-07-12 10:28:00,496,Toms,boots,red,10,276.62
+2024-07-12 10:27:59,497,Nike,boots,blue,10,147.0
+2024-07-12 10:27:58,498,Steve Madden,sandals,green,6,280.04
+2024-07-12 10:27:57,499,Puma,casual,blue,11,158.18
+2024-07-12 10:27:56,500,Toms,formal,gray,7,81.09
+2024-07-12 10:27:55,501,Nike,boots,green,13,164.36
+2024-07-12 10:27:54,502,Reebok,sandals,gray,11,239.88
+2024-07-12 10:27:53,503,Nike,boots,red,11,69.25
+2024-07-12 10:27:52,504,Reebok,casual,white,5,234.69
+2024-07-12 10:27:51,505,Reebok,sandals,purple,12,158.34
+2024-07-12 10:27:50,506,Steve Madden,formal,white,12,240.17
+2024-07-12 10:27:49,507,Reebok,athletic,black,6,290.45
+2024-07-12 10:27:48,508,Reebok,boots,red,8,273.74
+2024-07-12 10:27:47,509,Reebok,sandals,gray,7,204.26
+2024-07-12 10:27:46,510,Adidas,casual,gray,10,274.01
+2024-07-12 10:27:45,511,Crocs,formal,gray,9,93.72
+2024-07-12 10:27:44,512,Reebok,sandals,black,12,115.44
+2024-07-12 10:27:43,513,Crocs,casual,black,6,158.14
+2024-07-12 10:27:42,514,Crocs,boots,purple,5,104.96
+2024-07-12 10:27:41,515,Converse,sandals,white,10,177.38
+2024-07-12 10:27:40,516,Puma,formal,gray,7,101.16
+2024-07-12 10:27:39,517,Toms,casual,gray,13,280.44
+2024-07-12 10:27:38,518,Puma,casual,black,12,91.8
+2024-07-12 10:27:37,519,Adidas,athletic,purple,11,97.06
+2024-07-12 10:27:36,520,Reebok,casual,black,8,251.79
+2024-07-12 10:27:35,521,Adidas,boots,pink,5,189.79
+2024-07-12 10:27:34,522,Steve Madden,boots,white,5,175.74
+2024-07-12 10:27:33,523,Toms,sandals,black,12,158.81
+2024-07-12 10:27:32,524,Converse,casual,blue,10,113.31
+2024-07-12 10:27:31,525,Puma,casual,black,11,193.65
+2024-07-12 10:27:30,526,Adidas,athletic,green,11,218.85
+2024-07-12 10:27:29,527,Puma,boots,blue,8,288.74
+2024-07-12 10:27:28,528,Adidas,casual,pink,8,80.78
+2024-07-12 10:27:27,529,Adidas,boots,gray,12,145.8
+2024-07-12 10:27:26,530,Nike,athletic,purple,10,215.86
+2024-07-12 10:27:25,531,Adidas,formal,gray,13,273.58
+2024-07-12 10:27:24,532,Converse,sandals,gray,9,169.28
+2024-07-12 10:27:23,533,Steve Madden,athletic,gray,10,88.14
+2024-07-12 10:27:22,534,Puma,formal,pink,5,139.91
+2024-07-12 10:27:21,535,Converse,formal,black,10,296.66
+2024-07-12 10:27:20,536,Nike,athletic,purple,7,130.84
+2024-07-12 10:27:19,537,Crocs,casual,blue,12,85.21
+2024-07-12 10:27:18,538,Puma,formal,red,6,126.04
+2024-07-12 10:27:17,539,Toms,casual,green,6,288.06
+2024-07-12 10:27:16,540,Reebok,casual,black,9,124.75
+2024-07-12 10:27:15,541,Steve Madden,sandals,black,9,72.16
+2024-07-12 10:27:14,542,Nike,athletic,gray,10,62.58
+2024-07-12 10:27:13,543,Adidas,boots,purple,6,85.82
+2024-07-12 10:27:12,544,Crocs,athletic,blue,8,67.38
+2024-07-12 10:27:11,545,Adidas,athletic,purple,7,137.5
+2024-07-12 10:27:10,546,Converse,athletic,blue,10,80.47
+2024-07-12 10:27:09,547,Nike,sandals,purple,6,212.78
+2024-07-12 10:27:08,548,Crocs,boots,green,6,127.62
+2024-07-12 10:27:07,549,Converse,sandals,gray,13,247.48
+2024-07-12 10:27:06,550,Adidas,casual,red,8,267.06
+2024-07-12 10:27:05,551,Converse,athletic,red,5,67.04
+2024-07-12 10:27:04,552,Crocs,casual,purple,13,120.08
+2024-07-12 10:27:03,553,Puma,casual,gray,10,291.5
+2024-07-12 10:27:02,554,Toms,athletic,purple,6,125.32
+2024-07-12 10:27:01,555,Converse,athletic,white,13,171.44
+2024-07-12 10:27:00,556,Steve Madden,sandals,green,6,190.67
+2024-07-12 10:26:59,557,Toms,boots,gray,12,234.44
+2024-07-12 10:26:58,558,Adidas,athletic,red,10,248.37
+2024-07-12 10:26:57,559,Nike,formal,purple,5,212.74
+2024-07-12 10:26:56,560,Steve Madden,athletic,black,6,126.54
+2024-07-12 10:26:55,561,Puma,boots,blue,8,262.41
+2024-07-12 10:26:54,562,Reebok,casual,blue,7,227.11
+2024-07-12 10:26:53,563,Crocs,casual,gray,12,191.27
+2024-07-12 10:26:52,564,Nike,boots,pink,13,233.0
+2024-07-12 10:26:51,565,Steve Madden,boots,white,12,245.46
+2024-07-12 10:26:50,566,Nike,formal,purple,7,137.13
+2024-07-12 10:26:49,567,Adidas,casual,pink,10,251.6
+2024-07-12 10:26:48,568,Toms,casual,gray,6,275.71
+2024-07-12 10:26:47,569,Steve Madden,athletic,pink,7,140.35
+2024-07-12 10:26:46,570,Converse,athletic,black,12,242.34
+2024-07-12 10:26:45,571,Adidas,formal,purple,10,257.46
+2024-07-12 10:26:44,572,Puma,sandals,black,9,273.48
+2024-07-12 10:26:43,573,Puma,boots,black,6,203.75
+2024-07-12 10:26:42,574,Crocs,boots,green,10,199.9
+2024-07-12 10:26:41,575,Reebok,sandals,black,9,284.25
+2024-07-12 10:26:40,576,Converse,boots,red,10,243.53
+2024-07-12 10:26:39,577,Adidas,sandals,pink,10,242.05
+2024-07-12 10:26:38,578,Converse,boots,gray,12,250.28
+2024-07-12 10:26:37,579,Puma,casual,gray,10,204.95
+2024-07-12 10:26:36,580,Converse,formal,blue,6,122.0
+2024-07-12 10:26:35,581,Adidas,casual,gray,6,192.35
+2024-07-12 10:26:34,582,Crocs,sandals,white,12,122.56
+2024-07-12 10:26:33,583,Crocs,casual,black,10,113.63
+2024-07-12 10:26:32,584,Crocs,athletic,green,11,200.87
+2024-07-12 10:26:31,585,Adidas,athletic,red,6,73.36
+2024-07-12 10:26:30,586,Steve Madden,casual,red,12,264.36
+2024-07-12 10:26:29,587,Puma,casual,blue,9,268.31
+2024-07-12 10:26:28,588,Puma,sandals,black,7,213.67
+2024-07-12 10:26:27,589,Crocs,athletic,blue,9,75.84
+2024-07-12 10:26:26,590,Crocs,formal,green,11,59.96
+2024-07-12 10:26:25,591,Toms,formal,pink,6,51.9
+2024-07-12 10:26:24,592,Nike,casual,red,8,126.77
+2024-07-12 10:26:23,593,Toms,boots,white,10,131.7
+2024-07-12 10:26:22,594,Steve Madden,formal,black,13,159.89
+2024-07-12 10:26:21,595,Converse,casual,purple,5,52.11
+2024-07-12 10:26:20,596,Steve Madden,casual,red,5,279.16
+2024-07-12 10:26:19,597,Crocs,boots,blue,9,169.9
+2024-07-12 10:26:18,598,Adidas,athletic,pink,9,217.94
+2024-07-12 10:26:17,599,Adidas,sandals,blue,9,69.2
+2024-07-12 10:26:16,600,Crocs,formal,blue,9,294.79
+2024-07-12 10:26:15,601,Nike,boots,green,6,159.31
+2024-07-12 10:26:14,602,Converse,athletic,green,8,131.85
+2024-07-12 10:26:13,603,Puma,formal,gray,11,259.53
+2024-07-12 10:26:12,604,Converse,athletic,red,13,255.6
+2024-07-12 10:26:11,605,Converse,sandals,green,7,66.52
+2024-07-12 10:26:10,606,Nike,casual,white,6,227.02
+2024-07-12 10:26:09,607,Converse,casual,pink,9,91.01
+2024-07-12 10:26:08,608,Crocs,sandals,black,8,194.51
+2024-07-12 10:26:07,609,Toms,athletic,red,8,142.73
+2024-07-12 10:26:06,610,Converse,casual,red,9,165.34
+2024-07-12 10:26:05,611,Toms,boots,blue,6,223.26
+2024-07-12 10:26:04,612,Steve Madden,formal,white,7,149.3
+2024-07-12 10:26:03,613,Steve Madden,sandals,green,5,94.0
+2024-07-12 10:26:02,614,Reebok,sandals,blue,8,51.12
+2024-07-12 10:26:01,615,Nike,sandals,green,7,157.59
+2024-07-12 10:26:00,616,Reebok,sandals,black,10,237.31
+2024-07-12 10:25:59,617,Adidas,formal,white,7,63.35
+2024-07-12 10:25:58,618,Converse,athletic,black,8,180.17
+2024-07-12 10:25:57,619,Converse,athletic,red,12,152.46
+2024-07-12 10:25:56,620,Converse,athletic,white,13,197.93
+2024-07-12 10:25:55,621,Toms,casual,purple,11,90.1
+2024-07-12 10:25:54,622,Nike,casual,pink,11,174.99
+2024-07-12 10:25:53,623,Nike,athletic,pink,11,224.79
+2024-07-12 10:25:52,624,Reebok,athletic,red,9,238.26
+2024-07-12 10:25:51,625,Adidas,sandals,green,11,194.69
+2024-07-12 10:25:50,626,Steve Madden,sandals,pink,13,132.54
+2024-07-12 10:25:49,627,Reebok,boots,purple,5,286.53
+2024-07-12 10:25:48,628,Adidas,sandals,green,11,159.79
+2024-07-12 10:25:47,629,Puma,casual,white,10,203.73
+2024-07-12 10:25:46,630,Adidas,boots,gray,12,94.1
+2024-07-12 10:25:45,631,Steve Madden,casual,purple,11,254.95
+2024-07-12 10:25:44,632,Converse,casual,gray,6,59.74
+2024-07-12 10:25:43,633,Converse,athletic,white,11,103.43
+2024-07-12 10:25:42,634,Steve Madden,sandals,green,8,204.62
+2024-07-12 10:25:41,635,Steve Madden,formal,red,9,178.13
+2024-07-12 10:25:40,636,Converse,formal,pink,7,59.36
+2024-07-12 10:25:39,637,Steve Madden,athletic,blue,10,278.66
+2024-07-12 10:25:38,638,Crocs,athletic,gray,7,148.83
+2024-07-12 10:25:37,639,Adidas,formal,pink,11,60.61
+2024-07-12 10:25:36,640,Converse,athletic,white,10,286.77
+2024-07-12 10:25:35,641,Crocs,boots,green,9,115.79
+2024-07-12 10:25:34,642,Converse,boots,white,8,210.71
+2024-07-12 10:25:33,643,Adidas,formal,pink,8,170.35
+2024-07-12 10:25:32,644,Puma,sandals,black,12,284.69
+2024-07-12 10:25:31,645,Adidas,athletic,white,7,230.59
+2024-07-12 10:25:30,646,Reebok,formal,black,13,277.06
+2024-07-12 10:25:29,647,Nike,sandals,purple,11,265.37
+2024-07-12 10:25:28,648,Adidas,formal,red,10,167.9
+2024-07-12 10:25:27,649,Puma,boots,pink,13,53.18
+2024-07-12 10:25:26,650,Toms,formal,red,8,219.06
+2024-07-12 10:25:25,651,Converse,casual,blue,6,133.37
+2024-07-12 10:25:24,652,Converse,casual,black,9,218.9
+2024-07-12 10:25:23,653,Nike,sandals,pink,13,206.38
+2024-07-12 10:25:22,654,Crocs,formal,white,6,121.61
+2024-07-12 10:25:21,655,Puma,athletic,pink,9,114.3
+2024-07-12 10:25:20,656,Nike,sandals,pink,12,55.89
+2024-07-12 10:25:19,657,Steve Madden,sandals,gray,11,275.04
+2024-07-12 10:25:18,658,Nike,athletic,red,9,242.37
+2024-07-12 10:25:17,659,Crocs,boots,pink,7,159.91
+2024-07-12 10:25:16,660,Puma,sandals,white,13,121.72
+2024-07-12 10:25:15,661,Reebok,sandals,gray,9,168.74
+2024-07-12 10:25:14,662,Steve Madden,casual,green,13,76.5
+2024-07-12 10:25:13,663,Adidas,sandals,red,8,157.11
+2024-07-12 10:25:12,664,Steve Madden,athletic,gray,8,64.49
+2024-07-12 10:25:11,665,Steve Madden,sandals,gray,5,129.5
+2024-07-12 10:25:10,666,Nike,formal,white,11,163.83
+2024-07-12 10:25:09,667,Reebok,sandals,blue,8,84.81
+2024-07-12 10:25:08,668,Reebok,casual,black,12,167.77
+2024-07-12 10:25:07,669,Steve Madden,formal,red,13,284.31
+2024-07-12 10:25:06,670,Adidas,athletic,blue,12,290.97
+2024-07-12 10:25:05,671,Puma,casual,blue,7,172.0
+2024-07-12 10:25:04,672,Crocs,casual,black,8,293.0
+2024-07-12 10:25:03,673,Crocs,casual,white,12,75.42
+2024-07-12 10:25:02,674,Reebok,sandals,red,7,81.29
+2024-07-12 10:25:01,675,Puma,boots,blue,7,201.66
+2024-07-12 10:25:00,676,Nike,athletic,pink,10,276.48
+2024-07-12 10:24:59,677,Toms,boots,pink,6,167.85
+2024-07-12 10:24:58,678,Steve Madden,formal,black,8,176.54
+2024-07-12 10:24:57,679,Steve Madden,formal,red,11,89.46
+2024-07-12 10:24:56,680,Toms,formal,red,6,65.62
+2024-07-12 10:24:55,681,Adidas,casual,green,5,115.64
+2024-07-12 10:24:54,682,Puma,boots,gray,5,114.09
+2024-07-12 10:24:53,683,Adidas,casual,black,7,75.35
+2024-07-12 10:24:52,684,Converse,boots,red,10,244.85
+2024-07-12 10:24:51,685,Adidas,formal,pink,5,141.71
+2024-07-12 10:24:50,686,Puma,athletic,green,5,50.42
+2024-07-12 10:24:49,687,Reebok,boots,green,12,93.7
+2024-07-12 10:24:48,688,Steve Madden,casual,purple,8,238.24
+2024-07-12 10:24:47,689,Toms,casual,pink,7,262.78
+2024-07-12 10:24:46,690,Converse,sandals,white,9,252.53
+2024-07-12 10:24:45,691,Steve Madden,boots,red,7,137.78
+2024-07-12 10:24:44,692,Crocs,boots,red,12,170.28
+2024-07-12 10:24:43,693,Toms,formal,blue,6,213.85
+2024-07-12 10:24:42,694,Toms,sandals,white,8,127.02
+2024-07-12 10:24:41,695,Reebok,formal,gray,8,189.01
+2024-07-12 10:24:40,696,Converse,sandals,green,10,66.34
+2024-07-12 10:24:39,697,Crocs,sandals,red,13,52.35
+2024-07-12 10:24:38,698,Reebok,sandals,gray,9,87.73
+2024-07-12 10:24:37,699,Nike,athletic,white,7,188.87
+2024-07-12 10:24:36,700,Crocs,sandals,gray,13,165.83
+2024-07-12 10:24:35,701,Nike,sandals,gray,13,152.16
+2024-07-12 10:24:34,702,Adidas,athletic,red,13,201.18
+2024-07-12 10:24:33,703,Reebok,boots,white,5,189.16
+2024-07-12 10:24:32,704,Toms,formal,white,6,188.98
+2024-07-12 10:24:31,705,Puma,athletic,pink,10,132.76
+2024-07-12 10:24:30,706,Steve Madden,athletic,gray,11,118.94
+2024-07-12 10:24:29,707,Adidas,casual,green,8,266.28
+2024-07-12 10:24:28,708,Puma,athletic,purple,9,182.74
+2024-07-12 10:24:27,709,Converse,sandals,blue,13,52.0
+2024-07-12 10:24:26,710,Converse,casual,blue,12,277.63
+2024-07-12 10:24:25,711,Adidas,casual,blue,8,196.92
+2024-07-12 10:24:24,712,Nike,formal,green,7,69.15
+2024-07-12 10:24:23,713,Adidas,athletic,blue,9,51.86
+2024-07-12 10:24:22,714,Adidas,formal,black,10,159.71
+2024-07-12 10:24:21,715,Toms,boots,black,8,139.9
+2024-07-12 10:24:20,716,Converse,boots,pink,13,266.22
+2024-07-12 10:24:19,717,Toms,boots,blue,9,214.42
+2024-07-12 10:24:18,718,Puma,athletic,black,12,137.19
+2024-07-12 10:24:17,719,Toms,boots,black,8,285.11
+2024-07-12 10:24:16,720,Converse,casual,purple,13,101.12
+2024-07-12 10:24:15,721,Steve Madden,sandals,blue,12,126.44
+2024-07-12 10:24:14,722,Steve Madden,athletic,gray,9,107.05
+2024-07-12 10:24:13,723,Puma,athletic,red,9,170.84
+2024-07-12 10:24:12,724,Reebok,casual,purple,7,70.67
+2024-07-12 10:24:11,725,Toms,sandals,purple,12,230.21
+2024-07-12 10:24:10,726,Toms,sandals,green,13,290.66
+2024-07-12 10:24:09,727,Toms,casual,white,10,85.58
+2024-07-12 10:24:08,728,Adidas,athletic,blue,8,172.24
+2024-07-12 10:24:07,729,Crocs,boots,purple,8,236.12
+2024-07-12 10:24:06,730,Converse,sandals,green,11,251.17
+2024-07-12 10:24:05,731,Puma,sandals,black,9,77.49
+2024-07-12 10:24:04,732,Converse,casual,gray,5,132.91
+2024-07-12 10:24:03,733,Crocs,athletic,blue,12,264.56
+2024-07-12 10:24:02,734,Nike,casual,black,9,272.53
+2024-07-12 10:24:01,735,Nike,casual,gray,8,60.78
+2024-07-12 10:24:00,736,Nike,sandals,purple,12,164.58
+2024-07-12 10:23:59,737,Nike,formal,white,8,61.02
+2024-07-12 10:23:58,738,Reebok,boots,black,12,186.09
+2024-07-12 10:23:57,739,Puma,boots,red,6,294.55
+2024-07-12 10:23:56,740,Nike,casual,green,8,241.88
+2024-07-12 10:23:55,741,Adidas,athletic,gray,13,66.12
+2024-07-12 10:23:54,742,Puma,formal,blue,8,242.89
+2024-07-12 10:23:53,743,Nike,boots,white,11,168.79
+2024-07-12 10:23:52,744,Toms,formal,red,11,238.17
+2024-07-12 10:23:51,745,Adidas,formal,green,7,299.33
+2024-07-12 10:23:50,746,Adidas,boots,red,10,170.69
+2024-07-12 10:23:49,747,Toms,athletic,blue,6,212.64
+2024-07-12 10:23:48,748,Adidas,sandals,purple,11,56.08
+2024-07-12 10:23:47,749,Converse,athletic,purple,8,269.2
+2024-07-12 10:23:46,750,Crocs,casual,black,8,124.69
+2024-07-12 10:23:45,751,Toms,casual,white,9,224.09
+2024-07-12 10:23:44,752,Crocs,sandals,green,13,201.44
+2024-07-12 10:23:43,753,Adidas,sandals,pink,11,60.76
+2024-07-12 10:23:42,754,Toms,casual,red,6,209.77
+2024-07-12 10:23:41,755,Puma,athletic,white,11,85.75
+2024-07-12 10:23:40,756,Steve Madden,sandals,pink,6,290.46
+2024-07-12 10:23:39,757,Puma,formal,white,12,271.83
+2024-07-12 10:23:38,758,Toms,boots,gray,9,258.17
+2024-07-12 10:23:37,759,Toms,boots,gray,12,177.0
+2024-07-12 10:23:36,760,Adidas,boots,purple,13,90.41
+2024-07-12 10:23:35,761,Steve Madden,athletic,black,11,181.15
+2024-07-12 10:23:34,762,Puma,casual,green,8,135.18
+2024-07-12 10:23:33,763,Toms,casual,pink,10,83.75
+2024-07-12 10:23:32,764,Steve Madden,casual,gray,6,53.74
+2024-07-12 10:23:31,765,Adidas,formal,purple,13,116.37
+2024-07-12 10:23:30,766,Reebok,sandals,black,13,187.97
+2024-07-12 10:23:29,767,Toms,formal,red,9,156.28
+2024-07-12 10:23:28,768,Toms,boots,gray,5,148.27
+2024-07-12 10:23:27,769,Crocs,sandals,pink,7,268.01
+2024-07-12 10:23:26,770,Adidas,formal,red,8,196.06
+2024-07-12 10:23:25,771,Converse,casual,black,7,74.96
+2024-07-12 10:23:24,772,Adidas,boots,gray,12,247.22
+2024-07-12 10:23:23,773,Reebok,athletic,pink,11,289.22
+2024-07-12 10:23:22,774,Toms,casual,gray,7,257.58
+2024-07-12 10:23:21,775,Converse,boots,blue,13,62.67
+2024-07-12 10:23:20,776,Nike,boots,green,9,219.5
+2024-07-12 10:23:19,777,Steve Madden,athletic,green,5,164.08
+2024-07-12 10:23:18,778,Crocs,athletic,red,11,92.05
+2024-07-12 10:23:17,779,Steve Madden,sandals,pink,12,292.93
+2024-07-12 10:23:16,780,Nike,casual,green,5,135.65
+2024-07-12 10:23:15,781,Steve Madden,formal,green,8,58.01
+2024-07-12 10:23:14,782,Reebok,casual,gray,12,186.49
+2024-07-12 10:23:13,783,Reebok,casual,green,9,189.99
+2024-07-12 10:23:12,784,Steve Madden,sandals,green,5,161.49
+2024-07-12 10:23:11,785,Nike,casual,black,11,169.67
+2024-07-12 10:23:10,786,Nike,athletic,green,13,226.21
+2024-07-12 10:23:09,787,Toms,sandals,blue,13,171.04
+2024-07-12 10:23:08,788,Toms,boots,purple,10,231.72
+2024-07-12 10:23:07,789,Steve Madden,casual,blue,11,212.56
+2024-07-12 10:23:06,790,Reebok,boots,blue,5,195.58
+2024-07-12 10:23:05,791,Reebok,casual,gray,8,88.58
+2024-07-12 10:23:04,792,Toms,sandals,gray,9,276.26
+2024-07-12 10:23:03,793,Nike,sandals,black,5,91.72
+2024-07-12 10:23:02,794,Nike,formal,white,11,52.39
+2024-07-12 10:23:01,795,Reebok,boots,blue,7,102.97
+2024-07-12 10:23:00,796,Crocs,athletic,gray,8,85.86
+2024-07-12 10:22:59,797,Steve Madden,casual,green,9,290.95
+2024-07-12 10:22:58,798,Steve Madden,formal,green,7,98.37
+2024-07-12 10:22:57,799,Crocs,athletic,white,11,121.39
+2024-07-12 10:22:56,800,Adidas,formal,purple,13,209.95
+2024-07-12 10:22:55,801,Adidas,sandals,green,10,130.9
+2024-07-12 10:22:54,802,Crocs,sandals,black,12,126.37
+2024-07-12 10:22:53,803,Reebok,athletic,pink,8,67.87
+2024-07-12 10:22:52,804,Nike,athletic,green,12,149.48
+2024-07-12 10:22:51,805,Reebok,casual,red,11,182.86
+2024-07-12 10:22:50,806,Converse,boots,white,12,83.12
+2024-07-12 10:22:49,807,Converse,formal,purple,11,118.64
+2024-07-12 10:22:48,808,Nike,athletic,white,11,231.19
+2024-07-12 10:22:47,809,Nike,casual,black,5,232.66
+2024-07-12 10:22:46,810,Puma,casual,black,10,232.05
+2024-07-12 10:22:45,811,Puma,athletic,gray,8,183.34
+2024-07-12 10:22:44,812,Steve Madden,formal,red,11,226.15
+2024-07-12 10:22:43,813,Nike,sandals,gray,8,148.66
+2024-07-12 10:22:42,814,Steve Madden,boots,purple,5,129.24
+2024-07-12 10:22:41,815,Crocs,sandals,red,10,222.09
+2024-07-12 10:22:40,816,Puma,athletic,blue,13,152.84
+2024-07-12 10:22:39,817,Reebok,formal,red,9,210.06
+2024-07-12 10:22:38,818,Adidas,athletic,green,6,132.38
+2024-07-12 10:22:37,819,Crocs,boots,red,6,259.88
+2024-07-12 10:22:36,820,Nike,casual,pink,6,202.82
+2024-07-12 10:22:35,821,Steve Madden,sandals,pink,8,179.38
+2024-07-12 10:22:34,822,Puma,athletic,red,10,296.9
+2024-07-12 10:22:33,823,Toms,athletic,purple,12,286.1
+2024-07-12 10:22:32,824,Reebok,athletic,black,9,221.44
+2024-07-12 10:22:31,825,Steve Madden,boots,red,5,126.9
+2024-07-12 10:22:30,826,Converse,formal,pink,8,183.72
+2024-07-12 10:22:29,827,Adidas,casual,black,6,158.61
+2024-07-12 10:22:28,828,Adidas,formal,pink,8,89.06
+2024-07-12 10:22:27,829,Toms,sandals,black,6,50.43
+2024-07-12 10:22:26,830,Toms,boots,black,7,123.45
+2024-07-12 10:22:25,831,Crocs,athletic,purple,12,213.31
+2024-07-12 10:22:24,832,Toms,casual,green,8,205.61
+2024-07-12 10:22:23,833,Nike,boots,pink,8,206.49
+2024-07-12 10:22:22,834,Adidas,casual,white,6,80.96
+2024-07-12 10:22:21,835,Nike,formal,green,8,298.84
+2024-07-12 10:22:20,836,Converse,casual,blue,9,133.74
+2024-07-12 10:22:19,837,Toms,formal,white,13,271.72
+2024-07-12 10:22:18,838,Steve Madden,sandals,green,7,198.41
+2024-07-12 10:22:17,839,Toms,casual,pink,5,114.29
+2024-07-12 10:22:16,840,Crocs,boots,red,8,290.13
+2024-07-12 10:22:15,841,Crocs,athletic,green,11,69.22
+2024-07-12 10:22:14,842,Nike,boots,gray,9,234.17
+2024-07-12 10:22:13,843,Puma,athletic,pink,6,73.09
+2024-07-12 10:22:12,844,Puma,formal,green,9,182.24
+2024-07-12 10:22:11,845,Puma,boots,red,8,243.77
+2024-07-12 10:22:10,846,Nike,boots,red,7,57.94
+2024-07-12 10:22:09,847,Reebok,boots,black,8,131.21
+2024-07-12 10:22:08,848,Toms,formal,black,11,272.02
+2024-07-12 10:22:07,849,Toms,boots,blue,5,55.82
+2024-07-12 10:22:06,850,Toms,formal,pink,9,110.57
+2024-07-12 10:22:05,851,Reebok,formal,red,7,261.85
+2024-07-12 10:22:04,852,Converse,casual,pink,9,161.88
+2024-07-12 10:22:03,853,Converse,boots,black,6,75.96
+2024-07-12 10:22:02,854,Converse,sandals,gray,8,101.38
+2024-07-12 10:22:01,855,Crocs,boots,purple,12,65.6
+2024-07-12 10:22:00,856,Puma,athletic,red,5,114.33
+2024-07-12 10:21:59,857,Steve Madden,sandals,white,9,195.72
+2024-07-12 10:21:58,858,Puma,casual,gray,9,266.6
+2024-07-12 10:21:57,859,Reebok,boots,white,5,125.44
+2024-07-12 10:21:56,860,Crocs,athletic,blue,6,284.4
+2024-07-12 10:21:55,861,Nike,sandals,green,9,54.72
+2024-07-12 10:21:54,862,Nike,casual,blue,8,154.87
+2024-07-12 10:21:53,863,Converse,athletic,white,12,136.27
+2024-07-12 10:21:52,864,Converse,athletic,white,10,55.22
+2024-07-12 10:21:51,865,Reebok,athletic,pink,9,298.89
+2024-07-12 10:21:50,866,Nike,boots,white,10,244.63
+2024-07-12 10:21:49,867,Nike,casual,blue,5,278.91
+2024-07-12 10:21:48,868,Crocs,boots,pink,8,191.26
+2024-07-12 10:21:47,869,Crocs,boots,green,7,297.3
+2024-07-12 10:21:46,870,Nike,athletic,white,7,93.38
+2024-07-12 10:21:45,871,Reebok,sandals,green,11,279.34
+2024-07-12 10:21:44,872,Crocs,boots,red,10,112.89
+2024-07-12 10:21:43,873,Crocs,athletic,blue,6,56.04
+2024-07-12 10:21:42,874,Reebok,casual,black,13,110.36
+2024-07-12 10:21:41,875,Puma,casual,black,11,246.2
+2024-07-12 10:21:40,876,Adidas,boots,white,13,295.68
+2024-07-12 10:21:39,877,Puma,athletic,black,5,243.55
+2024-07-12 10:21:38,878,Steve Madden,casual,white,7,112.42
+2024-07-12 10:21:37,879,Steve Madden,boots,gray,13,112.61
+2024-07-12 10:21:36,880,Adidas,formal,red,12,205.93
+2024-07-12 10:21:35,881,Puma,casual,purple,8,93.38
+2024-07-12 10:21:34,882,Toms,sandals,white,9,201.53
+2024-07-12 10:21:33,883,Nike,casual,black,10,72.06
+2024-07-12 10:21:32,884,Toms,boots,blue,10,202.06
+2024-07-12 10:21:31,885,Crocs,sandals,blue,11,126.44
+2024-07-12 10:21:30,886,Puma,boots,blue,7,66.96
+2024-07-12 10:21:29,887,Converse,formal,black,11,210.64
+2024-07-12 10:21:28,888,Converse,formal,purple,10,150.31
+2024-07-12 10:21:27,889,Toms,casual,pink,12,167.0
+2024-07-12 10:21:26,890,Reebok,formal,red,9,268.21
+2024-07-12 10:21:25,891,Toms,sandals,blue,13,138.13
+2024-07-12 10:21:24,892,Nike,sandals,red,10,80.99
+2024-07-12 10:21:23,893,Converse,sandals,pink,10,137.34
+2024-07-12 10:21:22,894,Converse,boots,green,12,250.5
+2024-07-12 10:21:21,895,Toms,formal,black,10,186.97
+2024-07-12 10:21:20,896,Reebok,casual,pink,13,225.74
+2024-07-12 10:21:19,897,Toms,formal,purple,10,118.17
+2024-07-12 10:21:18,898,Toms,athletic,red,6,233.65
+2024-07-12 10:21:17,899,Nike,sandals,red,13,287.31
+2024-07-12 10:21:16,900,Toms,sandals,purple,7,88.46
+2024-07-12 10:21:15,901,Toms,casual,pink,7,260.01
+2024-07-12 10:21:14,902,Converse,boots,pink,12,195.86
+2024-07-12 10:21:13,903,Puma,sandals,white,11,208.55
+2024-07-12 10:21:12,904,Steve Madden,formal,pink,8,227.52
+2024-07-12 10:21:11,905,Adidas,formal,gray,12,231.99
+2024-07-12 10:21:10,906,Adidas,formal,blue,5,235.45
+2024-07-12 10:21:09,907,Reebok,sandals,pink,6,168.15
+2024-07-12 10:21:08,908,Puma,formal,green,5,75.68
+2024-07-12 10:21:07,909,Nike,boots,red,9,218.71
+2024-07-12 10:21:06,910,Puma,athletic,red,12,269.53
+2024-07-12 10:21:05,911,Puma,athletic,green,5,289.52
+2024-07-12 10:21:04,912,Toms,casual,purple,6,147.43
+2024-07-12 10:21:03,913,Reebok,casual,red,10,227.16
+2024-07-12 10:21:02,914,Reebok,sandals,blue,6,240.51
+2024-07-12 10:21:01,915,Nike,sandals,black,8,147.48
+2024-07-12 10:21:00,916,Nike,boots,pink,5,165.44
+2024-07-12 10:20:59,917,Converse,formal,white,5,228.95
+2024-07-12 10:20:58,918,Puma,sandals,black,9,157.77
+2024-07-12 10:20:57,919,Reebok,boots,red,8,297.65
+2024-07-12 10:20:56,920,Crocs,sandals,black,7,254.79
+2024-07-12 10:20:55,921,Converse,boots,gray,7,192.36
+2024-07-12 10:20:54,922,Reebok,casual,white,11,278.13
+2024-07-12 10:20:53,923,Adidas,formal,pink,9,75.19
+2024-07-12 10:20:52,924,Reebok,sandals,pink,5,261.57
+2024-07-12 10:20:51,925,Nike,sandals,red,13,267.25
+2024-07-12 10:20:50,926,Converse,formal,white,9,273.79
+2024-07-12 10:20:49,927,Nike,athletic,purple,9,212.08
+2024-07-12 10:20:48,928,Toms,casual,pink,9,208.73
+2024-07-12 10:20:47,929,Converse,casual,purple,12,286.14
+2024-07-12 10:20:46,930,Converse,casual,blue,8,79.76
+2024-07-12 10:20:45,931,Steve Madden,casual,pink,9,65.68
+2024-07-12 10:20:44,932,Steve Madden,boots,purple,9,84.14
+2024-07-12 10:20:43,933,Nike,boots,black,9,119.77
+2024-07-12 10:20:42,934,Crocs,formal,red,8,249.34
+2024-07-12 10:20:41,935,Converse,boots,gray,9,240.99
+2024-07-12 10:20:40,936,Crocs,casual,purple,13,270.69
+2024-07-12 10:20:39,937,Puma,athletic,green,6,73.27
+2024-07-12 10:20:38,938,Toms,boots,black,12,233.14
+2024-07-12 10:20:37,939,Puma,athletic,red,12,238.27
+2024-07-12 10:20:36,940,Adidas,athletic,purple,10,272.97
+2024-07-12 10:20:35,941,Converse,casual,pink,6,266.5
+2024-07-12 10:20:34,942,Nike,formal,red,7,111.48
+2024-07-12 10:20:33,943,Toms,casual,purple,12,283.67
+2024-07-12 10:20:32,944,Adidas,boots,green,6,164.78
+2024-07-12 10:20:31,945,Puma,sandals,red,10,246.86
+2024-07-12 10:20:30,946,Reebok,athletic,gray,10,63.76
+2024-07-12 10:20:29,947,Nike,formal,white,5,57.46
+2024-07-12 10:20:28,948,Adidas,athletic,blue,13,96.25
+2024-07-12 10:20:27,949,Puma,athletic,white,13,266.98
+2024-07-12 10:20:26,950,Toms,casual,red,8,59.4
+2024-07-12 10:20:25,951,Steve Madden,sandals,red,5,200.97
+2024-07-12 10:20:24,952,Crocs,formal,green,12,214.24
+2024-07-12 10:20:23,953,Reebok,casual,white,11,151.9
+2024-07-12 10:20:22,954,Nike,casual,green,11,99.67
+2024-07-12 10:20:21,955,Puma,boots,white,12,172.24
+2024-07-12 10:20:20,956,Adidas,casual,white,7,173.85
+2024-07-12 10:20:19,957,Nike,boots,red,12,247.68
+2024-07-12 10:20:18,958,Converse,casual,blue,10,135.18
+2024-07-12 10:20:17,959,Steve Madden,sandals,gray,9,257.8
+2024-07-12 10:20:16,960,Crocs,casual,red,10,103.97
+2024-07-12 10:20:15,961,Crocs,formal,purple,6,170.33
+2024-07-12 10:20:14,962,Steve Madden,boots,pink,12,120.34
+2024-07-12 10:20:13,963,Crocs,athletic,white,12,134.09
+2024-07-12 10:20:12,964,Converse,athletic,black,12,101.14
+2024-07-12 10:20:11,965,Converse,sandals,red,6,266.19
+2024-07-12 10:20:10,966,Converse,casual,blue,9,181.12
+2024-07-12 10:20:09,967,Steve Madden,sandals,red,6,147.9
+2024-07-12 10:20:08,968,Reebok,sandals,white,5,236.29
+2024-07-12 10:20:07,969,Nike,formal,pink,12,277.96
+2024-07-12 10:20:06,970,Converse,boots,pink,9,181.34
+2024-07-12 10:20:05,971,Converse,casual,red,6,143.89
+2024-07-12 10:20:04,972,Nike,formal,red,13,74.13
+2024-07-12 10:20:03,973,Steve Madden,athletic,pink,7,150.52
+2024-07-12 10:20:02,974,Crocs,boots,pink,5,102.29
+2024-07-12 10:20:01,975,Adidas,boots,gray,12,205.52
+2024-07-12 10:20:00,976,Nike,casual,red,11,114.3
+2024-07-12 10:19:59,977,Converse,boots,pink,12,113.29
+2024-07-12 10:19:58,978,Reebok,casual,pink,6,79.1
+2024-07-12 10:19:57,979,Converse,formal,black,11,263.04
+2024-07-12 10:19:56,980,Puma,athletic,white,5,156.72
+2024-07-12 10:19:55,981,Puma,casual,pink,6,235.62
+2024-07-12 10:19:54,982,Adidas,boots,green,5,186.62
+2024-07-12 10:19:53,983,Crocs,athletic,black,9,265.56
+2024-07-12 10:19:52,984,Adidas,casual,white,13,145.72
+2024-07-12 10:19:51,985,Steve Madden,boots,white,10,210.09
+2024-07-12 10:19:50,986,Adidas,casual,gray,12,248.21
+2024-07-12 10:19:49,987,Converse,boots,gray,9,265.16
+2024-07-12 10:19:48,988,Puma,formal,red,11,167.03
+2024-07-12 10:19:47,989,Converse,formal,white,12,75.58
+2024-07-12 10:19:46,990,Crocs,athletic,gray,5,265.43
+2024-07-12 10:19:45,991,Puma,sandals,pink,7,243.72
+2024-07-12 10:19:44,992,Puma,sandals,red,13,261.11
+2024-07-12 10:19:43,993,Converse,sandals,black,7,52.62
+2024-07-12 10:19:42,994,Steve Madden,casual,white,11,91.53
+2024-07-12 10:19:41,995,Adidas,boots,red,13,294.2
+2024-07-12 10:19:40,996,Nike,casual,green,5,222.55
+2024-07-12 10:19:39,997,Nike,boots,pink,13,96.87
+2024-07-12 10:19:38,998,Nike,formal,pink,13,298.57
+2024-07-12 10:19:37,999,Steve Madden,athletic,blue,9,148.74
+2024-07-12 10:19:36,1000,Toms,boots,red,9,275.89
