@@ -9,7 +9,9 @@ const Header = () => {
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container">
           <Link className="navbar-brand" to="/">
-           STEP UP SHOES
+            <span style={{ fontFamily: "Didot, serif" }}>
+              <b>STEP UP SHOES </b>
+            </span>
           </Link>
           <button
             className="navbar-toggler"
