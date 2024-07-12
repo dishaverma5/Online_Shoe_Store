@@ -1,29 +1,21 @@
 import React from "react";
 
-const Shoe = (props) => {
-  const { shoeDetails, additionalFeatures, addedTimestamp, _id } = props.data;
+const Shoe = ({ product }) => {
+  const {id, brand, type, color, size, price, category, addedTimestamp} = product;
 
   return (
     <div
-      className="card card-background"
+      className="card"
       style={{ flex: "1", minWidth: "300px", maxWidth: "45%" }}
     >
+      <img src={image} className="card-img-top" alt={brand} />
       <div className="card-body">
-        <h5 className="card-title">Shoe Details</h5>
-        <div className="card-text">Shoe Size: {shoeDetails?.size}</div>
-        <div className="card-text">Shoe Color: {shoeDetails?.color}</div>
-        <div className="card-text">Shoe Brand: {shoeDetails?.brand}</div>
-        <div className="card-text">Shoe Material: {shoeDetails?.material}</div>
-        <div className="card-text">Shoe Condition: {shoeDetails?.condition}</div>
-      </div>
-      <div className="card-body">
-        <h5 className="card-title">Additional Features</h5>
-        <div className="card-text">
-          Has Laces: {additionalFeatures?.hasLaces ? "Yes" : "No"}
-        </div>
-        <div className="card-text">
-          Is Athletic: {additionalFeatures?.isAthletic ? "Yes" : "No"}
-        </div>
+        <h5 className="card-title">Brand: {brand}</h5>
+        <div className="card-text">Type: {type}</div>
+        <div className="card-text">Color: {color}</div>
+        <div className="card-text">Size: {size}</div>
+        <div className="card-text">Price: $ {price}</div>
+        <div className="card-text">Category: {category}</div>
       </div>
       <div
         className="card-footer"
@@ -31,6 +23,7 @@ const Shoe = (props) => {
       >
         <small className="text-muted">Added: {new Date(addedTimestamp).toLocaleString()}</small>
       </div>
+      <button className="btn btn-primary">Add to Cart</button>
     </div>
   );
 };
