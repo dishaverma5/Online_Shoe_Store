@@ -1,14 +1,17 @@
 import React from "react";
 
 const Shoe = ({ product }) => {
-  const {brand, type, color, size, price, category} = product;
+  if (!product) {
+    return <div className="card">Product data is unavailable</div>;
+  }
+
+  const { brand, type, color, size, price, category } = product;
 
   return (
     <div
       className="card"
       style={{ flex: "1", minWidth: "300px", maxWidth: "45%" }}
     >
-      <img src={image} className="card-img-top" alt={brand} />
       <div className="card-body">
         <h5 className="card-title">Brand: {brand}</h5>
         <div className="card-text">Type: {type}</div>
@@ -20,8 +23,7 @@ const Shoe = ({ product }) => {
       <div
         className="card-footer"
         style={{ display: "flex", justifyContent: "space-between" }}
-      >
-      </div>
+      ></div>
       <button className="btn btn-primary">Add to Cart</button>
     </div>
   );
