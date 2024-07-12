@@ -11,11 +11,7 @@ const dbName = process.env.MONGO_DB;
 const app = express();
 
 // Configure CORS middleware
-app.use(cors({
-  origin: "http://localhost:5173", // Replace with your frontend URL
-  methods: ["GET", "POST", "PUT", "DELETE"], // Allow the HTTP methods you need
-  allowedHeaders: ["Content-Type", "Authorization"], // Allow headers
-}));
+app.use(cors());
 
 app.use(express.json()); // Middleware to parse JSON bodies
 
