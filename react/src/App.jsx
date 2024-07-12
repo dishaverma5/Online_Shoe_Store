@@ -22,7 +22,7 @@ function App() {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `${import.meta.env.VITE_SOCKS_API_URL}/${page}/10`
+          `${import.meta.env.VITE_API_URL}/shoes`
         );
         if (!response.ok) {
           throw new Error("Data could not be fetched!");
@@ -36,26 +36,6 @@ function App() {
 
     fetchData();
   }, [page]);
-
-  const handleDelete = async (shoeId) => {
-    try {
-      // Make an API request to delete the shoe with the given shoeId
-      const response = await fetch(
-        `${import.meta.env.VITE_SOCKS_API_URL}/${shoeId}`,
-        {
-          method: "DELETE",
-        }
-      );
-      if (!response.ok) {
-        throw new Error("Shoe could not be deleted!");
-      }
-      // Update the state or fetch the updated data from the server
-      const updatedData = data.filter((shoe) => shoe._id !== shoeId); // Remove the deleted shoe from the data array
-      setData(updatedData); // Update the state with the updated data
-    } catch (error) {
-      console.error("Error deleting shoe:", error);
-    }
-  };
 
   return (
     <>
@@ -104,7 +84,7 @@ function App() {
         <main role="main" className="col-md-9 ml-sm-auto col-lg-10 px-md-4">
           <div className="container-fluid">
             <div className="row">
-              <Featured data={promo_data} />
+              <Featured data={[]} />
               <hr />
               <AuthProvider>
                 <Routes>
@@ -114,7 +94,7 @@ function App() {
                     element={
                       <Home
                         data={data}
-                        handleDelete={handleDelete}
+                        handleDelete={() => {}}
                         page={page}
                         setPage={setPage}
                       />
