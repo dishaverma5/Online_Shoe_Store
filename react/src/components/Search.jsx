@@ -5,14 +5,19 @@ const Search = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch(`${import.meta.env.VITE_SOCKS_API_URL}/search`, {
+    fetch(`${import.meta.env.VITE_API_URL}/search`, {  // Using VITE_API_URL here
       method: "POST",
       body: JSON.stringify({ searchTerm }),
       headers: {
         "Content-Type": "application/json",
       },
     })
-      .then((response) => response.json())
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
       .then((data) => {
         // Handle the response data
         props.setData(data);
@@ -20,13 +25,12 @@ const Search = (props) => {
       })
       .catch((error) => {
         // Handle any errors
-        console.error(error);
+        console.error("Error fetching data:", error);
       });
   };
 
   const handleChange = (e) => {
     setSearchTerm(e.target.value);
-    console.log(searchTerm);
   };
 
   return (
