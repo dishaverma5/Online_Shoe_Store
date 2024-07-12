@@ -1,9 +1,5 @@
-
-
 [
   {
-    "addedTimestamp": "2024-07-11T20:53:12.519940",
-    "id":"1",
     "brand": "Adidas",
     "type": "Athletic",
     "color": "Black",
@@ -11,8 +7,6 @@
     "price": "150"
   },
   {
-    "addedTimestamp": "2024-07-11T20:53:12.519940",
-    "id":"2",
     "brand": "Adidas",
     "type": "Athletic",
     "color": "Black",
@@ -20,8 +14,6 @@
     "price": "150"
   },
   {
-    "addedTimestamp": "2024-07-11T20:53:12.519940",
-    "id":"3",
     "brand": "Adidas",
     "type": "Athletic",
     "color": "Black",

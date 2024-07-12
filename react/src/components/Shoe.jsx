@@ -1,7 +1,7 @@
 import React from "react";
 
 const Shoe = ({ product }) => {
-  const {id, brand, type, color, size, price, category, addedTimestamp} = product;
+  const {brand, type, color, size, price, category} = product;
 
   return (
     <div
@@ -21,7 +21,6 @@ const Shoe = ({ product }) => {
         className="card-footer"
         style={{ display: "flex", justifyContent: "space-between" }}
       >
-        <small className="text-muted">Added: {new Date(addedTimestamp).toLocaleString()}</small>
       </div>
       <button className="btn btn-primary">Add to Cart</button>
     </div>
