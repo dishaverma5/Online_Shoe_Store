@@ -30,12 +30,6 @@ const Shoe = (props) => {
         style={{ display: "flex", justifyContent: "space-between" }}
       >
         <small className="text-muted">Added: {new Date(addedTimestamp).toLocaleString()}</small>
-        <button
-          className="btn btn-sm btn-danger"
-          onClick={() => props.handleDelete(_id)}
-        >
-          Delete
-        </button>
       </div>
     </div>
   );

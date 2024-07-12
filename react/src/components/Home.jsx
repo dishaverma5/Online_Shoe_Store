@@ -9,7 +9,7 @@ const Home = (props) => {
     }
     >
       {props.data.map((shoe) => (
-        <Shoe key={shoe._id} data={shoe} handleDelete={props.handleDelete} />
+        <Shoe key={shoe._id} data={shoe} />
       ))}
     </div>
   );
