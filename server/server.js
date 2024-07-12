@@ -1,4 +1,4 @@
-import { MongoClient, ObjectId } from "mongodb";
+import { MongoClient } from "mongodb";
 import dotenv from "dotenv";
 import cors from "cors";
 import express from "express";
@@ -9,7 +9,9 @@ const url = process.env.MONGO_DB_URL;
 const dbName = process.env.MONGO_DB;
 
 const app = express();
-app.use(cors()); // Enable CORS for all routes
+app.use(cors({
+  origin: "http://localhost:5173", // Replace with your frontend URL
+})); // Enable CORS for specific origin
 app.use(express.json()); // Middleware to parse JSON bodies
 
 const PORT = 3000;
