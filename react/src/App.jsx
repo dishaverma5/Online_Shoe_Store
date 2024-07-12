@@ -16,14 +16,13 @@ import { AuthProvider } from "./hooks/AuthContext";
 
 function App() {
   const [data, setData] = useState([]);
-  const [page, setPage] = useState(1); // State to store the current page number
+  const [cart, setCart] = useState([]);
+  const [page, setPage] = useState(1);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(
-          `${import.meta.env.VITE_API_URL}/shoes`
-        );
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/shoes`);
         if (!response.ok) {
           throw new Error("Data could not be fetched!");
         }
@@ -36,6 +35,28 @@ function App() {
 
     fetchData();
   }, [page]);
+
+  const addToCart = async (cartItem) => {
+    try {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/cart`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(cartItem),
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const data = await response.json();
+      console.log("Item added to cart:", data);
+      setCart((prevCart) => [...prevCart, data]);
+    } catch (error) {
+      console.error("Error adding to cart:", error);
+    }
+  };
 
   return (
     <>
@@ -56,10 +77,7 @@ function App() {
             >
               <span className="navbar-toggler-icon"></span>
             </button>
-            <div
-              className="collapse navbar-collapse"
-              id="navbarSupportedContent"
-            >
+            <div className="collapse navbar-collapse" id="navbarSupportedContent">
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
                   <Link className="nav-link" to="/">
@@ -72,7 +90,7 @@ function App() {
                   </Link>
                 </li>
                 <li className="nav-item dropdown">
-                  <Link className="nav-link" to="/add">
+                  <Link className="nav-link" to="/cart">
                     <b>MY CART</b>
                   </Link>
                 </li>
@@ -105,11 +123,15 @@ function App() {
                     path="/add"
                     element={
                       <RequireAuth>
-                        <AddShoe />
+                        <AddShoe addToCart={addToCart} />
                       </RequireAuth>
                     }
                   />
                   <Route path="/Login" element={<LoginForm />} />
+                  <Route
+                    path="/cart"
+                    element={<Cart cart={cart} />}
+                  />
                 </Routes>
               </AuthProvider>
             </div>
@@ -132,5 +154,18 @@ function App() {
     </>
   );
 }
+
+const Cart = ({ cart }) => (
+  <div>
+    <h2>My Cart</h2>
+    <ul>
+      {cart.map((item, index) => (
+        <li key={index}>
+          {item.shoeName} - Quantity: {item.quantity}
+        </li>
+      ))}
+    </ul>
+  </div>
+);
 
 export default App;
