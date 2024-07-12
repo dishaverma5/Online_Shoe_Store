@@ -5,7 +5,7 @@ const Featured = (props) => {
     <>
       <div>
         <br />
-        <b>Step Up Shoe Store: Where Style Meets Durability!</b>
+        <b>Step Up Shoes: Where Style Meets Durability</b>
         <br />
         Explore our curated selection of stylish, durable footwear for every
         occasion. From casual comfort to chic elegance and sporty durability,
@@ -15,7 +15,7 @@ const Featured = (props) => {
 
       <h5 style={{ color: "#006400", align: "center" }}>
         <br />
-        <u>FEATURED SHOES</u>
+         FEATURED ITEMS 
       </h5>
       <div
         className="card-container d-flex flex-row justify-content-start"
