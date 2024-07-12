@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useAuth } from "../hooks/AuthContext";
-
+//MAKE IT MY CART
 const AddShoe = () => {
   const { user } = useAuth();
 

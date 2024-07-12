@@ -13,7 +13,7 @@ const Featured = (props) => {
         quality.
       </div>
 
-      <h5 style={{ color: "#006400" }}>
+      <h5 style={{ color: "#006400", align: "center" }}>
         <br />
         <u>FEATURED SHOES</u>
       </h5>

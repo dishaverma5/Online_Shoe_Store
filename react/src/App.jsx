@@ -63,7 +63,7 @@ function App() {
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
           <div className="container-fluid">
             <a className="navbar-brand" href="#">
-              The Step Up Shoe Shop
+              <h4>STEP UP SHOES</h4>
             </a>
             <button
               className="navbar-toggler"
@@ -83,17 +83,17 @@ function App() {
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
                   <Link className="nav-link" to="/">
-                    Home
+                    <b>HOME</b>
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link" to="/about">
-                    About
+                    <b>ABOUT</b>
                   </Link>
                 </li>
                 <li className="nav-item dropdown">
                   <Link className="nav-link" to="/add">
-                    Add Shoe
+                    <b>MY CART</b>
                   </Link>
                 </li>
               </ul>
