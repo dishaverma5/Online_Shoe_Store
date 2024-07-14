@@ -11,14 +11,23 @@ const Featured = (props) => {
         Explore our curated selection of stylish, durable footwear for every
         occasion. From casual comfort to chic elegance and sporty durability,
         find your perfect pair today and step into timeless style and unmatched
-        quality.
+        quality. <br />
+        <br />
       </div>
 
-      <h6 style={{ color: "#00365a" }}>
-        <br />
-        <br />
-        <b>FEATURED PRODUCTS</b>
-      </h6>
+      <div style={{ textAlign: "center" }}>
+        <h6
+          style={{
+            color: "#00365a",
+            padding: "10px",
+            borderRadius: "10px",
+            //display: "inline-block",
+            backgroundColor: "#f9f9f9",
+          }}
+        >
+          <b>FEATURED PRODUCTS</b>
+        </h6>
+      </div>
 
       <div
         className="card-container d-flex flex-row justify-content-start"

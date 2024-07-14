@@ -41,7 +41,7 @@ function LoginForm() {
           />
         </div>
         <button type="SUBMIT" className="btn btn-primary">
-          Login
+          LOGIN
         </button>
       </form>
     </div>
