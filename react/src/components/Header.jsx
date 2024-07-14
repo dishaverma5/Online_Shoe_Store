@@ -1,4 +1,4 @@
-// Header.jsx
+ 
 
 import React from "react";
 import { Link } from "react-router-dom"; // If using React Router for navigation
@@ -9,7 +9,7 @@ const Header = () => {
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container">
           <Link className="navbar-brand" to="/">
-            <span style={{ fontFamily: "Didot, serif" }}>
+            <span >
               <b>STEP UP SHOES </b>
             </span>
           </Link>

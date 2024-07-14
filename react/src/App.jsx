@@ -64,7 +64,11 @@ function App() {
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
           <div className="container-fluid">
             <a className="navbar-brand" href="#">
-              <h4>STEP UP SHOES</h4>
+              <h2 style={{ fontFamily: "Didot", color: "#003f69" }}>
+                <b>
+                  <b>S T E P - U P </b>
+                </b>
+              </h2>
             </a>
             <button
               className="navbar-toggler"
@@ -77,7 +81,10 @@ function App() {
             >
               <span className="navbar-toggler-icon"></span>
             </button>
-            <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <div
+              className="collapse navbar-collapse"
+              id="navbarSupportedContent"
+            >
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
                   <Link className="nav-link" to="/">
@@ -86,7 +93,7 @@ function App() {
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link" to="/about">
-                    <b>ABOUT</b>
+                    <b>ABOUT </b>
                   </Link>
                 </li>
                 <li className="nav-item dropdown">
@@ -128,23 +135,20 @@ function App() {
                     }
                   />
                   <Route path="/Login" element={<LoginForm />} />
-                  <Route
-                    path="/cart"
-                    element={<Cart cart={cart} />}
-                  />
+                  <Route path="/cart" element={<Cart cart={cart} />} />
                 </Routes>
               </AuthProvider>
             </div>
           </div>
         </main>
         <footer
-          className={
-            import.meta.env.VITE_ENVIRONMENT === "development"
-              ? "bg-yellow"
-              : import.meta.env.VITE_ENVIRONMENT === "production"
-              ? "bg-green"
-              : ""
-          }
+         // className={
+            //import.meta.env.VITE_ENVIRONMENT === "development"
+             //</Router> ? "bg-yellow"
+              // : import.meta.env.VITE_ENVIRONMENT === "production"
+              // ? "bg-green"
+              // : ""
+       //   }
         >
           <div>
             <strong>{import.meta.env.VITE_ENVIRONMENT.toUpperCase()}</strong>
@@ -156,8 +160,14 @@ function App() {
 }
 
 const Cart = ({ cart }) => (
-  <div>
-    <h2>My Cart</h2>
+  <div style={{ textAlign: "center" }}>
+    <h3 style={{ fontFamily: "Didot", color: "#004878" }}>
+     
+      <b>
+        <u>C A R T - I T E M S </u>
+      </b>
+    </h3>
+
     <ul>
       {cart.map((item, index) => (
         <li key={index}>

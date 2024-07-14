@@ -25,10 +25,6 @@ for i in range(1, NUM_ROWS + 1):
     size = random.randint(5, 13)  # Shoe size
     price = round(random.uniform(50, 300), 2)  # Example price range
 
-    # Select a random home world from the available options
-    #home_world = random.choice(home_worlds)
-   # home_world_name = home_world["name"]
-
     # Create the data row
     data_row = [
         timestamp.strftime("%Y-%m-%d %H:%M:%S"),
