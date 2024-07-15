@@ -51,42 +51,49 @@ function App() {
 
   return (
     <Router>
-      <div className="App">
-        <Header />
-        <div className="container-fluid">
-          <div className="row">
-            <main role="main" className="col-md-9 ml-sm-auto col-lg-10 px-md-4">
-              <Routes>
-                <Route
-                  exact
-                  path="/"
-                  element={
-                    <Home
-                      data={data}
-                      handleDelete={() => {}}
-                      page={page}
-                      setPage={setPage}
-                      addToCart={addToCart}
-                    />
-                  }
-                />
-                <Route path="/about" element={<About />} />
-                <Route path="/cart" element={<Cart cart={cart} />} />
-                <Route path="/checkout" element={<Checkout cart={cart} setCart={setCart} />} />
-                <Route path="/product/:productId" element={<ProductDetails products={data} addToCart={addToCart} />} />
-                <Route path="/order-placed" element={<OrderPlaced cart={cart} />} />
-                <Route path="/add" element={<AddShoe addToCart={addToCart} />} />
-                <Route path="/login" element={<LoginForm />} />
-              </Routes>
-            </main>
-          </div>
+      <Header />
+      <main role="main" className="container-fluid">
+        <div className="row">
+          <Featured data={[]} />
+          <hr />
+          <AuthProvider>
+            <Routes>
+              <Route
+                exact
+                path="/"
+                element={
+                  <Home
+                    data={data}
+                    handleDelete={() => {}}
+                    page={page}
+                    setPage={setPage}
+                    addToCart={addToCart}
+                  />
+                }
+              />
+              <Route path="/about" element={<About />} />
+              <Route
+                path="/add"
+                element={
+                  <RequireAuth>
+                    <AddShoe addToCart={addToCart} />
+                  </RequireAuth>
+                }
+              />
+              <Route path="/login" element={<LoginForm />} />
+              <Route path="/cart" element={<Cart cart={cart} />} />
+              <Route path="/checkout" element={<Checkout cart={cart} setCart={setCart} />} />
+              <Route path="/product/:productId" element={<ProductDetails products={data} addToCart={addToCart} />} />
+              <Route path="/order-placed" element={<OrderPlaced cart={cart} />} />
+            </Routes>
+          </AuthProvider>
         </div>
-        <footer>
-          <div>
-            <strong>{import.meta.env.VITE_ENVIRONMENT.toUpperCase()}</strong>
-          </div>
-        </footer>
-      </div>
+      </main>
+      <footer>
+        <div>
+          <strong>{import.meta.env.VITE_ENVIRONMENT.toUpperCase()}</strong>
+        </div>
+      </footer>
     </Router>
   );
 }
