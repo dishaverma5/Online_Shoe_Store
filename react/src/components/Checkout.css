@@ -30,24 +30,28 @@
     width: 100%;
   }
   
-  .checkout-form .checkout-section {
+  .checkout-section {
     display: flex;
     justify-content: space-between;
   }
   
-  .checkout-form .checkout-section div {
+  .payment-info, .shipping-info {
+    flex: 1;
+    margin: 10px;
+  }
+  
+  .payment-info div, .shipping-info div {
     margin-bottom: 1em;
   }
   
-  .checkout-form .checkout-section label {
+  .payment-info label, .shipping-info label {
     display: block;
     margin-bottom: 0.5em;
   }
   
-  .checkout-form .checkout-section input {
+  .payment-info input, .shipping-info input {
     padding: 0.5em;
     width: 100%;
-    max-width: 300px;
     box-sizing: border-box;
   }
   
