@@ -52,7 +52,6 @@ function App() {
   return (
     <>
       <Router>
-        <Header /> {/* Ensure Header component is used */}
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
           <div className="container-fluid">
             <Link className="navbar-brand" to="/">
@@ -99,6 +98,8 @@ function App() {
         <main role="main" className="col-md-9 ml-sm-auto col-lg-10 px-md-4">
           <div className="container-fluid">
             <div className="row">
+              <Featured data={[]} />
+              <hr />
               <AuthProvider>
                 <Routes>
                   <Route
