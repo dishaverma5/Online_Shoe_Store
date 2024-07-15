@@ -58,7 +58,6 @@ function App() {
   return (
     <>
       <Router>
-        <Header />
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
           <div className="container-fluid">
             <Link className="navbar-brand" to="/">
