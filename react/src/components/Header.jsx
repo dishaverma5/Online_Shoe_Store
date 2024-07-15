@@ -1,7 +1,6 @@
- 
-
 import React from "react";
-import { Link } from "react-router-dom"; // If using React Router for navigation
+import { Link } from "react-router-dom";
+import Search from "./Search";
 
 const Header = () => {
   return (
@@ -9,7 +8,7 @@ const Header = () => {
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container">
           <Link className="navbar-brand" to="/">
-            <span >
+            <span>
               <b>STEP UP SHOES </b>
             </span>
           </Link>
@@ -47,6 +46,7 @@ const Header = () => {
                 </Link>
               </li>
             </ul>
+            <Search />
           </div>
         </div>
       </nav>
