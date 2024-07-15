@@ -15,6 +15,7 @@ import LoginForm from "./components/LoginForm";
 import { AuthProvider } from "./hooks/AuthContext";
 import Cart from './components/Cart';
 import Checkout from './components/Checkout';
+import ProductDetails from './components/ProductDetails';
 
 function App() {
   const [data, setData] = useState([]);
@@ -122,6 +123,7 @@ function App() {
                   <Route path="/Login" element={<LoginForm />} />
                   <Route path="/cart" element={<Cart cart={cart} />} />
                   <Route path="/checkout" element={<Checkout cart={cart} />} />
+                  <Route path="/product/:productId" element={<ProductDetails products={data} addToCart={addToCart} />} />
                 </Routes>
               </AuthProvider>
             </div>
