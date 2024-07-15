@@ -56,102 +56,103 @@ const Checkout = ({ cart, setCart }) => {
   };
 
   return (
-    <div>
-      <h2>CHECKOUT</h2>
-      <form onSubmit={handleSubmit}>
-        <h3>PAYMENT INFORMATION</h3>
-        <div>
-          <label htmlFor="cardNumber">Card Number:</label>
-          <input
-            type="text"
-            id="cardNumber"
-            name="cardNumber"
-            value={paymentInfo.cardNumber}
-            onChange={(e) => handleInputChange(e, setPaymentInfo)}
-            required
-          />
+    <div className="checkout-container">
+      <form className="checkout-form" onSubmit={handleSubmit}>
+        <div className="checkout-section">
+          <h3>PAYMENT INFORMATION</h3>
+          <div>
+            <label htmlFor="cardNumber">Card Number:</label>
+            <input
+              type="text"
+              id="cardNumber"
+              name="cardNumber"
+              value={paymentInfo.cardNumber}
+              onChange={(e) => handleInputChange(e, setPaymentInfo)}
+              required
+            />
+          </div>
+          <div>
+            <label htmlFor="expirationDate">Expiration Date:</label>
+            <input
+              type="text"
+              id="expirationDate"
+              name="expirationDate"
+              placeholder="MM/YY"
+              value={paymentInfo.expirationDate}
+              onChange={(e) => handleInputChange(e, setPaymentInfo)}
+              required
+            />
+          </div>
+          <div>
+            <label htmlFor="cvv">CVV:</label>
+            <input
+              type="text"
+              id="cvv"
+              name="cvv"
+              value={paymentInfo.cvv}
+              onChange={(e) => handleInputChange(e, setPaymentInfo)}
+              required
+            />
+          </div>
         </div>
-        <div>
-          <label htmlFor="expirationDate">Expiration Date:</label>
-          <input
-            type="text"
-            id="expirationDate"
-            name="expirationDate"
-            placeholder="MM/YY"
-            value={paymentInfo.expirationDate}
-            onChange={(e) => handleInputChange(e, setPaymentInfo)}
-            required
-          />
+        <div className="checkout-section">
+          <h3>SHIPPING INFORMATION</h3>
+          <div>
+            <label htmlFor="name">Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={shippingInfo.name}
+              onChange={(e) => handleInputChange(e, setShippingInfo)}
+              required
+            />
+          </div>
+          <div>
+            <label htmlFor="address">Address:</label>
+            <input
+              type="text"
+              id="address"
+              name="address"
+              value={shippingInfo.address}
+              onChange={(e) => handleInputChange(e, setShippingInfo)}
+              required
+            />
+          </div>
+          <div>
+            <label htmlFor="city">City:</label>
+            <input
+              type="text"
+              id="city"
+              name="city"
+              value={shippingInfo.city}
+              onChange={(e) => handleInputChange(e, setShippingInfo)}
+              required
+            />
+          </div>
+          <div>
+            <label htmlFor="state">State:</label>
+            <input
+              type="text"
+              id="state"
+              name="state"
+              value={shippingInfo.state}
+              onChange={(e) => handleInputChange(e, setShippingInfo)}
+              required
+            />
+          </div>
+          <div>
+            <label htmlFor="zip">Zip Code:</label>
+            <input
+              type="text"
+              id="zip"
+              name="zip"
+              value={shippingInfo.zip}
+              onChange={(e) => handleInputChange(e, setShippingInfo)}
+              required
+            />
+          </div>
         </div>
-        <div>
-          <label htmlFor="cvv">CVV:</label>
-          <input
-            type="text"
-            id="cvv"
-            name="cvv"
-            value={paymentInfo.cvv}
-            onChange={(e) => handleInputChange(e, setPaymentInfo)}
-            required
-          />
-        </div>
-
-        <h3>SHIPPING INFORMATION</h3>
-        <div>
-          <label htmlFor="name">Name:</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={shippingInfo.name}
-            onChange={(e) => handleInputChange(e, setShippingInfo)}
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="address">Address:</label>
-          <input
-            type="text"
-            id="address"
-            name="address"
-            value={shippingInfo.address}
-            onChange={(e) => handleInputChange(e, setShippingInfo)}
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="city">City:</label>
-          <input
-            type="text"
-            id="city"
-            name="city"
-            value={shippingInfo.city}
-            onChange={(e) => handleInputChange(e, setShippingInfo)}
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="state">State:</label>
-          <input
-            type="text"
-            id="state"
-            name="state"
-            value={shippingInfo.state}
-            onChange={(e) => handleInputChange(e, setShippingInfo)}
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="zip">Zip Code:</label>
-          <input
-            type="text"
-            id="zip"
-            name="zip"
-            value={shippingInfo.zip}
-            onChange={(e) => handleInputChange(e, setShippingInfo)}
-            required
-          />
-        </div>
-
         <button type="submit">Place Order</button>
       </form>
     </div>
