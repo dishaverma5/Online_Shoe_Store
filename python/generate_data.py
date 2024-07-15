@@ -1,49 +1,40 @@
-import csv
-import random
-from datetime import datetime, timedelta
+
 import json
+import random
 
-# Generate data for 50 characters
-NUM_ROWS = 1000
-
-# Create the CSV file
-OUTPUT_FILE = "shoe_sales.csv"
-
-# Load shoe data from JSON file
-with open("shoe_models.json") as json_file:
-    shoe_models = json.load(json_file)
-
-# Generate data rows
-data_rows = []
-for i in range(1, NUM_ROWS + 1):
-    # Generate random values for each column
-    timestamp = datetime.now() - timedelta(seconds=i)
+# Generate 1,000 JSON documents for shoes
+documents = []
+for i in range(1000):
     shoe_id = i
-    brand = random.choice(["Nike", "Adidas", "Puma", "Reebok", "Steve Madden", "Crocs", "Converse", "Toms"])  # Example shoe brands
-    shoe_type = random.choice(["athletic", "casual", "formal", "sandals", "boots"])  # Types of shoes
-    color = random.choice(["red", "blue", "pink", "purple", "green", "black", "white", "gray"])  # Example colors
-    size = random.randint(5, 13)  # Shoe size
-    price = round(random.uniform(50, 300), 2)  # Example price range
+    brand = random.choice(["Nike", "Adidas", "Puma", "Reebok", "Steve Madden", "Crocs", "Converse", "Toms", "Vans", "Birkenstock", "UGG"])
+    shoe_type = random.choice(["athletic", "casual", "formal", "sandals", "boots"])
+    color = random.choice(["red", "blue", "pink", "beige", "purple", "green", "black", "white", "gray"])
+    size = random.randint(5, 13)
+    price = round(random.uniform(30, 300), 2)
 
-    # Create the data row
-    data_row = [
-        timestamp.strftime("%Y-%m-%d %H:%M:%S"),
-        shoe_id,
-        brand,
-        shoe_type,
-        color,
-        size,
-        price
-    ]
-    # Add the data row to the list
-    data_rows.append(data_row)
+    document = {
+        "shoe_id": shoe_id,
+        "shoeDetails": {
+            "brand": brand,
+            "shoe_type": shoe_type,
+            "color": color,
+            "size": size,
+            "price": price
+        },
+        "additionalFeatures": {
+            "isPopular": bool(random.getrandbits(1)),
+            "inStock": bool(random.getrandbits(1)),
+            "onSale": bool(random.getrandbits(1))
+        }
+    }
 
-# Write the data to the CSV file
-with open(OUTPUT_FILE, "w", newline="") as file:
-    writer = csv.writer(file)
-    writer.writerow(
-        ["timestamp", "shoe_id", "brand", "shoe_type", "color", "size", "price"]
-    )
-    writer.writerows(data_rows)
+   
+    documents.append(document)
 
-print("Data generation complete.")
+json_data = json.dumps(documents, indent=4)
+
+# save to shoes.json
+with open('shoes.json', 'w') as f:
+    f.write(json_data)
+
+print("1,000 JSON documents saved to shoes.json")

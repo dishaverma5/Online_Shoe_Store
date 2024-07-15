@@ -21,7 +21,6 @@ const Featured = (props) => {
             color: "#00365a",
             padding: "10px",
             borderRadius: "10px",
-            //display: "inline-block",
             backgroundColor: "#f9f9f9",
           }}
         >
