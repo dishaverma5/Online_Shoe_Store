@@ -1,12 +1,14 @@
 const About = () => {
   return (
     <div>
-      <div  style={{ textAlign: "center" }}>
-      <h3 style={{ fontFamily: "Didot", color: "#004878" }}>
-        {" "}
-        <b><u>A B O U T - U S </u></b>
-      </h3>
-    </div>
+      <div style={{ textAlign: "center" }}>
+        <h3 style={{ fontFamily: "Didot", color: "#004878" }}>
+          {" "}
+          <b>
+            <u>A B O U T - U S </u>
+          </b>
+        </h3>
+      </div>
       <p>
         Step Up your shoe game with our curated collection that blends style and
         durability. Whether you seek casual comfort, chic elegance, or sporty
@@ -36,6 +38,7 @@ const About = () => {
       </ul>
       <h5 style={{ color: "#005f6b" }}>Join Our Journey</h5>
       <p>Discover timeless style with Step Up Shoes!</p>
+      <br /><br /> <br /> <br />
     </div>
   );
 };

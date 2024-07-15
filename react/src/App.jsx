@@ -15,6 +15,7 @@ import LoginForm from "./components/LoginForm";
 import { AuthProvider } from "./hooks/AuthContext";
 import Cart from './components/Cart';
 import Checkout from './components/Checkout';
+import OrderPlaced from "./components/OrderPlaced.jsx";
 
 function App() {
   const [data, setData] = useState([]);
@@ -53,7 +54,7 @@ function App() {
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
           <div className="container-fluid">
             <Link className="navbar-brand" to="/">
-              <h2 style={{ fontFamily: 'Didot', color: '#003f69' }}>
+              <h2 style={{ fontFamily: "Didot", color: "#003f69" }}>
                 <b>S T E P - U P</b>
               </h2>
             </Link>
@@ -68,7 +69,10 @@ function App() {
             >
               <span className="navbar-toggler-icon"></span>
             </button>
-            <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <div
+              className="collapse navbar-collapse"
+              id="navbarSupportedContent"
+            >
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
                   <Link className="nav-link" to="/">
@@ -122,6 +126,7 @@ function App() {
                   <Route path="/Login" element={<LoginForm />} />
                   <Route path="/cart" element={<Cart cart={cart} />} />
                   <Route path="/checkout" element={<Checkout cart={cart} />} />
+                  <Route path="/order-placed" element={<OrderPlaced cart={cart} />} />
                 </Routes>
               </AuthProvider>
             </div>
