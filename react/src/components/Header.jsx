@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom"; // If using React Router for navigation
-import Search from "./Search"; // Adjust the import path based on your folder structure
+import { Link } from "react-router-dom";
+import Search from "./Search"; // Adjust path based on your folder structure
 
 const Header = () => {
   return (
@@ -31,8 +31,8 @@ const Header = () => {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/products">
-                  PRODUCTS
+                <Link className="nav-link" to="/about">
+                  ABOUT
                 </Link>
               </li>
               <li className="nav-item">
@@ -48,7 +48,7 @@ const Header = () => {
             </ul>
           </div>
           <div className="ml-auto">
-            <Search /> {/* Adjust the placement of Search based on your design */}
+            <Search /> {/* Adjust placement based on your design */}
           </div>
         </div>
       </nav>
