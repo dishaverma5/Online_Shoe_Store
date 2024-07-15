@@ -1,0 +1,38 @@
+.checkout-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+  }
+  
+  .checkout-form {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .checkout-section {
+    flex: 1;
+    margin: 0 20px;
+  }
+  
+  .checkout-section div {
+    margin-bottom: 1em;
+  }
+  
+  .checkout-section label {
+    display: block;
+    margin-bottom: 0.5em;
+  }
+  
+  .checkout-section input {
+    padding: 0.5em;
+    width: 100%;
+    max-width: 300px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    margin-top: 20px;
+    align-self: center;
+  }
+  
