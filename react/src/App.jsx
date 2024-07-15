@@ -27,7 +27,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`${import.meta.env.VITE_API_URL}/shoes`);
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/shoe`);
         if (!response.ok) {
           throw new Error('Data could not be fetched!');
         }
