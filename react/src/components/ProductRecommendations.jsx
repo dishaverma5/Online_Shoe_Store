@@ -10,19 +10,30 @@ const ProductRecommendations = ({ selectedProduct }) => {
     fetchRecommendations();
   }, [selectedProduct]);
 
-  const fetchRecommendations = async () => {
-    try {
-      // Make an API request to get recommendations
-      const response = await axios.post(
-        "/api/recommendations",
-        selectedProduct
-      ); // Adjust the endpoint URL
-      const data = response.data; // Assuming the response contains recommended products
-      setRecommendedProducts(data);
-    } catch (error) {
-      console.error("Error fetching recommendations:", error);
-    }
-  };
+const fetchRecommendations = async () => {
+  try {
+    // Make an API request to get recommendations
+    const response = await axios.post(
+      "http://localhost:5000/predict", //endpoint URL according to Flask service
+      {
+        cart_size: 1, //match Flask service
+        cart: [selectedProduct],
+      }
+    );
+    const indices = response.data.recommended_indices; // Assuming the response contains recommended product indices
+
+    // Fetch details for each recommended product
+    const detailsRequests = indices.map(
+      (index) => axios.get(`http://localhost:3000/shoe/${index}`) // Adjust the URL to your Express server
+    );
+    const detailsResponses = await Promise.all(detailsRequests);
+    const products = detailsResponses.map((res) => res.data);
+
+    setRecommendedProducts(products);
+  } catch (error) {
+    console.error("Error fetching recommendations:", error);
+  }
+};
 
   return (
     <div>
