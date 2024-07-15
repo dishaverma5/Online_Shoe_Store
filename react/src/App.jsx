@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Shoe from "./components/Shoe";
 import shoe_data from "./assets/shoe.json";
 import promo_data from "./assets/promo.json";
-import Header from "./components/Header";
+//import Header from "./components/Header";
 import Search from "./components/Search";
 import Promotion from "./components/Promotion";
 import Home from "./components/Home";
