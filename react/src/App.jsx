@@ -27,7 +27,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`${import.meta.env.VITE_API_URL}/shoe`);
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/shoes`);
         if (!response.ok) {
           throw new Error('Data could not be fetched!');
         }
@@ -56,16 +56,17 @@ function App() {
   const sizes = ["Small", "Medium", "Large"];
 
   return (
-    <Router>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
-        <div className="container-fluid">
-          <Link className="navbar-brand" to="/">
-            <h2 style={{ fontFamily: "Didot", color: "#003f69" }}>
-              <b>S T E P - U P</b>
-            </h2>
-          </Link>
-          <button
-            className="navbar-toggler"
+    <>
+      <Router>
+        <nav className="navbar navbar-expand-lg bg-body-tertiary">
+          <div className="container-fluid">
+            <Link className="navbar-brand" to="/">
+              <h2 style={{ fontFamily: "Didot", color: "#003f69" }}>
+                <b>S T E P - U P</b>
+              </h2>
+            </Link>
+            <button
+              className="navbar-toggler"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#navbarSupportedContent"
@@ -75,7 +76,10 @@ function App() {
             >
               <span className="navbar-toggler-icon"></span>
             </button>
-            <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <div
+              className="collapse navbar-collapse"
+              id="navbarSupportedContent"
+            >
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
                   <Link className="nav-link" to="/">
@@ -101,23 +105,7 @@ function App() {
           <div className="container-fluid">
             <div className="row">
               <div className="col">
-                <Routes>
-                  <Route path="/" element={<Home data={data} page={page} setPage={setPage} addToCart={addToCart} />} />
-                  <Route path="/about" element={<About />} />
-                  <Route
-                    path="/add"
-                    element={
-                      <RequireAuth>
-                        <AddShoe addToCart={addToCart} />
-                      </RequireAuth>
-                    }
-                  />
-                  <Route path="/login" element={<LoginForm />} />
-                  <Route path="/cart" element={<Cart cart={cart} />} />
-                  <Route path="/checkout" element={<Checkout cart={cart} setCart={setCart} />} />
-                  <Route path="/product/:productId" element={<ProductDetails products={data} addToCart={addToCart} />} />
-                  <Route path="/order-placed" element={<OrderPlaced cart={cart} />} />
-                </Routes>
+                <Featured data={data} />
               </div>
             </div>
             <div className="row">
@@ -126,6 +114,37 @@ function App() {
               </div>
             </div>
             <hr />
+            <AuthProvider>
+              <Routes>
+                <Route
+                  exact
+                  path="/"
+                  element={
+                    <Home
+                      data={data}
+                      handleDelete={() => {}}
+                      page={page}
+                      setPage={setPage}
+                      addToCart={addToCart}
+                    />
+                  }
+                />
+                <Route path="/about" element={<About />} />
+                <Route
+                  path="/add"
+                  element={
+                    <RequireAuth>
+                      <AddShoe addToCart={addToCart} />
+                    </RequireAuth>
+                  }
+                />
+                <Route path="/login" element={<LoginForm />} />
+                <Route path="/cart" element={<Cart cart={cart} />} />
+                <Route path="/checkout" element={<Checkout cart={cart} setCart={setCart} />} />
+                <Route path="/product/:productId" element={<ProductDetails products={data} addToCart={addToCart} />} />
+                <Route path="/order-placed" element={<OrderPlaced cart={cart} />} />
+              </Routes>
+            </AuthProvider>
           </div>
         </main>
         <footer>
@@ -134,6 +153,7 @@ function App() {
           </div>
         </footer>
       </Router>
+    </>
   );
 }
 
