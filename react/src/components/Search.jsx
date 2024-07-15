@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 const Search = ({ setData }) => {
   const [searchTerm, setSearchTerm] = useState("");
+  const [error, setError] = useState(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -20,8 +21,11 @@ const Search = ({ setData }) => {
 
       const data = await response.json();
       setData(data);
+      setError(null); // Clear any previous errors
     } catch (error) {
       console.error("Error fetching data:", error);
+      setError("Error fetching data. Please try again."); // Set error state
+      setData([]); // Optionally clear previous data on error
     }
   };
 
@@ -42,6 +46,7 @@ const Search = ({ setData }) => {
       <button className="btn btn-outline-success" type="submit">
         Search
       </button>
+      {error && <p className="text-danger">{error}</p>}
     </form>
   );
 };

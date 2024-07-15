@@ -49,36 +49,56 @@ function App() {
     }
   };
 
-  const handleSearch = async (searchTerm) => {
-    try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/search`, {
-        method: "POST",
-        body: JSON.stringify({ searchTerm }),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-      
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
-
-      const data = await response.json();
-      setData(data);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
-  };
-
   return (
     <>
       <Router>
-        <Header />
+        <Header /> {/* Ensure Header component is used */}
+        <nav className="navbar navbar-expand-lg bg-body-tertiary">
+          <div className="container-fluid">
+            <Link className="navbar-brand" to="/">
+              <h2 style={{ fontFamily: "Didot", color: "#003f69" }}>
+                <b>S T E P - U P</b>
+              </h2>
+            </Link>
+            <button
+              className="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span className="navbar-toggler-icon"></span>
+            </button>
+            <div
+              className="collapse navbar-collapse"
+              id="navbarSupportedContent"
+            >
+              <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                <li className="nav-item">
+                  <Link className="nav-link" to="/">
+                    <b>HOME</b>
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/about">
+                    <b>ABOUT</b>
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/cart">
+                    <b>MY CART</b>
+                  </Link>
+                </li>
+              </ul>
+              <Search setData={setData} />
+            </div>
+          </div>
+        </nav>
         <main role="main" className="col-md-9 ml-sm-auto col-lg-10 px-md-4">
           <div className="container-fluid">
             <div className="row">
-              <Featured data={data} />
-              <hr />
               <AuthProvider>
                 <Routes>
                   <Route
