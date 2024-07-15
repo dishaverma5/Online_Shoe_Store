@@ -50,10 +50,6 @@ function App() {
     }
   };
 
-  const brands = ["Nike", "Adidas", "Puma"];
-  const colors = ["Red", "Blue", "Black", "White"];
-  const sizes = ["Small", "Medium", "Large"];
-
   return (
     <>
       <Router>
@@ -103,7 +99,7 @@ function App() {
         <main role="main" className="col-md-9 ml-sm-auto col-lg-10 px-md-4">
           <div className="container-fluid">
             <div className="row">
-              <Categories brands={brands} colors={colors} sizes={sizes} />
+              <Featured data={[]} />
               <hr />
               <AuthProvider>
                 <Routes>
@@ -129,7 +125,7 @@ function App() {
                       </RequireAuth>
                     }
                   />
-                  <Route path="/login" element={<LoginForm />} />
+                  <Route path="/Login" element={<LoginForm />} />
                   <Route path="/cart" element={<Cart cart={cart} />} />
                   <Route path="/checkout" element={<Checkout cart={cart} setCart={setCart} />} />
                   <Route path="/product/:productId" element={<ProductDetails products={data} addToCart={addToCart} />} />
