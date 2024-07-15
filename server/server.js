@@ -82,7 +82,7 @@ app.get("/orders", async (req, res) => {
     const ordersCollection = db.collection("orders");
     const orders = await ordersCollection.find({}).toArray();
     res.json(orders);
-    client.close(); // Close the database connection
+    client.close(); // Closing database connection
   } catch (err) {
     console.error("Error:", err);
     res.status(500).send("Error fetching orders.");

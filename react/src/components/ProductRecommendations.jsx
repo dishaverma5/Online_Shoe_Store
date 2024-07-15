@@ -20,11 +20,11 @@ const fetchRecommendations = async () => {
         cart: [selectedProduct],
       }
     );
-    const indices = response.data.recommended_indices; // Assuming the response contains recommended product indices
+    const indices = response.data.recommended_indices; //response contains recommended product indices
 
     // Fetch details for each recommended product
     const detailsRequests = indices.map(
-      (index) => axios.get(`http://localhost:3000/shoe/${index}`) // Adjust the URL to your Express server
+      (index) => axios.get(`http://localhost:3000/shoe/${index}`) //URL to your Express server
     );
     const detailsResponses = await Promise.all(detailsRequests);
     const products = detailsResponses.map((res) => res.data);

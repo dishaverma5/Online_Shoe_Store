@@ -59,9 +59,9 @@ const Checkout = ({ cart, setCart }) => {
 
   return (
     <div className="checkout-container">
-      <h2 className="checkout-title">CHECKOUT</h2>
+      <h3 className="checkout-title"> <u><b>C H E C K O U T</b></u> </h3>
       <div className="checkout-cart">
-        <h3>Cart Items:</h3>
+        <h3> Cart Items: </h3>
         <ul>
           {cart.map((item, index) => (
             <li key={index}>
@@ -69,12 +69,12 @@ const Checkout = ({ cart, setCart }) => {
             </li>
           ))}
         </ul>
-        <h4>Total: ${total.toFixed(2)}</h4>
+        <h4>TOTAL: ${total.toFixed(2)}</h4>
       </div>
       <form className="checkout-form" onSubmit={handleSubmit}>
         <div className="checkout-section">
           <div className="payment-info">
-            <h3>PAYMENT INFORMATION</h3>
+            <h4><u>PAYMENT INFORMATION</u></h4>
             <div>
               <label htmlFor="cardNumber">Card Number:</label>
               <input
@@ -113,7 +113,7 @@ const Checkout = ({ cart, setCart }) => {
         </div>
         <div className="checkout-section">
           <div className="shipping-info">
-            <h3>SHIPPING INFORMATION</h3>
+            <h4><u>SHIPPING INFORMATION</u></h4>
             <div>
               <label htmlFor="name">Name:</label>
               <input
@@ -172,7 +172,7 @@ const Checkout = ({ cart, setCart }) => {
           </div>
         </div>
         <div className="checkout-button">
-          <button type="submit">Place Order</button>
+          <button type="submit"><b>Place Order</b></button>
         </div>
       </form>
     </div>
