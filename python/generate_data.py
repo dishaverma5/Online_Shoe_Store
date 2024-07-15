@@ -38,3 +38,5 @@ with open('shoes.json', 'w') as f:
     f.write(json_data)
 
 print("1,000 JSON documents saved to shoes.json")
+
+

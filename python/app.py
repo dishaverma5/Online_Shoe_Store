@@ -47,3 +47,13 @@ def predict():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+
+
+import pickle
+
+#loading trained KNN model from KNNmodel.pkl
+with open('KNNmodel.pkl', 'rb') as f:
+    knn = pickle.load(f)
+
+print("KNN model loaded successfully.")
