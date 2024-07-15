@@ -30,10 +30,13 @@ const Checkout = ({ cart }) => {
   const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
   return (
-    <div style={{ textAlign: 'center' }}>
-      <h3 style={{ fontFamily: 'Didot', color: '#004878' }}>
-        <b><u>CHECKOUT</u></b>
+    <div style={{ textAlign: "center" }}>
+      <h3 style={{ fontFamily: "Didot", color: "#004878" }}>
+        <b>
+          <u>CHECKOUT</u>
+        </b>
       </h3>
+      <br />
       <ul>
         {cart.map((item, index) => (
           <li key={index}>
@@ -41,10 +44,24 @@ const Checkout = ({ cart }) => {
           </li>
         ))}
       </ul>
-      <h4>Total: ${total}</h4>
+      <div
+        style={{
+          backgroundColor: "white",
+          borderRadius: "10px",
+          display: "inline-block",
+          padding: "10px 20px",
+          marginTop: "10px",
+        }}
+      >
+        <h4 style={{ margin: "0" }}>
+          <b>TOTAL: ${total.toFixed(2)}</b>{" "}
+          {/* show total amount rounded to 2 decimal places */}
+        </h4>
+      </div>
+      <br /> <br />
       <div>
         <label>
-          Payment Info:
+          <b>PAYMENT INFORMATION: </b>
           <input
             type="text"
             value={paymentInfo}
@@ -52,9 +69,10 @@ const Checkout = ({ cart }) => {
           />
         </label>
       </div>
+      <br />
       <div>
         <label>
-          Shipping Info:
+          <b>SHIPPING INFORMATION: </b>
           <input
             type="text"
             value={shippingInfo}
@@ -62,7 +80,27 @@ const Checkout = ({ cart }) => {
           />
         </label>
       </div>
-      <button className="btn btn-primary" onClick={handleCheckout}>Place Order</button>
+      <br />
+      <button
+        style={{
+          backgroundColor: "#0d4d25",
+          border: "3px solid #2478fe",
+          color: "white",
+          padding: "10px 20px",
+          fontSize: "16px",
+          cursor: "pointer",
+          borderRadius: "5px",
+          textDecoration: "none",
+          transition: "background-color 0.3s",
+        }}
+        onClick={handleCheckout}
+        onMouseEnter={(e) => (e.target.style.backgroundColor = "#2478b7")}
+        onMouseLeave={(e) => (e.target.style.backgroundColor = "#0d4d25")}
+      >
+        Place Order
+      </button>
+      <br />
+      <br />
     </div>
   );
 };
