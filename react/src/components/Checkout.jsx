@@ -49,7 +49,7 @@ const Checkout = ({ cart, setCart }) => {
       console.log('Order created:', result);
 
       setCart([]);
-      navigate('/confirmation');
+      navigate('/order-placed');
     } catch (error) {
       console.error('Error creating order:', error);
     }
