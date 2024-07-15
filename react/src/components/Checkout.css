@@ -26,25 +26,25 @@
   
   .checkout-form {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     width: 100%;
   }
   
-  .checkout-section {
-    flex: 1;
-    margin: 0 20px;
+  .checkout-form .checkout-section {
+    display: flex;
+    justify-content: space-between;
   }
   
-  .checkout-section div {
+  .checkout-form .checkout-section div {
     margin-bottom: 1em;
   }
   
-  .checkout-section label {
+  .checkout-form .checkout-section label {
     display: block;
     margin-bottom: 0.5em;
   }
   
-  .checkout-section input {
+  .checkout-form .checkout-section input {
     padding: 0.5em;
     width: 100%;
     max-width: 300px;
@@ -54,7 +54,6 @@
   .checkout-button {
     display: flex;
     justify-content: center;
-    width: 100%;
     margin-top: 20px;
   }
   
