@@ -1,20 +1,14 @@
+import React from "react";
 import Shoe from "./Shoe";
 
-const Home = (props) => {
+const Home = ({ data, addToCart }) => {
   return (
-    <div
-      className="card-container"
-      style={{ display: "flex", flexWrap: "wrap", gap: "20px"  }
-    
-    }
-    >
-      {props.data.map((shoe) => (
-        <Shoe key={shoe._id} data={shoe} />
+    <div className="row">
+      {data.map((product) => (
+        <Shoe key={product.shoe_id} product={product} addToCart={addToCart} />
       ))}
     </div>
   );
 };
-
-
 
 export default Home;

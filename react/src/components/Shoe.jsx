@@ -1,11 +1,12 @@
 import React from "react";
 
 const Shoe = ({ product }) => {
-  if (!product) {
+  if (!product || !product.shoeDetails) {
     return <div className="card">Product data is unavailable</div>;
   }
 
-  const { brand, type, color, size, price, category } = product;
+  const { brand, shoe_type, color, size, price } = product.shoeDetails;
+  const { isPopular, inStock, onSale } = product.additionalFeatures;
 
   return (
     <div
@@ -14,11 +15,13 @@ const Shoe = ({ product }) => {
     >
       <div className="card-body">
         <h5 className="card-title">Brand: {brand}</h5>
-        <div className="card-text">Type: {type}</div>
+        <div className="card-text">Type: {shoe_type}</div>
         <div className="card-text">Color: {color}</div>
         <div className="card-text">Size: {size}</div>
         <div className="card-text">Price: $ {price}</div>
-        <div className="card-text">Category: {category}</div>
+        <div className="card-text">Popular: {isPopular ? "Yes" : "No"}</div>
+        <div className="card-text">In Stock: {inStock ? "Yes" : "No"}</div>
+        <div className="card-text">On Sale: {onSale ? "Yes" : "No"}</div>
       </div>
       <div
         className="card-footer"
