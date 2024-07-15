@@ -12,7 +12,6 @@ const app = express();
 
 // Configure CORS middleware
 app.use(cors());
-
 app.use(express.json()); // Middleware to parse JSON bodies
 
 const PORT = 3000;
@@ -20,7 +19,10 @@ const PORT = 3000;
 // Endpoint to fetch all shoes
 app.get("/shoes", async (req, res) => {
   try {
-    const client = await MongoClient.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
+    const client = await MongoClient.connect(url, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
     const db = client.db(dbName);
     const shoesCollection = db.collection("shoes");
     const shoes = await shoesCollection.find({}).toArray();
@@ -34,7 +36,10 @@ app.get("/shoes", async (req, res) => {
 // Endpoint to search for shoes by criteria
 app.post("/search", async (req, res) => {
   try {
-    const client = await MongoClient.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
+    const client = await MongoClient.connect(url, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
     const db = client.db(dbName);
     const shoesCollection = db.collection("shoes");
     const { searchTerm } = req.body;
@@ -50,7 +55,10 @@ app.post("/search", async (req, res) => {
 // Endpoint to create an order
 app.post("/orders", async (req, res) => {
   try {
-    const client = await MongoClient.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
+    const client = await MongoClient.connect(url, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
     const db = client.db(dbName);
     const ordersCollection = db.collection("orders");
     const { cart, total, paymentInfo, shippingInfo } = req.body;
@@ -62,7 +70,7 @@ app.post("/orders", async (req, res) => {
       createdAt: new Date(),
     };
     const result = await ordersCollection.insertOne(newOrder);
-    res.status(201).send(result.ops[0]);
+    res.status(201).json(result.ops[0]);
   } catch (err) {
     console.error("Error:", err);
     res.status(500).send("Error creating order.");
@@ -72,7 +80,10 @@ app.post("/orders", async (req, res) => {
 // Endpoint to fetch all orders (for admin purposes)
 app.get("/orders", async (req, res) => {
   try {
-    const client = await MongoClient.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
+    const client = await MongoClient.connect(url, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
     const db = client.db(dbName);
     const ordersCollection = db.collection("orders");
     const orders = await ordersCollection.find({}).toArray();
