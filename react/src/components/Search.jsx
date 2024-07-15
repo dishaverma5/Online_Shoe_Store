@@ -1,32 +1,28 @@
 import React, { useState } from "react";
 
-const Search = (props) => {
+const Search = ({ setData }) => {
   const [searchTerm, setSearchTerm] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    fetch(`${import.meta.env.VITE_API_URL}/search`, {  // Using VITE_API_URL here
-      method: "POST",
-      body: JSON.stringify({ searchTerm }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        return response.json();
-      })
-      .then((data) => {
-        // Handle the response data
-        props.setData(data);
-        console.log(data);
-      })
-      .catch((error) => {
-        // Handle any errors
-        console.error("Error fetching data:", error);
+    try {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/search`, {
+        method: "POST",
+        body: JSON.stringify({ searchTerm }),
+        headers: {
+          "Content-Type": "application/json",
+        },
       });
+
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+
+      const data = await response.json();
+      setData(data);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
   };
 
   const handleChange = (e) => {

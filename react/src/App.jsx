@@ -49,14 +49,35 @@ function App() {
     }
   };
 
+  const handleSearch = async (searchTerm) => {
+    try {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/search`, {
+        method: "POST",
+        body: JSON.stringify({ searchTerm }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+
+      const data = await response.json();
+      setData(data);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+
   return (
     <>
       <Router>
-        <Header /> {/* Include the Header component here */}
+        <Header />
         <main role="main" className="col-md-9 ml-sm-auto col-lg-10 px-md-4">
           <div className="container-fluid">
             <div className="row">
-              <Featured data={data} /> {/* Pass data to Featured component */}
+              <Featured data={data} />
               <hr />
               <AuthProvider>
                 <Routes>
