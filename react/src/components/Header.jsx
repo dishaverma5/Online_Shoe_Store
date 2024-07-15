@@ -1,15 +1,14 @@
- 
-
 import React from "react";
 import { Link } from "react-router-dom"; // If using React Router for navigation
+import Search from "./Search"; // Adjust the import path based on your folder structure
 
 const Header = () => {
   return (
     <header>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <div className="container">
+        <div className="container-fluid">
           <Link className="navbar-brand" to="/">
-            <span >
+            <span>
               <b>STEP UP SHOES </b>
             </span>
           </Link>
@@ -25,7 +24,7 @@ const Header = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav ml-auto">
+            <ul className="navbar-nav ml-auto w-100 justify-content-end">
               <li className="nav-item">
                 <Link className="nav-link" to="/">
                   HOME
@@ -47,6 +46,9 @@ const Header = () => {
                 </Link>
               </li>
             </ul>
+          </div>
+          <div className="ml-auto">
+            <Search /> {/* Adjust the placement of Search based on your design */}
           </div>
         </div>
       </nav>
