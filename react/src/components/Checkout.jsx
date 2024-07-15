@@ -1,50 +1,68 @@
 // components/Checkout.jsx
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 const Checkout = ({ cart }) => {
-  const [paymentInfo, setPaymentInfo] = useState("");
-  const [shippingInfo, setShippingInfo] = useState("");
+  const [paymentInfo, setPaymentInfo] = useState('');
+  const [shippingInfo, setShippingInfo] = useState('');
 
-  const handleCheckout = () => {
-    // Handle the checkout process here (e.g., send data to the server)
-    console.log("Payment Info:", paymentInfo);
-    console.log("Shipping Info:", shippingInfo);
-    console.log("Cart Items:", cart);
+  const handleCheckout = async () => {
+    try {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/orders`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ cart, paymentInfo, shippingInfo }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const data = await response.json();
+      console.log('Order placed:', data);
+      // Clear cart and form fields after successful order placement
+    } catch (error) {
+      console.error('Error placing order:', error);
+    }
   };
 
-  const calculateTotal = () => {
-    return cart.reduce((total, item) => total + item.price * item.quantity, 0);
-  };
+  const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
   return (
-    <div className="container">
-      <h2>Checkout</h2>
-      <ul className="list-group mb-3">
+    <div style={{ textAlign: 'center' }}>
+      <h3 style={{ fontFamily: 'Didot', color: '#004878' }}>
+        <b><u>CHECKOUT</u></b>
+      </h3>
+      <ul>
         {cart.map((item, index) => (
-          <li key={index} className="list-group-item d-flex justify-content-between lh-condensed">
-            <div>
-              <h6 className="my-0">{item.name}</h6>
-              <small className="text-muted">Quantity: {item.quantity}</small>
-            </div>
-            <span className="text-muted">${item.price * item.quantity}</span>
+          <li key={index}>
+            {item.brand} - Quantity: {item.quantity} - Price: ${item.price}
           </li>
         ))}
       </ul>
-      <div className="d-flex justify-content-between">
-        <span>Total (USD)</span>
-        <strong>${calculateTotal()}</strong>
+      <h4>Total: ${total}</h4>
+      <div>
+        <label>
+          Payment Info:
+          <input
+            type="text"
+            value={paymentInfo}
+            onChange={(e) => setPaymentInfo(e.target.value)}
+          />
+        </label>
       </div>
-      <form onSubmit={handleCheckout}>
-        <div className="mb-3">
-          <label htmlFor="paymentInfo" className="form-label">Payment Information</label>
-          <input type="text" className="form-control" id="paymentInfo" value={paymentInfo} onChange={(e) => setPaymentInfo(e.target.value)} required />
-        </div>
-        <div className="mb-3">
-          <label htmlFor="shippingInfo" className="form-label">Shipping Information</label>
-          <input type="text" className="form-control" id="shippingInfo" value={shippingInfo} onChange={(e) => setShippingInfo(e.target.value)} required />
-        </div>
-        <button type="submit" className="btn btn-primary">Place Order</button>
-      </form>
+      <div>
+        <label>
+          Shipping Info:
+          <input
+            type="text"
+            value={shippingInfo}
+            onChange={(e) => setShippingInfo(e.target.value)}
+          />
+        </label>
+      </div>
+      <button className="btn btn-primary" onClick={handleCheckout}>Place Order</button>
     </div>
   );
 };

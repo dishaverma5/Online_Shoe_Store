@@ -1,17 +1,20 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import Shoe from "./components/Shoe";
+import shoe_data from "./assets/shoe.json";
+import promo_data from "./assets/promo.json";
+///import Footer from "./components/Footer";
 import Search from "./components/Search";
 import Promotion from "./components/Promotion";
 import Home from "./components/Home";
 import RequireAuth from "./components/RequireAuth";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import About from "./components/About";
 import Featured from "./components/Featured";
 import AddShoe from "./components/AddShoe";
 import LoginForm from "./components/LoginForm";
 import { AuthProvider } from "./hooks/AuthContext";
-import Cart from "./components/Cart";
-import Checkout from "./components/Checkout";
+import Cart from './components/Cart';
+import Checkout from './components/Checkout';
 
 function App() {
   const [data, setData] = useState([]);
@@ -23,12 +26,12 @@ function App() {
       try {
         const response = await fetch(`${import.meta.env.VITE_API_URL}/shoes`);
         if (!response.ok) {
-          throw new Error("Data could not be fetched!");
+          throw new Error('Data could not be fetched!');
         }
         const json_response = await response.json();
         setData(json_response);
       } catch (error) {
-        console.error("Error fetching shoes:", error);
+        console.error('Error fetching shoes:', error);
       }
     };
 
@@ -50,8 +53,8 @@ function App() {
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
           <div className="container-fluid">
             <Link className="navbar-brand" to="/">
-              <h2 style={{ fontFamily: "Didot", color: "#003f69" }}>
-                <b>S T E P - U P </b>
+              <h2 style={{ fontFamily: 'Didot', color: '#003f69' }}>
+                <b>S T E P - U P</b>
               </h2>
             </Link>
             <button
@@ -74,7 +77,7 @@ function App() {
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link" to="/about">
-                    <b>ABOUT </b>
+                    <b>ABOUT</b>
                   </Link>
                 </li>
                 <li className="nav-item">
@@ -133,89 +136,5 @@ function App() {
     </>
   );
 }
-
-const Cart = ({ cart }) => (
-  <div style={{ textAlign: "center" }}>
-    <h3 style={{ fontFamily: "Didot", color: "#004878" }}>
-      <b><u>C A R T - I T E M S </u></b>
-    </h3>
-    <ul>
-      {cart.map((item, index) => (
-        <li key={index}>
-          {item.brand} - Quantity: {item.quantity}
-        </li>
-      ))}
-    </ul>
-    <Link to="/checkout">
-      <button className="btn btn-primary">Proceed to Checkout</button>
-    </Link>
-  </div>
-);
-
-const Checkout = ({ cart }) => {
-  const [paymentInfo, setPaymentInfo] = useState("");
-  const [shippingInfo, setShippingInfo] = useState("");
-
-  const handleCheckout = async () => {
-    try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/orders`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ cart, paymentInfo, shippingInfo }),
-      });
-
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-
-      const data = await response.json();
-      console.log("Order placed:", data);
-      // Clear cart and form fields after successful order placement
-    } catch (error) {
-      console.error("Error placing order:", error);
-    }
-  };
-
-  const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
-
-  return (
-    <div style={{ textAlign: "center" }}>
-      <h3 style={{ fontFamily: "Didot", color: "#004878" }}>
-        <b><u>CHECKOUT</u></b>
-      </h3>
-      <ul>
-        {cart.map((item, index) => (
-          <li key={index}>
-            {item.brand} - Quantity: {item.quantity} - Price: ${item.price}
-          </li>
-        ))}
-      </ul>
-      <h4>Total: ${total}</h4>
-      <div>
-        <label>
-          Payment Info:
-          <input
-            type="text"
-            value={paymentInfo}
-            onChange={(e) => setPaymentInfo(e.target.value)}
-          />
-        </label>
-      </div>
-      <div>
-        <label>
-          Shipping Info:
-          <input
-            type="text"
-            value={shippingInfo}
-            onChange={(e) => setShippingInfo(e.target.value)}
-          />
-        </label>
-      </div>
-      <button className="btn btn-primary" onClick={handleCheckout}>Place Order</button>
-    </div>
-  );
-};
 
 export default App;
