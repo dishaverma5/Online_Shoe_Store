@@ -50,9 +50,15 @@ function App() {
     }
   };
 
+  // Dummy data for categories
+  const brands = ["Nike", "Adidas", "Puma"];
+  const colors = ["Red", "Blue", "Black", "White"];
+  const sizes = ["Small", "Medium", "Large"];
+
   return (
     <>
       <Router>
+        <Header />
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
           <div className="container-fluid">
             <Link className="navbar-brand" to="/">
@@ -99,40 +105,47 @@ function App() {
         <main role="main" className="col-md-9 ml-sm-auto col-lg-10 px-md-4">
           <div className="container-fluid">
             <div className="row">
-              <Featured data={[]} />
-              <hr />
-              <AuthProvider>
-                <Routes>
-                  <Route
-                    exact
-                    path="/"
-                    element={
-                      <Home
-                        data={data}
-                        handleDelete={() => {}}
-                        page={page}
-                        setPage={setPage}
-                        addToCart={addToCart}
-                      />
-                    }
-                  />
-                  <Route path="/about" element={<About />} />
-                  <Route
-                    path="/add"
-                    element={
-                      <RequireAuth>
-                        <AddShoe addToCart={addToCart} />
-                      </RequireAuth>
-                    }
-                  />
-                  <Route path="/Login" element={<LoginForm />} />
-                  <Route path="/cart" element={<Cart cart={cart} />} />
-                  <Route path="/checkout" element={<Checkout cart={cart} setCart={setCart} />} />
-                  <Route path="/product/:productId" element={<ProductDetails products={data} addToCart={addToCart} />} />
-                  <Route path="/order-placed" element={<OrderPlaced cart={cart} />} />
-                </Routes>
-              </AuthProvider>
+              <div className="col">
+                <Featured data={data} />
+              </div>
             </div>
+            <div className="row">
+              <div className="col">
+                <Categories brands={brands} colors={colors} sizes={sizes} />
+              </div>
+            </div>
+            <hr />
+            <AuthProvider>
+              <Routes>
+                <Route
+                  exact
+                  path="/"
+                  element={
+                    <Home
+                      data={data}
+                      handleDelete={() => {}}
+                      page={page}
+                      setPage={setPage}
+                      addToCart={addToCart}
+                    />
+                  }
+                />
+                <Route path="/about" element={<About />} />
+                <Route
+                  path="/add"
+                  element={
+                    <RequireAuth>
+                      <AddShoe addToCart={addToCart} />
+                    </RequireAuth>
+                  }
+                />
+                <Route path="/login" element={<LoginForm />} />
+                <Route path="/cart" element={<Cart cart={cart} />} />
+                <Route path="/checkout" element={<Checkout cart={cart} setCart={setCart} />} />
+                <Route path="/product/:productId" element={<ProductDetails products={data} addToCart={addToCart} />} />
+                <Route path="/order-placed" element={<OrderPlaced cart={cart} />} />
+              </Routes>
+            </AuthProvider>
           </div>
         </main>
         <footer>
