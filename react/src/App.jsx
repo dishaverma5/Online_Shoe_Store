@@ -126,7 +126,7 @@ function App() {
                   />
                   <Route path="/Login" element={<LoginForm />} />
                   <Route path="/cart" element={<Cart cart={cart} />} />
-                  <Route path="/checkout" element={<Checkout cart={cart} />} />
+                  <Route path="/checkout" element={<Checkout cart={cart} setCart={setCart} />} />
                   <Route path="/product/:productId" element={<ProductDetails products={data} addToCart={addToCart} />} />
                   <Route path="/order-placed" element={<OrderPlaced cart={cart} />} />
                 </Routes>
