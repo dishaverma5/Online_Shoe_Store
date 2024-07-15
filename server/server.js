@@ -2,6 +2,8 @@ import { MongoClient } from "mongodb";
 import dotenv from "dotenv";
 import cors from "cors";
 import express from "express";
+import path from "path";
+import fs from "fs";
 
 dotenv.config();
 

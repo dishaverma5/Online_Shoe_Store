@@ -5,12 +5,10 @@ import Promotion from "./Promotion";
 const Featured = (props) => {
   const location = useLocation();
 
-  // Check if the current location is the Home page
   const isHomePage = location.pathname === "/";
 
-  // Render the component only on the Home page
   if (!isHomePage) {
-    return null; // Return null if not on the Home page
+    return null;
   }
 
   return (
