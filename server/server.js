@@ -18,11 +18,11 @@ app.use(express.json()); // Middleware to parse JSON bodies
 const PORT = 3000;
 
 // Endpoint to fetch all shoes
-app.get("/shoes", async (req, res) => {
+app.get("/shoe", async (req, res) => {
   try {
     const client = await MongoClient.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
     const db = client.db(dbName);
-    const shoesCollection = db.collection("shoes");
+    const shoesCollection = db.collection("shoe");
     const shoes = await shoesCollection.find({}).toArray();
     res.json(shoes);
     client.close(); // Close the database connection
@@ -89,27 +89,4 @@ app.get("/orders", async (req, res) => {
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
-});
-
-
-
-
-// Load KNN model 
-const knnModel = require("C:Capstone_OnlineStorepythonKNNmodel.pkl"); 
-
-// Endpoint to get recommended products
-app.post("/api/recommendations", async (req, res) => {
-  try {
-    const selectedProduct = req.body; // Assuming the selected product is sent in the request body
-    // Preprocess the input features (normalize, encode, etc.) to match the model's format
- 
-    // Use the KNN model to get recommended products
-    const recommendedProducts = knnModel.getRecommendations(selectedProduct);
-
-    // Return the recommended products as JSON response
-    res.json(recommendedProducts);
-  } catch (error) {
-    console.error("Error fetching recommendations:", error);
-    res.status(500).send("Error fetching recommendations.");
-  }
 });
