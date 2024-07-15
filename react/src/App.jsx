@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Shoe from "./components/Shoe";
 import shoe_data from "./assets/shoe.json";
 import promo_data from "./assets/promo.json";
-///import Footer from "./components/Footer";
+import Header from "./components/Header";
 import Search from "./components/Search";
 import Promotion from "./components/Promotion";
 import Home from "./components/Home";
@@ -52,53 +52,11 @@ function App() {
   return (
     <>
       <Router>
-        <nav className="navbar navbar-expand-lg bg-body-tertiary">
-          <div className="container-fluid">
-            <Link className="navbar-brand" to="/">
-              <h2 style={{ fontFamily: "Didot", color: "#003f69" }}>
-                <b>S T E P - U P</b>
-              </h2>
-            </Link>
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <div
-              className="collapse navbar-collapse"
-              id="navbarSupportedContent"
-            >
-              <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                <li className="nav-item">
-                  <Link className="nav-link" to="/">
-                    <b>HOME</b>
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/about">
-                    <b>ABOUT</b>
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/cart">
-                    <b>MY CART</b>
-                  </Link>
-                </li>
-              </ul>
-              <Search setData={setData} />
-            </div>
-          </div>
-        </nav>
+        <Header /> {/* Include the Header component here */}
         <main role="main" className="col-md-9 ml-sm-auto col-lg-10 px-md-4">
           <div className="container-fluid">
             <div className="row">
-              <Featured data={[]} />
+              <Featured data={data} /> {/* Pass data to Featured component */}
               <hr />
               <AuthProvider>
                 <Routes>
