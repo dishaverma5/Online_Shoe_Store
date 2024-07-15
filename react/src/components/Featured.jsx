@@ -10,6 +10,9 @@ const Featured = ({ data }) => {
     return null;
   }
 
+  // Slice the data to only get the first 10 items
+  const featuredItems = data.slice(0, 10);
+
   return (
     <>
       <div>
@@ -41,7 +44,7 @@ const Featured = ({ data }) => {
         className="card-container d-flex flex-row justify-content-start"
         style={{ gap: "20px", padding: "20px" }}
       >
-        {data.map((promo, index) => (
+        {featuredItems.map((promo, index) => (
           <Promotion key={promo.id || index} data={promo} />
         ))}
       </div>
