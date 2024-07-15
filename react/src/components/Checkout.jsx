@@ -59,7 +59,7 @@ const Checkout = ({ cart, setCart }) => {
     <div className="checkout-container">
       <form className="checkout-form" onSubmit={handleSubmit}>
         <div className="checkout-section">
-          <h3>PAYMENT INFORMATION</h3>
+          <h3>Payment Information</h3>
           <div>
             <label htmlFor="cardNumber">Card Number:</label>
             <input
@@ -96,7 +96,7 @@ const Checkout = ({ cart, setCart }) => {
           </div>
         </div>
         <div className="checkout-section">
-          <h3>SHIPPING INFORMATION</h3>
+          <h3>Shipping Information</h3>
           <div>
             <label htmlFor="name">Name:</label>
             <input
