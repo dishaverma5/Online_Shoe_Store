@@ -2,7 +2,7 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import Promotion from "./Promotion";
 
-const Featured = (props) => {
+const Featured = ({ data }) => {
   const location = useLocation();
   const isHomePage = location.pathname === "/";
 
@@ -41,8 +41,8 @@ const Featured = (props) => {
         className="card-container d-flex flex-row justify-content-start"
         style={{ gap: "20px", padding: "20px" }}
       >
-        {props.data.map((promo) => (
-          <Promotion key={promo.id} data={promo} />
+        {data.map((promo, index) => (
+          <Promotion key={promo.id || index} data={promo} />
         ))}
       </div>
     </>
