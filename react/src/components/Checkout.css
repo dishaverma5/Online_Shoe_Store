@@ -1,7 +1,27 @@
 .checkout-container {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     margin: 20px;
+  }
+  
+  .checkout-title {
+    text-align: center;
+    font-family: Didot;
+    color: #004878;
+    margin-bottom: 20px;
+  }
+  
+  .checkout-cart {
+    margin-bottom: 20px;
+  }
+  
+  .checkout-cart ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .checkout-cart li {
+    margin-bottom: 10px;
   }
   
   .checkout-form {
@@ -29,6 +49,11 @@
     width: 100%;
     max-width: 300px;
     box-sizing: border-box;
+  }
+  
+  .checkout-button {
+    text-align: center;
+    margin-top: 20px;
   }
   
   button {

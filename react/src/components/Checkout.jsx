@@ -55,8 +55,22 @@ const Checkout = ({ cart, setCart }) => {
     }
   };
 
+  const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+
   return (
     <div className="checkout-container">
+      <h2 className="checkout-title">CHECKOUT</h2>
+      <div className="checkout-cart">
+        <h3>Cart Items</h3>
+        <ul>
+          {cart.map((item, index) => (
+            <li key={index}>
+              {item.shoeName} - Quantity: {item.quantity} - Price: ${item.price}
+            </li>
+          ))}
+        </ul>
+        <h4>Total: ${total.toFixed(2)}</h4>
+      </div>
       <form className="checkout-form" onSubmit={handleSubmit}>
         <div className="checkout-section">
           <h3>Payment Information</h3>
@@ -153,7 +167,9 @@ const Checkout = ({ cart, setCart }) => {
             />
           </div>
         </div>
-        <button type="submit">Place Order</button>
+        <div className="checkout-button">
+          <button type="submit">Place Order</button>
+        </div>
       </form>
     </div>
   );
