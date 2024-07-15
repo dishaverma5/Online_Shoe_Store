@@ -1,3 +1,23 @@
+import React, { useState, useEffect } from "react";
+import Shoe from "./components/Shoe";
+import shoe_data from "./assets/shoe.json";
+import promo_data from "./assets/promo.json";
+import Header from "./components/Header";
+import Search from "./components/Search";
+import Promotion from "./components/Promotion";
+import Home from "./components/Home";
+import RequireAuth from "./components/RequireAuth";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import About from "./components/About";
+import Featured from "./components/Featured";
+import AddShoe from "./components/AddShoe";
+import LoginForm from "./components/LoginForm";
+import { AuthProvider } from "./hooks/AuthContext";
+import Cart from './components/Cart';
+import Checkout from './components/Checkout';
+import ProductDetails from './components/ProductDetails';
+import OrderPlaced from "./components/OrderPlaced.jsx";
+
 function App() {
   const [data, setData] = useState([]);
   const [cart, setCart] = useState([]);
