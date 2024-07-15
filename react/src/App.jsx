@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import Search from "./components/Search";
 import Promotion from "./components/Promotion";
 import Home from "./components/Home";
+import Categories from "./components/Categories";
 import RequireAuth from "./components/RequireAuth";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import About from "./components/About";
@@ -98,7 +99,7 @@ function App() {
         <main role="main" className="col-md-9 ml-sm-auto col-lg-10 px-md-4">
           <div className="container-fluid">
             <div className="row">
-              <Featured data={[]} />
+              <Categories brands={brands} colors={colors} sizes={sizes} />
               <hr />
               <AuthProvider>
                 <Routes>
@@ -124,7 +125,7 @@ function App() {
                       </RequireAuth>
                     }
                   />
-                  <Route path="/Login" element={<LoginForm />} />
+                  <Route path="/login" element={<LoginForm />} />
                   <Route path="/cart" element={<Cart cart={cart} />} />
                   <Route path="/checkout" element={<Checkout cart={cart} setCart={setCart} />} />
                   <Route path="/product/:productId" element={<ProductDetails products={data} addToCart={addToCart} />} />
