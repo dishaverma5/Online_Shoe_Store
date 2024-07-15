@@ -4,7 +4,6 @@ import Promotion from "./Promotion";
 
 const Featured = (props) => {
   const location = useLocation();
-
   const isHomePage = location.pathname === "/";
 
   if (!isHomePage) {
