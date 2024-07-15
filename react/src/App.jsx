@@ -50,6 +50,10 @@ function App() {
     }
   };
 
+  const brands = ["Nike", "Adidas", "Puma"];
+  const colors = ["Red", "Blue", "Black", "White"];
+  const sizes = ["Small", "Medium", "Large"];
+
   return (
     <>
       <Router>
