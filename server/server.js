@@ -2,6 +2,8 @@ import { MongoClient } from "mongodb";
 import dotenv from "dotenv";
 import cors from "cors";
 import express from "express";
+import path from "path";
+import fs from "fs";
 
 dotenv.config();
 
@@ -91,18 +93,15 @@ app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
 
-
-
-
-// Load KNN model 
-const knnModel = require("C:Capstone_OnlineStorepythonKNNmodel.pkl"); 
+// Load KNN model
+import knnModel from "C:/Capstone_OnlineStore/python/KNNmodel.pkl";
 
 // Endpoint to get recommended products
 app.post("/api/recommendations", async (req, res) => {
   try {
     const selectedProduct = req.body; // Assuming the selected product is sent in the request body
     // Preprocess the input features (normalize, encode, etc.) to match the model's format
- 
+
     // Use the KNN model to get recommended products
     const recommendedProducts = knnModel.getRecommendations(selectedProduct);
 
