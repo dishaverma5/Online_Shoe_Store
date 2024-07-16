@@ -41,16 +41,20 @@ app.post("/search", async (req, res) => {
     const db = client.db(dbName);
     const shoesCollection = db.collection("shoe");
     const { searchTerm } = req.body;
-    console.log("Search term:", searchTerm); // Log the search term
 
-    const query = {
+    let query = {
       $or: [
         { "shoeDetails.brand": { $regex: searchTerm, $options: "i" } },
         { "shoeDetails.color": { $regex: searchTerm, $options: "i" } },
-        { "shoeDetails.size": { $regex: searchTerm, $options: "i" } },
         { "shoeDetails.shoe_type": { $regex: searchTerm, $options: "i" } }
       ]
     };
+
+    // If the search term can be parsed as a number, add the size search
+    const searchTermAsNumber = parseFloat(searchTerm);
+    if (!isNaN(searchTermAsNumber)) {
+      query.$or.push({ "shoeDetails.size": searchTermAsNumber });
+    }
 
     const shoes = await shoesCollection.find(query).toArray();
     res.json(shoes);
