@@ -41,7 +41,7 @@ export default ProductRecommendations;*/
 import React from "react";
 import Shoe from "./Shoe";
 
-const ProductRecommendations = ({ recommendedProducts }) => {
+const ProductRecommendations = ({ recommendedProducts = [] }) => {
   return (
     <div className="recommendations">
       <h3>Recommended Products</h3>
