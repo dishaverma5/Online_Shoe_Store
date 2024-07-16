@@ -49,6 +49,16 @@ const Featured = ({ data }) => {
         >
           <b>FEATURED PRODUCTS</b>
         </h6>
+        <p
+          style={{
+            color: "#007bff",
+            marginTop: "-10px",
+            fontSize: "14px",
+            fontStyle: "italic",
+          }}
+        >
+          Test your luck in the shoe roulette
+        </p>
       </div>
 
       <div
