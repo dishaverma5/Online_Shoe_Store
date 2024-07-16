@@ -28,35 +28,35 @@ if __name__ == '__main__':
     app.run(debug=True)"""
 from flask import Flask, request, jsonify
 import pickle
-import pandas as pd
-from sklearn.neighbors import NearestNeighbors
 
 app = Flask(__name__)
 
-# Load the model
-with open('KNNmodel.pkl', 'rb') as f:
-    knn_model = pickle.load(f)
-
-# Load your data (ensure this matches your training data structure)
-data = pd.read_csv('your_shoe_data.csv') # Update this with the actual path to your shoe data
+# Load the KNN model and the data
+with open('KNNmodel.pkl', 'rb') as file:
+    knn_model, data = pickle.load(file)
 
 @app.route('/recommendations', methods=['POST'])
 def get_recommendations():
-    content = request.json
-    product_id = content['productId']
+    request_data = request.json
+    shoe_id = request_data.get('shoe_id')
 
-    # Find the product in your data
-    product_index = data[data['shoe_id'] == product_id].index[0]
-    product_features = data.iloc[product_index].values.reshape(1, -1)
+    if shoe_id is None:
+        return jsonify({"error": "shoe_id is required"}), 400
 
-    # Get recommendations
-    distances, indices = knn_model.kneighbors(product_features, n_neighbors=4)
-    recommended_indices = indices.flatten()[1:]  # Exclude the product itself
+    # Ensure shoe_id is within the range of data
+    if shoe_id < 0 or shoe_id >= len(data):
+        return jsonify({"error": "Invalid shoe_id"}), 400
 
-    recommended_products = data.iloc[recommended_indices].to_dict('records')
-    return jsonify(recommended_products)
+    # Extract the feature vector of the given shoe_id
+    shoe_features = data.iloc[shoe_id].drop('shoe_id').values.reshape(1, -1)
 
-if __name__ == "__main__":
+    # Find the nearest neighbors (recommendations)
+    distances, indices = knn_model.kneighbors(shoe_features)
+
+    # Fetch the recommended shoes
+    recommendations = data.iloc[indices[0]].to_dict(orient='records')
+    
+    return jsonify(recommendations)
+
+if __name__ == '__main__':
     app.run(port=5000, debug=True)
-
-   
