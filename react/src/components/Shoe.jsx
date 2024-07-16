@@ -18,7 +18,7 @@ const Shoe = ({ product }) => {
         <div className="card-text">Price: $ {price}</div>
       </div>
       <div className="card-footer" style={{ display: "flex", justifyContent: "space-between" }}>
-        <Link to={`/product/${shoe_id}`} className="btn btn-primary">
+        <Link to={`/product/${product.shoe_id}`} className="btn btn-primary">
           View Details
         </Link>
       </div>
