@@ -1,6 +1,6 @@
 import React from "react";
 
-const Categories = ({ brands, colors, sizes }) => {
+const Categories = ({ brands = [], colors = [], sizes = [] }) => {
   return (
     <div className="categories">
       <div className="category-section">

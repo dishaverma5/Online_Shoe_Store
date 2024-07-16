@@ -23,6 +23,7 @@ function App() {
   const [data, setData] = useState([]);
   const [cart, setCart] = useState([]);
   const [page, setPage] = useState(1);
+  const [categories, setCategories] = useState({ brands: [], colors: [], sizes: [] });
 
   useEffect(() => {
     const fetchData = async () => {
@@ -38,7 +39,21 @@ function App() {
       }
     };
 
+    const fetchCategories = async () => {
+      try {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/categories`);
+        if (!response.ok) {
+          throw new Error('Categories could not be fetched!');
+        }
+        const json_response = await response.json();
+        setCategories(json_response);
+      } catch (error) {
+        console.error("Error fetching categories:", error);
+      }
+    };
+
     fetchData();
+    fetchCategories();
   }, [page]);
 
   const addToCart = (product) => {
@@ -105,7 +120,11 @@ function App() {
             </div>
             <div className="row">
               <div className="col">
-                <Categories />
+                <Categories 
+                  brands={categories.brands} 
+                  colors={categories.colors} 
+                  sizes={categories.sizes} 
+                />
               </div>
             </div>
             <hr />
