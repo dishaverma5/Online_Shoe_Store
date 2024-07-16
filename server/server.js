@@ -125,7 +125,7 @@ app.get("/categories", async (req, res) => {
   }
 });
 
-/*app.post("/recommendations", async (req, res) => {
+app.post("/recommendations", async (req, res) => {
   try {
     const { productId } = req.body;
     const response = await fetch("http://localhost:5000/recommendations", {
@@ -146,7 +146,7 @@ app.get("/categories", async (req, res) => {
     console.error("Error:", err);
     res.status(500).send("Error fetching recommendations.");
   }
-});*/
+});
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
