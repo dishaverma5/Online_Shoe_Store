@@ -1,5 +1,5 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import Promotion from "./Promotion";
 
 const Featured = ({ data }) => {
@@ -10,7 +10,7 @@ const Featured = ({ data }) => {
     return null;
   }
 
-  // Filter the data to get items that are popular, in stock, and on sale
+  // Filter and shuffle the items based on the criteria
   const filteredItems = data.filter(
     (item) =>
       item.additionalFeatures.isPopular &&
@@ -18,13 +18,11 @@ const Featured = ({ data }) => {
       item.additionalFeatures.onSale
   );
 
-  // Function to get 10 random items from the filtered list
-  const getRandomItems = (items, numItems) => {
-    const shuffled = items.sort(() => 0.5 - Math.random());
-    return shuffled.slice(0, numItems);
-  };
+  // Shuffle the array
+  const shuffledItems = filteredItems.sort(() => 0.5 - Math.random());
 
-  const featuredItems = getRandomItems(filteredItems, 10);
+  // Get the first 10 items from the shuffled array
+  const featuredItems = shuffledItems.slice(0, 10);
 
   return (
     <>
@@ -57,8 +55,19 @@ const Featured = ({ data }) => {
         className="card-container d-flex flex-row justify-content-start"
         style={{ gap: "20px", padding: "20px" }}
       >
-        {featuredItems.map((promo, index) => (
-          <Promotion key={promo.shoe_id || index} data={promo} />
+        {featuredItems.map((promo) => (
+          <div key={promo.shoe_id} className="card">
+            <div className="card-body">
+              <h5 className="card-title">{promo.shoeDetails.brand}</h5>
+              <p className="card-text">Type: {promo.shoeDetails.shoe_type}</p>
+              <p className="card-text">Color: {promo.shoeDetails.color}</p>
+              <p className="card-text">Size: {promo.shoeDetails.size}</p>
+              <p className="card-text">Price: ${promo.shoeDetails.price}</p>
+              <Link to={`/product/${promo.shoe_id}`} className="btn btn-primary">
+                View Details
+              </Link>
+            </div>
+          </div>
         ))}
       </div>
     </>
