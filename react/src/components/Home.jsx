@@ -3,38 +3,38 @@ import Featured from "./Featured";
 import Categories from "./Categories";
 import Shoe from "./Shoe";
 
-const Home = ({ data, categories, addToCart }) => {
+const Home = ({ data, addToCart }) => {
   // Helper function to group products by a specified attribute
   const groupBy = (array, key) => {
     return array.reduce((result, currentValue) => {
-      (result[currentValue[key]] = result[currentValue[key]] || []).push(
-        currentValue
-      );
+      const groupKey = currentValue.shoeDetails[key];
+      if (!result[groupKey]) {
+        result[groupKey] = [];
+      }
+      result[groupKey].push(currentValue);
       return result;
     }, {});
   };
 
   // Grouping the data
-  const groupedByBrand = groupBy(data, "shoeDetails.brand");
-  const groupedByColor = groupBy(data, "shoeDetails.color");
-  const groupedBySize = groupBy(data, "shoeDetails.size");
-  const groupedByType = groupBy(data, "shoeDetails.shoe_type");
+  const groupedByBrand = groupBy(data, "brand");
+  const groupedByColor = groupBy(data, "color");
+  const groupedBySize = groupBy(data, "size");
+  const groupedByType = groupBy(data, "shoe_type");
 
   const renderGroupedProducts = (groupedData, groupTitle) => (
-    <div className="row">
-      <div className="col">
-        <h3>Grouped by {groupTitle}</h3>
-        {Object.keys(groupedData).map((groupKey) => (
-          <div key={groupKey}>
-            <h4>{groupKey}</h4>
-            <div className="row">
-              {groupedData[groupKey].map((product) => (
-                <Shoe key={product.shoe_id} product={product} addToCart={addToCart} />
-              ))}
-            </div>
+    <div className="category-section">
+      <h3>{groupTitle}</h3>
+      {Object.keys(groupedData).map((groupKey) => (
+        <div key={groupKey}>
+          <h4>{groupKey}</h4>
+          <div className="row">
+            {groupedData[groupKey].map((product) => (
+              <Shoe key={product.shoe_id} product={product} addToCart={addToCart} />
+            ))}
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
     </div>
   );
 
@@ -45,23 +45,36 @@ const Home = ({ data, categories, addToCart }) => {
           <Featured data={data} />
         </div>
       </div>
+      <hr />
       <div className="row">
         <div className="col">
-          <Categories 
-            brands={categories.brands} 
-            colors={categories.colors} 
-            sizes={categories.sizes} 
-          />
+          <Categories />
         </div>
       </div>
       <hr />
-      {renderGroupedProducts(groupedByBrand, "Brand")}
+      <div className="row">
+        <div className="col">
+          {renderGroupedProducts(groupedByBrand, "Brand")}
+        </div>
+      </div>
       <hr />
-      {renderGroupedProducts(groupedByColor, "Color")}
+      <div className="row">
+        <div className="col">
+          {renderGroupedProducts(groupedByColor, "Color")}
+        </div>
+      </div>
       <hr />
-      {renderGroupedProducts(groupedBySize, "Size")}
+      <div className="row">
+        <div className="col">
+          {renderGroupedProducts(groupedBySize, "Size")}
+        </div>
+      </div>
       <hr />
-      {renderGroupedProducts(groupedByType, "Type")}
+      <div className="row">
+        <div className="col">
+          {renderGroupedProducts(groupedByType, "Type")}
+        </div>
+      </div>
     </>
   );
 };
