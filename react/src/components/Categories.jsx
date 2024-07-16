@@ -1,6 +1,10 @@
 import React from "react";
 
-const Categories = ({ brands = [], colors = [], sizes = [] }) => {
+const Categories = ({ brands = [], colors = [], sizes = [], isVisible }) => {
+  if (!isVisible) {
+    return null;
+  }
+
   return (
     <div className="categories">
       <div className="category-section">

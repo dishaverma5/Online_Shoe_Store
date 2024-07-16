@@ -19,11 +19,14 @@ import Checkout from './components/Checkout';
 import ProductDetails from './components/ProductDetails';
 import OrderPlaced from "./components/OrderPlaced.jsx";
 
-function App() {
+const App = () => {
   const [data, setData] = useState([]);
   const [cart, setCart] = useState([]);
   const [page, setPage] = useState(1);
   const [categories, setCategories] = useState({ brands: [], colors: [], sizes: [] });
+
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
 
   useEffect(() => {
     const fetchData = async () => {
@@ -113,20 +116,25 @@ function App() {
         </nav>
         <main role="main" className="col-md-9 ml-sm-auto col-lg-10 px-md-4">
           <div className="container-fluid">
-            <div className="row">
-              <div className="col">
-                <Featured data={data} />
-              </div>
-            </div>
-            <div className="row">
-              <div className="col">
-                <Categories 
-                  brands={categories.brands} 
-                  colors={categories.colors} 
-                  sizes={categories.sizes} 
-                />
-              </div>
-            </div>
+            {isHomePage && (
+              <>
+                <div className="row">
+                  <div className="col">
+                    <Featured data={data} />
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="col">
+                    <Categories 
+                      brands={categories.brands} 
+                      colors={categories.colors} 
+                      sizes={categories.sizes} 
+                      isVisible={isHomePage} 
+                    />
+                  </div>
+                </div>
+              </>
+            )}
             <hr />
             <AuthProvider>
               <Routes>
@@ -169,6 +177,6 @@ function App() {
       </Router>
     </>
   );
-}
+};
 
 export default App;
