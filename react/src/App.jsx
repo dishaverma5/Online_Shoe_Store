@@ -18,6 +18,7 @@ import Cart from './components/Cart';
 import Checkout from './components/Checkout';
 import ProductDetails from './components/ProductDetails';
 import OrderPlaced from "./components/OrderPlaced.jsx";
+import "./App.css";
 
 const App = () => {
   const [data, setData] = useState([]);
