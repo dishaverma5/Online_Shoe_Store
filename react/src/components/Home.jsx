@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Featured from "./Featured";
 import Categories from "./Categories";
 import Shoe from "./Shoe";
@@ -22,19 +22,51 @@ const Home = ({ data, addToCart }) => {
   const groupedBySize = groupBy(data, "size");
   const groupedByType = groupBy(data, "shoe_type");
 
+  // State to handle the open/close state of each main category
+  const [openCategories, setOpenCategories] = useState({
+    Brand: false,
+    Color: false,
+    Size: false,
+    Type: false,
+  });
+
+  // State to handle the open/close state of each subcategory
+  const [openSubCategories, setOpenSubCategories] = useState({});
+
+  const toggleCategory = (category) => {
+    setOpenCategories((prev) => ({
+      ...prev,
+      [category]: !prev[category],
+    }));
+  };
+
+  const toggleSubCategory = (mainCategory, subCategory) => {
+    setOpenSubCategories((prev) => ({
+      ...prev,
+      [`${mainCategory}-${subCategory}`]: !prev[`${mainCategory}-${subCategory}`],
+    }));
+  };
+
   const renderGroupedProducts = (groupedData, groupTitle) => (
     <div className="category-section">
-      <h3>{groupTitle}</h3>
-      {Object.keys(groupedData).map((groupKey) => (
-        <div key={groupKey}>
-          <h4>{groupKey}</h4>
-          <div className="row">
-            {groupedData[groupKey].map((product) => (
-              <Shoe key={product.shoe_id} product={product} addToCart={addToCart} />
-            ))}
+      <h3 onClick={() => toggleCategory(groupTitle)}>
+        {groupTitle} <button className="btn btn-sm btn-outline-secondary">{openCategories[groupTitle] ? "Hide" : "Show"}</button>
+      </h3>
+      {openCategories[groupTitle] &&
+        Object.keys(groupedData).map((groupKey) => (
+          <div key={groupKey}>
+            <h4 onClick={() => toggleSubCategory(groupTitle, groupKey)}>
+              {groupKey} <button className="btn btn-sm btn-outline-secondary">{openSubCategories[`${groupTitle}-${groupKey}`] ? "Hide" : "Show"}</button>
+            </h4>
+            {openSubCategories[`${groupTitle}-${groupKey}`] && (
+              <div className="row">
+                {groupedData[groupKey].map((product) => (
+                  <Shoe key={product.shoe_id} product={product} addToCart={addToCart} />
+                ))}
+              </div>
+            )}
           </div>
-        </div>
-      ))}
+        ))}
     </div>
   );
 
