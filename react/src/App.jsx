@@ -118,7 +118,7 @@ const App = () => {
                 exact
                 path="/"
                 element={
-                  <HomePage
+                  <Home
                     data={data}
                     categories={categories}
                     page={page}
@@ -151,27 +151,6 @@ const App = () => {
         </div>
       </footer>
     </Router>
-  );
-};
-
-const HomePage = ({ data, categories, page, setPage, addToCart }) => {
-  return (
-    <>
-      <div className="row">
-        <div className="col">
-          <Featured data={data} />
-        </div>
-      </div>
-      <div className="row">
-        <div className="col">
-          <Categories 
-            brands={categories.brands} 
-            colors={categories.colors} 
-            sizes={categories.sizes} 
-          />
-        </div>
-      </div>
-    </>
   );
 };
 
