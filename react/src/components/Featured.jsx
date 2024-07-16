@@ -10,8 +10,21 @@ const Featured = ({ data }) => {
     return null;
   }
 
-  // Slice the data to only get the first 10 items
-  const featuredItems = data.slice(0, 10);
+  // Filter the data to get items that are popular, in stock, and on sale
+  const filteredItems = data.filter(
+    (item) =>
+      item.additionalFeatures.isPopular &&
+      item.additionalFeatures.inStock &&
+      item.additionalFeatures.onSale
+  );
+
+  // Function to get 10 random items from the filtered list
+  const getRandomItems = (items, numItems) => {
+    const shuffled = items.sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, numItems);
+  };
+
+  const featuredItems = getRandomItems(filteredItems, 10);
 
   return (
     <>
@@ -45,7 +58,7 @@ const Featured = ({ data }) => {
         style={{ gap: "20px", padding: "20px" }}
       >
         {featuredItems.map((promo, index) => (
-          <Promotion key={promo.id || index} data={promo} />
+          <Promotion key={promo.shoe_id || index} data={promo} />
         ))}
       </div>
     </>
