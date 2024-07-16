@@ -34,6 +34,7 @@ const App = () => {
         }
         const json_response = await response.json();
         setData(json_response);
+        console.log('Fetched Data:', json_response); // Debugging
       } catch (error) {
         console.error('Error fetching shoes:', error);
       }

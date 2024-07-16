@@ -3,7 +3,11 @@ import { useParams } from "react-router-dom";
 
 const ProductDetails = ({ products, addToCart }) => {
   const { productId } = useParams();
-  const product = products.find((p) => p.shoeDetails?.shoe_id?.toString() === productId);
+  console.log('ProductDetails Component:', productId); // Debugging
+
+  const product = products.find((p) => p.shoeDetails.shoe_id.toString() === productId);
+
+  console.log('Found Product:', product); // Debugging
 
   if (!product) {
     return <div>Product not found</div>;

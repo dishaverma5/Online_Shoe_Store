@@ -8,6 +8,8 @@ const Shoe = ({ product }) => {
 
   const { shoeDetails } = product;
 
+  console.log('Shoe Component:', shoeDetails.shoe_id); // Debugging
+
   return (
     <div
       className="card"
