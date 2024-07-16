@@ -56,7 +56,7 @@ const Home = ({ data, addToCart }) => {
         Object.keys(groupedData).map((groupKey) => (
           <div key={groupKey}>
             <h4 onClick={() => toggleSubCategory(groupTitle, groupKey)}>
-              {groupKey} <button className="btn btn-sm btn-outline-secondary">{openSubCategories[`${mainCategory}-${groupKey}`] ? "Hide" : "Show"}</button>
+              {groupKey} <button className="btn btn-sm btn-outline-secondary">{openSubCategories[`${groupTitle}-${groupKey}`] ? "Hide" : "Show"}</button>
             </h4>
             {openSubCategories[`${groupTitle}-${groupKey}`] && (
               <div className="row">
