@@ -8,7 +8,7 @@ import Promotion from "./components/Promotion";
 import Home from "./components/Home";
 import Categories from "./components/Categories";
 import RequireAuth from "./components/RequireAuth";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Link, useLocation} from "react-router-dom";
 import About from "./components/About";
 import Featured from "./components/Featured";
 import AddShoe from "./components/AddShoe";
