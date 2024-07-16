@@ -25,13 +25,10 @@ const App = () => {
   const [page, setPage] = useState(1);
   const [categories, setCategories] = useState({ brands: [], colors: [], sizes: [] });
 
-  const location = useLocation();
-  const isHomePage = location.pathname === "/";
-
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`${import.meta.env.VITE_API_URL}/shoe`);
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/shoes`);
         if (!response.ok) {
           throw new Error('Data could not be fetched!');
         }
@@ -69,112 +66,111 @@ const App = () => {
   };
 
   return (
+    <Router>
+      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+        <div className="container-fluid">
+          <Link className="navbar-brand" to="/">
+            <h2 style={{ fontFamily: "Didot", color: "#003f69" }}>
+              <b>S T E P - U P</b>
+            </h2>
+          </Link>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div
+            className="collapse navbar-collapse"
+            id="navbarSupportedContent"
+          >
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              <li className="nav-item">
+                <Link className="nav-link" to="/">
+                  <b>HOME</b>
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/about">
+                  <b>ABOUT</b>
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/cart">
+                  <b>MY CART</b>
+                </Link>
+              </li>
+            </ul>
+            <Search setData={setData} />
+          </div>
+        </div>
+      </nav>
+      <main role="main" className="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+        <div className="container-fluid">
+          <AuthProvider>
+            <Routes>
+              <Route
+                exact
+                path="/"
+                element={
+                  <HomePage
+                    data={data}
+                    categories={categories}
+                    page={page}
+                    setPage={setPage}
+                    addToCart={addToCart}
+                  />
+                }
+              />
+              <Route path="/about" element={<About />} />
+              <Route
+                path="/add"
+                element={
+                  <RequireAuth>
+                    <AddShoe addToCart={addToCart} />
+                  </RequireAuth>
+                }
+              />
+              <Route path="/login" element={<LoginForm />} />
+              <Route path="/cart" element={<Cart cart={cart} />} />
+              <Route path="/checkout" element={<Checkout cart={cart} setCart={setCart} />} />
+              <Route path="/product/:productId" element={<ProductDetails products={data} addToCart={addToCart} />} />
+              <Route path="/order-placed" element={<OrderPlaced cart={cart} />} />
+            </Routes>
+          </AuthProvider>
+        </div>
+      </main>
+      <footer>
+        <div>
+          <strong>{import.meta.env.VITE_ENVIRONMENT.toUpperCase()}</strong>
+        </div>
+      </footer>
+    </Router>
+  );
+};
+
+const HomePage = ({ data, categories, page, setPage, addToCart }) => {
+  return (
     <>
-      <Router>
-        <nav className="navbar navbar-expand-lg bg-body-tertiary">
-          <div className="container-fluid">
-            <Link className="navbar-brand" to="/">
-              <h2 style={{ fontFamily: "Didot", color: "#003f69" }}>
-                <b>S T E P - U P</b>
-              </h2>
-            </Link>
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <div
-              className="collapse navbar-collapse"
-              id="navbarSupportedContent"
-            >
-              <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                <li className="nav-item">
-                  <Link className="nav-link" to="/">
-                    <b>HOME</b>
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/about">
-                    <b>ABOUT</b>
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/cart">
-                    <b>MY CART</b>
-                  </Link>
-                </li>
-              </ul>
-              <Search setData={setData} />
-            </div>
-          </div>
-        </nav>
-        <main role="main" className="col-md-9 ml-sm-auto col-lg-10 px-md-4">
-          <div className="container-fluid">
-            {isHomePage && (
-              <>
-                <div className="row">
-                  <div className="col">
-                    <Featured data={data} />
-                  </div>
-                </div>
-                <div className="row">
-                  <div className="col">
-                    <Categories 
-                      brands={categories.brands} 
-                      colors={categories.colors} 
-                      sizes={categories.sizes} 
-                      isVisible={isHomePage} 
-                    />
-                  </div>
-                </div>
-              </>
-            )}
-            <hr />
-            <AuthProvider>
-              <Routes>
-                <Route
-                  exact
-                  path="/"
-                  element={
-                    <Home
-                      data={data}
-                      handleDelete={() => {}}
-                      page={page}
-                      setPage={setPage}
-                      addToCart={addToCart}
-                    />
-                  }
-                />
-                <Route path="/about" element={<About />} />
-                <Route
-                  path="/add"
-                  element={
-                    <RequireAuth>
-                      <AddShoe addToCart={addToCart} />
-                    </RequireAuth>
-                  }
-                />
-                <Route path="/login" element={<LoginForm />} />
-                <Route path="/cart" element={<Cart cart={cart} />} />
-                <Route path="/checkout" element={<Checkout cart={cart} setCart={setCart} />} />
-                <Route path="/product/:productId" element={<ProductDetails products={data} addToCart={addToCart} />} />
-                <Route path="/order-placed" element={<OrderPlaced cart={cart} />} />
-              </Routes>
-            </AuthProvider>
-          </div>
-        </main>
-        <footer>
-          <div>
-            <strong>{import.meta.env.VITE_ENVIRONMENT.toUpperCase()}</strong>
-          </div>
-        </footer>
-      </Router>
+      <div className="row">
+        <div className="col">
+          <Featured data={data} />
+        </div>
+      </div>
+      <div className="row">
+        <div className="col">
+          <Categories 
+            brands={categories.brands} 
+            colors={categories.colors} 
+            sizes={categories.sizes} 
+          />
+        </div>
+      </div>
     </>
   );
 };
