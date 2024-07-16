@@ -50,11 +50,6 @@ function App() {
     }
   };
 
-  // Dummy data for categories
-  const brands = ["Nike", "Adidas", "Puma"];
-  const colors = ["Red", "Blue", "Black", "White"];
-  const sizes = ["Small", "Medium", "Large"];
-
   return (
     <>
       <Router>
@@ -110,7 +105,7 @@ function App() {
             </div>
             <div className="row">
               <div className="col">
-                <Categories brands={brands} colors={colors} sizes={sizes} />
+                <Categories />
               </div>
             </div>
             <hr />

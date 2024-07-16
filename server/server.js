@@ -39,7 +39,7 @@ app.post("/search", async (req, res) => {
   try {
     const client = await MongoClient.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
     const db = client.db(dbName);
-    const shoesCollection = db.collection("shoes");
+    const shoesCollection = db.collection("shoe");
     const { searchTerm } = req.body;
     const query = { $text: { $search: searchTerm } }; // Example of text search
     const shoes = await shoesCollection.find(query).toArray();
@@ -89,6 +89,28 @@ app.get("/orders", async (req, res) => {
   }
 });
 
+app.get("/categories", async (req, res) => {
+  try {
+    const client = await MongoClient.connect(url, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+    const db = client.db(dbName);
+    const shoesCollection = db.collection("shoe");
+
+    const brands = await shoesCollection.distinct("shoeDetails.brand");
+    const colors = await shoesCollection.distinct("shoeDetails.color");
+    const sizes = await shoesCollection.distinct("shoeDetails.size");
+
+    client.close();
+    res.json({ brands, colors, sizes });
+  } catch (err) {
+    console.error("Error:", err);
+    res.status(500).send("Error fetching categories.");
+  }
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
+
