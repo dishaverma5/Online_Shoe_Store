@@ -41,12 +41,17 @@ export default ProductRecommendations;*/
 import React from "react";
 import Shoe from "./Shoe";
 
-const ProductRecommendations = ({ recommendations, addToCart }) => {
+const ProductRecommendations = ({ recommendations }) => {
   return (
-    <div className="recommendations">
-      {recommendations.map((product) => (
-        <Shoe key={product.shoe_id} product={product} addToCart={addToCart} />
-      ))}
+    <div className="mt-4">
+      <h3>Recommended Products</h3>
+      <div className="row">
+        {recommendations.map((product) => (
+          <div className="col-md-4" key={product.shoe_id}>
+            <Shoe product={product} />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
