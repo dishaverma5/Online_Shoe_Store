@@ -6,7 +6,7 @@ const Shoe = ({ product }) => {
     return <div className="card">Product data is unavailable</div>;
   }
 
-  const { brand, shoe_type, color, size, price, shoe_id } = product.shoeDetails;
+  const { brand, shoe_type, color, size, price } = product.shoeDetails;
 
   return (
     <div className="card" style={{ flex: "1", minWidth: "300px", maxWidth: "45%" }}>
@@ -18,7 +18,7 @@ const Shoe = ({ product }) => {
         <div className="card-text">Price: $ {price}</div>
       </div>
       <div className="card-footer" style={{ display: "flex", justifyContent: "space-between" }}>
-        <Link to={`/product/${product.shoe_id}`} className="btn btn-primary">
+        <Link to={`/product/${product.shoeDetails.shoe_id}`} className="btn btn-primary">
           View Details
         </Link>
       </div>
