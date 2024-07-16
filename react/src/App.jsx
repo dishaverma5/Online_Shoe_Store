@@ -114,7 +114,7 @@ const App = () => {
           </div>
         </div>
       </nav>
-      <main role="main" className="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+      <main role="main" className="main-content col-md-9 ml-sm-auto col-lg-10 px-md-4">
         <div className="container-fluid">
           <AuthProvider>
             <Routes>
