@@ -55,34 +55,32 @@ const ProductDetails = ({ products, addToCart }) => {
   const product = products.find(
     (item) => item.shoe_id.toString() === productId
   );
+
   const [recommendations, setRecommendations] = useState([]);
 
   useEffect(() => {
     if (product) {
-      fetchRecommendations(product.shoe_id);
-    }
-  }, [product]);
-
-  const fetchRecommendations = async (shoe_id) => {
-    try {
-      const response = await fetch("http://localhost:3000/recommendations", {
+      fetch(`${import.meta.env.VITE_API_URL}/recommendations`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ shoe_id }),
-      });
-
-      if (!response.ok) {
-        throw new Error("Error fetching recommendations");
-      }
-
-      const data = await response.json();
-      setRecommendations(data);
-    } catch (error) {
-      console.error("Error fetching recommendations:", error);
+        body: JSON.stringify({ shoe_id: product.shoe_id }),
+      })
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Network response was not ok");
+          }
+          return response.json();
+        })
+        .then((data) => {
+          setRecommendations(data);
+        })
+        .catch((error) => {
+          console.error("Error fetching recommendations:", error);
+        });
     }
-  };
+  }, [product]);
 
   if (!product) {
     return <div>Product not found</div>;
@@ -118,10 +116,10 @@ const ProductDetails = ({ products, addToCart }) => {
           </button>
         </div>
       </div>
-      <h2 className="my-4">Recommended Products</h2>
-      <ProductRecommendations recommendations={recommendations} addToCart={addToCart} />
+      <ProductRecommendations recommendations={recommendations} />
     </div>
   );
 };
 
 export default ProductDetails;
+
