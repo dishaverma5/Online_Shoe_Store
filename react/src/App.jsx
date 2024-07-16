@@ -30,12 +30,12 @@ const App = () => {
       try {
         const response = await fetch(`${import.meta.env.VITE_API_URL}/shoe`);
         if (!response.ok) {
-          throw new Error('Data could not be fetched!');
+          throw new Error("Data could not be fetched!");
         }
         const json_response = await response.json();
         setData(json_response);
       } catch (error) {
-        console.error('Error fetching shoes:', error);
+        console.error("Error fetching shoes:", error);
       }
     };
 
@@ -43,7 +43,7 @@ const App = () => {
       try {
         const response = await fetch(`${import.meta.env.VITE_API_URL}/categories`);
         if (!response.ok) {
-          throw new Error('Categories could not be fetched!');
+          throw new Error("Categories could not be fetched!");
         }
         const json_response = await response.json();
         setCategories(json_response);
@@ -57,9 +57,15 @@ const App = () => {
   }, [page]);
 
   const addToCart = (product) => {
-    const existingItem = cart.find(item => item.id === product.id);
+    const existingItem = cart.find((item) => item.shoe_id === product.shoe_id);
     if (existingItem) {
-      setCart(cart.map(item => item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item));
+      setCart(
+        cart.map((item) =>
+          item.shoe_id === product.shoe_id
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
+        )
+      );
     } else {
       setCart([...cart, { ...product, quantity: 1 }]);
     }
@@ -85,10 +91,7 @@ const App = () => {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div
-            className="collapse navbar-collapse"
-            id="navbarSupportedContent"
-          >
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
                 <Link className="nav-link" to="/">
