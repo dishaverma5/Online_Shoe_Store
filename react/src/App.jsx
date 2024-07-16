@@ -16,8 +16,10 @@ import LoginForm from "./components/LoginForm";
 import { AuthProvider } from "./hooks/AuthContext";
 import Cart from './components/Cart';
 import Checkout from './components/Checkout';
-import ProductDetails from './components/ProductDetails';
+import ProductDetails from './components/ProductDetails.jsx';
 import OrderPlaced from "./components/OrderPlaced.jsx";
+import ProductRecommendations from "./components/ProductRecommendations.jsx";
+
 import "./App.css";
 
 const App = () => {

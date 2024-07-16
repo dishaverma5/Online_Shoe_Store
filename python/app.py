@@ -36,7 +36,7 @@ app = Flask(__name__)
 with open('KNNmodel.pkl', 'rb') as file:
     knn_model = pickle.load(file)
 
-# Load the shoe data from JSON file
+# shoe data from JSON file
 data = pd.read_json('shoes.json')
 
 @app.route('/recommendations', methods=['POST'])
