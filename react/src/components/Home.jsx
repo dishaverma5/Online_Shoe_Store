@@ -48,7 +48,7 @@ const Home = ({ data, addToCart }) => {
   };
 
   const renderGroupedProducts = (groupedData, groupTitle) => (
-    <div className="category-section">
+    <div className="category-section" key={groupTitle}>
       <h3 onClick={() => toggleCategory(groupTitle)}>
         {groupTitle} <button className="btn btn-sm btn-outline-secondary">{openCategories[groupTitle] ? "Hide" : "Show"}</button>
       </h3>
@@ -61,7 +61,7 @@ const Home = ({ data, addToCart }) => {
             {openSubCategories[`${groupTitle}-${groupKey}`] && (
               <div className="row">
                 {groupedData[groupKey].map((product) => (
-                  <Shoe key={product.shoeDetails.shoe_id} product={product} addToCart={addToCart} />
+                  <Shoe key={product.shoe_id} product={product} addToCart={addToCart} />
                 ))}
               </div>
             )}
