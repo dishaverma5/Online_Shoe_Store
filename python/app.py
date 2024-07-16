@@ -28,12 +28,16 @@ if __name__ == '__main__':
     app.run(debug=True)"""
 from flask import Flask, request, jsonify
 import pickle
+import pandas as pd
 
 app = Flask(__name__)
 
-# Load the KNN model and the data
+# Load the KNN model
 with open('KNNmodel.pkl', 'rb') as file:
-    knn_model, data = pickle.load(file)
+    knn_model = pickle.load(file)
+
+# Load the shoe data from JSON file
+data = pd.read_json('shoes.json')
 
 @app.route('/recommendations', methods=['POST'])
 def get_recommendations():
@@ -60,3 +64,4 @@ def get_recommendations():
 
 if __name__ == '__main__':
     app.run(port=5000, debug=True)
+
