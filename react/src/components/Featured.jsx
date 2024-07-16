@@ -21,8 +21,8 @@ const Featured = ({ data }) => {
   // Shuffle the array
   const shuffledItems = filteredItems.sort(() => 0.5 - Math.random());
 
-  // Get the first 10 items from the shuffled array
-  const featuredItems = shuffledItems.slice(0, 10);
+  // Get the first 6 items from the shuffled array
+  const featuredItems = shuffledItems.slice(0, 6);
 
   return (
     <>
@@ -52,11 +52,11 @@ const Featured = ({ data }) => {
       </div>
 
       <div
-        className="card-container d-flex flex-row justify-content-start"
+        className="card-container d-flex flex-row justify-content-start flex-wrap"
         style={{ gap: "20px", padding: "20px" }}
       >
         {featuredItems.map((promo) => (
-          <div key={promo.shoe_id} className="card">
+          <div key={promo.shoe_id} className="card" style={{ flex: "1 1 calc(33.33% - 20px)", maxWidth: "calc(33.33% - 20px)" }}>
             <div className="card-body">
               <h5 className="card-title">{promo.shoeDetails.brand}</h5>
               <p className="card-text">Type: {promo.shoeDetails.shoe_type}</p>
