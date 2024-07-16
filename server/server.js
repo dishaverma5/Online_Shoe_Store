@@ -42,7 +42,16 @@ app.post("/search", async (req, res) => {
     const shoesCollection = db.collection("shoe");
     const { searchTerm } = req.body;
     console.log("Search term:", searchTerm); // Log the search term
-    const query = { "shoeDetails.brand": { $regex: searchTerm, $options: "i" } }; // Example of text search
+
+    const query = {
+      $or: [
+        { "shoeDetails.brand": { $regex: searchTerm, $options: "i" } },
+        { "shoeDetails.color": { $regex: searchTerm, $options: "i" } },
+        { "shoeDetails.size": { $regex: searchTerm, $options: "i" } },
+        { "shoeDetails.shoe_type": { $regex: searchTerm, $options: "i" } }
+      ]
+    };
+
     const shoes = await shoesCollection.find(query).toArray();
     res.json(shoes);
     client.close(); // Close the database connection
