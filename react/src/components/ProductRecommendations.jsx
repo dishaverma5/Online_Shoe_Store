@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+/*import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 const ProductRecommendations = ({ selectedProduct }) => {
@@ -33,6 +33,20 @@ const ProductRecommendations = ({ selectedProduct }) => {
           </li>
         ))}
       </ul>
+    </div>
+  );
+};
+
+export default ProductRecommendations;*/
+import React from "react";
+import Shoe from "./Shoe";
+
+const ProductRecommendations = ({ recommendations, addToCart }) => {
+  return (
+    <div className="recommendations">
+      {recommendations.map((product) => (
+        <Shoe key={product.shoe_id} product={product} addToCart={addToCart} />
+      ))}
     </div>
   );
 };

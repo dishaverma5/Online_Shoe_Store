@@ -125,6 +125,29 @@ app.get("/categories", async (req, res) => {
   }
 });
 
+app.post("/recommendations", async (req, res) => {
+  try {
+    const { productId } = req.body;
+    const response = await fetch("http://localhost:5000/recommendations", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ productId }),
+    });
+
+    if (!response.ok) {
+      throw new Error("Error fetching recommendations from Python service");
+    }
+
+    const recommendations = await response.json();
+    res.json(recommendations);
+  } catch (err) {
+    console.error("Error:", err);
+    res.status(500).send("Error fetching recommendations.");
+  }
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });

@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+"""from flask import Flask, request, jsonify
 import pickle
 import pandas as pd
 
@@ -25,4 +25,38 @@ def recommend(shoe_id):
     return jsonify(output)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True)"""
+from flask import Flask, request, jsonify
+import pickle
+import pandas as pd
+from sklearn.neighbors import NearestNeighbors
+
+app = Flask(__name__)
+
+# Load the model
+with open('KNNmodel.pkl', 'rb') as f:
+    knn_model = pickle.load(f)
+
+# Load your data (ensure this matches your training data structure)
+data = pd.read_csv('your_shoe_data.csv') # Update this with the actual path to your shoe data
+
+@app.route('/recommendations', methods=['POST'])
+def get_recommendations():
+    content = request.json
+    product_id = content['productId']
+
+    # Find the product in your data
+    product_index = data[data['shoe_id'] == product_id].index[0]
+    product_features = data.iloc[product_index].values.reshape(1, -1)
+
+    # Get recommendations
+    distances, indices = knn_model.kneighbors(product_features, n_neighbors=4)
+    recommended_indices = indices.flatten()[1:]  # Exclude the product itself
+
+    recommended_products = data.iloc[recommended_indices].to_dict('records')
+    return jsonify(recommended_products)
+
+if __name__ == "__main__":
+    app.run(port=5000, debug=True)
+
+   
