@@ -60,7 +60,7 @@ const ProductDetails = ({ products, addToCart }) => {
 
   useEffect(() => {
     if (product) {
-      fetch(`${import.meta.env.VITE_API_URL}/recommendations`, {
+      fetch(`http://localhost:5000/recommendations`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -99,15 +99,9 @@ const ProductDetails = ({ products, addToCart }) => {
           <p className="card-text">Color: {color}</p>
           <p className="card-text">Size: {size}</p>
           <p className="card-text">Price: ${price}</p>
-          <p className="card-text">
-            Popular: {isPopular ? "Yes" : "No"}
-          </p>
-          <p className="card-text">
-            In Stock: {inStock ? "Yes" : "No"}
-          </p>
-          <p className="card-text">
-            On Sale: {onSale ? "Yes" : "No"}
-          </p>
+          <p className="card-text">Popular: {isPopular ? "Yes" : "No"}</p>
+          <p className="card-text">In Stock: {inStock ? "Yes" : "No"}</p>
+          <p className="card-text">On Sale: {onSale ? "Yes" : "No"}</p>
           <button
             className="btn btn-primary"
             onClick={() => addToCart(product)}
@@ -122,4 +116,3 @@ const ProductDetails = ({ products, addToCart }) => {
 };
 
 export default ProductDetails;
-
