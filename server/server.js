@@ -41,7 +41,8 @@ app.post("/search", async (req, res) => {
     const db = client.db(dbName);
     const shoesCollection = db.collection("shoe");
     const { searchTerm } = req.body;
-    const query = { $text: { $search: searchTerm } }; // Example of text search
+    console.log("Search term:", searchTerm); // Log the search term
+    const query = { "shoeDetails.brand": { $regex: searchTerm, $options: "i" } }; // Example of text search
     const shoes = await shoesCollection.find(query).toArray();
     res.json(shoes);
     client.close(); // Close the database connection
@@ -82,13 +83,14 @@ app.get("/orders", async (req, res) => {
     const ordersCollection = db.collection("orders");
     const orders = await ordersCollection.find({}).toArray();
     res.json(orders);
-    client.close(); // Closing database connection
+    client.close(); // Close the database connection
   } catch (err) {
     console.error("Error:", err);
     res.status(500).send("Error fetching orders.");
   }
 });
 
+// Endpoint to fetch distinct categories
 app.get("/categories", async (req, res) => {
   try {
     const client = await MongoClient.connect(url, {
@@ -113,4 +115,3 @@ app.get("/categories", async (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
-
