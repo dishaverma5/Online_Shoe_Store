@@ -3,13 +3,14 @@ import { useParams } from "react-router-dom";
 
 const ProductDetails = ({ products, addToCart }) => {
   const { productId } = useParams();
-  const product = products.find((p) => p.shoeDetails.shoe_id.toString() === productId);
+  const product = products.find((p) => p.shoeDetails?.shoe_id?.toString() === productId);
 
   if (!product) {
     return <div>Product not found</div>;
   }
 
-  const { brand, shoe_type, color, size, price, additionalFeatures } = product.shoeDetails;
+  const { brand, shoe_type, color, size, price } = product.shoeDetails;
+  const { isPopular, inStock, onSale } = product.additionalFeatures;
 
   return (
     <div className="container">
@@ -23,9 +24,9 @@ const ProductDetails = ({ products, addToCart }) => {
           <div className="card-text">Price: $ {price}</div>
           <div className="card-text">Additional Features:</div>
           <ul>
-            <li>Popular: {additionalFeatures.isPopular ? "Yes" : "No"}</li>
-            <li>In Stock: {additionalFeatures.inStock ? "Yes" : "No"}</li>
-            <li>On Sale: {additionalFeatures.onSale ? "Yes" : "No"}</li>
+            <li>Popular: {isPopular ? "Yes" : "No"}</li>
+            <li>In Stock: {inStock ? "Yes" : "No"}</li>
+            <li>On Sale: {onSale ? "Yes" : "No"}</li>
           </ul>
           <button className="btn btn-primary" onClick={() => addToCart(product)}>Add to Cart</button>
         </div>
