@@ -24,10 +24,10 @@ const Home = ({ data, addToCart }) => {
 
   // State to handle the open/close state of each main category
   const [openCategories, setOpenCategories] = useState({
-    Brand: false,
-    Color: false,
-    Size: false,
-    Type: false,
+    BRAND: false,
+    COLOR: false,
+    SIZE: false,
+    TYPE: false,
   });
 
   // State to handle the open/close state of each subcategory
@@ -56,7 +56,7 @@ const Home = ({ data, addToCart }) => {
         Object.keys(groupedData).map((groupKey) => (
           <div key={groupKey}>
             <h4 onClick={() => toggleSubCategory(groupTitle, groupKey)}>
-              {groupKey} <button className="btn btn-sm btn-outline-secondary">{openSubCategories[`${groupTitle}-${groupKey}`] ? "Hide" : "Show"}</button>
+              {groupKey} <button className="btn btn-sm btn-outline-secondary">{openSubCategories[`${mainCategory}-${groupKey}`] ? "Hide" : "Show"}</button>
             </h4>
             {openSubCategories[`${groupTitle}-${groupKey}`] && (
               <div className="row">
@@ -86,37 +86,25 @@ const Home = ({ data, addToCart }) => {
       <hr />
       <div className="row">
         <div className="col">
-          {renderGroupedProducts(
-            groupedByBrand,
-            <u style={{ color: "#00365a" }}>BRAND</u>
-          )}
+          {renderGroupedProducts(groupedByBrand, "BRAND")}
         </div>
       </div>
       <hr />
       <div className="row">
         <div className="col">
-          {renderGroupedProducts(
-            groupedByColor,
-            <u style={{ color: "#00365a" }}>COLOR</u>
-          )}
+          {renderGroupedProducts(groupedByColor, "COLOR")}
         </div>
       </div>
       <hr />
       <div className="row">
         <div className="col">
-          {renderGroupedProducts(
-            groupedBySize,
-            <u style={{ color: "#00365a" }}>SIZE</u>
-          )}
+          {renderGroupedProducts(groupedBySize, "SIZE")}
         </div>
       </div>
       <hr />
       <div className="row">
         <div className="col">
-          {renderGroupedProducts(
-            groupedByType,
-            <u style={{ color: "#00365a" }}>TYPE</u>
-          )}
+          {renderGroupedProducts(groupedByType, "TYPE")}
           <br />
           <br />
           <br />
