@@ -4,6 +4,7 @@ import Categories from "./Categories";
 import Shoe from "./Shoe";
 
 const Home = ({ data, categories, addToCart }) => {
+  // Helper function to group products by a specified attribute
   const groupBy = (array, key) => {
     return array.reduce((result, currentValue) => {
       (result[currentValue[key]] = result[currentValue[key]] || []).push(
@@ -13,10 +14,29 @@ const Home = ({ data, categories, addToCart }) => {
     }, {});
   };
 
+  // Grouping the data
   const groupedByBrand = groupBy(data, "shoeDetails.brand");
   const groupedByColor = groupBy(data, "shoeDetails.color");
   const groupedBySize = groupBy(data, "shoeDetails.size");
   const groupedByType = groupBy(data, "shoeDetails.shoe_type");
+
+  const renderGroupedProducts = (groupedData, groupTitle) => (
+    <div className="row">
+      <div className="col">
+        <h3>Grouped by {groupTitle}</h3>
+        {Object.keys(groupedData).map((groupKey) => (
+          <div key={groupKey}>
+            <h4>{groupKey}</h4>
+            <div className="row">
+              {groupedData[groupKey].map((product) => (
+                <Shoe key={product.shoe_id} product={product} addToCart={addToCart} />
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 
   return (
     <>
@@ -35,69 +55,13 @@ const Home = ({ data, categories, addToCart }) => {
         </div>
       </div>
       <hr />
-      <div className="row">
-        <div className="col">
-          <h3>Grouped by Brand</h3>
-          {Object.keys(groupedByBrand).map((brand) => (
-            <div key={brand}>
-              <h4>{brand}</h4>
-              <div className="row">
-                {groupedByBrand[brand].map((product) => (
-                  <Shoe key={product.shoe_id} product={product} addToCart={addToCart} />
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+      {renderGroupedProducts(groupedByBrand, "Brand")}
       <hr />
-      <div className="row">
-        <div className="col">
-          <h3>Grouped by Color</h3>
-          {Object.keys(groupedByColor).map((color) => (
-            <div key={color}>
-              <h4>{color}</h4>
-              <div className="row">
-                {groupedByColor[color].map((product) => (
-                  <Shoe key={product.shoe_id} product={product} addToCart={addToCart} />
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+      {renderGroupedProducts(groupedByColor, "Color")}
       <hr />
-      <div className="row">
-        <div className="col">
-          <h3>Grouped by Size</h3>
-          {Object.keys(groupedBySize).map((size) => (
-            <div key={size}>
-              <h4>{size}</h4>
-              <div className="row">
-                {groupedBySize[size].map((product) => (
-                  <Shoe key={product.shoe_id} product={product} addToCart={addToCart} />
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+      {renderGroupedProducts(groupedBySize, "Size")}
       <hr />
-      <div className="row">
-        <div className="col">
-          <h3>Grouped by Type</h3>
-          {Object.keys(groupedByType).map((type) => (
-            <div key={type}>
-              <h4>{type}</h4>
-              <div className="row">
-                {groupedByType[type].map((product) => (
-                  <Shoe key={product.shoe_id} product={product} addToCart={addToCart} />
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+      {renderGroupedProducts(groupedByType, "Type")}
     </>
   );
 };
