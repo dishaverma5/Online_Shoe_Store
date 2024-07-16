@@ -74,7 +74,7 @@ const App = () => {
 
   return (
     <Router>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+      <nav className="navbar navbar-expand-lg bg-body-tertiary full-width-navbar">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
             <h2 style={{ fontFamily: "Didot", color: "#003f69" }}>
