@@ -41,16 +41,18 @@ export default ProductRecommendations;*/
 import React from "react";
 import Shoe from "./Shoe";
 
-const ProductRecommendations = ({ recommendations }) => {
+const ProductRecommendations = ({ recommendedProducts }) => {
   return (
-    <div className="mt-4">
+    <div className="recommendations">
       <h3>Recommended Products</h3>
       <div className="row">
-        {recommendations.map((product) => (
-          <div className="col-md-4" key={product.shoe_id}>
-            <Shoe product={product} />
-          </div>
-        ))}
+        {recommendedProducts.length > 0 ? (
+          recommendedProducts.map((product) => (
+            <Shoe key={product.shoe_id} product={product} />
+          ))
+        ) : (
+          <p>No recommendations available</p>
+        )}
       </div>
     </div>
   );
