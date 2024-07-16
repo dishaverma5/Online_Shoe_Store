@@ -26,14 +26,6 @@ const Featured = ({ data }) => {
 
   const featuredItems = getRandomItems(filteredItems, 10);
 
-
-  // Filter the data based on the conditions
-  //const filteredItems = data.filter(item => item.isPopular && item.isOnSale && item.isInStock);
-
-  // Randomly select 10 items from the filtered data
-  //const featuredItems = filteredItems.sort(() => 0.5 - Math.random()).slice(0, 10);
-
-
   return (
     <>
       <div>
