@@ -86,25 +86,40 @@ const Home = ({ data, addToCart }) => {
       <hr />
       <div className="row">
         <div className="col">
-          {renderGroupedProducts(groupedByBrand, "Brand")}
+          {renderGroupedProducts(
+            groupedByBrand,
+            <u style={{ color: "#00365a" }}>BRAND</u>
+          )}
         </div>
       </div>
       <hr />
       <div className="row">
         <div className="col">
-          {renderGroupedProducts(groupedByColor, "Color")}
+          {renderGroupedProducts(
+            groupedByColor,
+            <u style={{ color: "#00365a" }}>COLOR</u>
+          )}
         </div>
       </div>
       <hr />
       <div className="row">
         <div className="col">
-          {renderGroupedProducts(groupedBySize, "Size")}
+          {renderGroupedProducts(
+            groupedBySize,
+            <u style={{ color: "#00365a" }}>SIZE</u>
+          )}
         </div>
       </div>
       <hr />
       <div className="row">
         <div className="col">
-          {renderGroupedProducts(groupedByType, "Type")}
+          {renderGroupedProducts(
+            groupedByType,
+            <u style={{ color: "#00365a" }}>TYPE</u>
+          )}
+          <br />
+          <br />
+          <br />
         </div>
       </div>
     </>
