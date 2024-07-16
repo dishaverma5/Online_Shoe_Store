@@ -1,40 +1,34 @@
-import React from "react";
-import { useParams } from "react-router-dom";
+import React from 'react';
+import { useParams } from 'react-router-dom';
 
 const ProductDetails = ({ products, addToCart }) => {
   const { productId } = useParams();
-  console.log('ProductDetails Component:', productId); // Debugging
 
-  const product = products.find((p) => p.shoeDetails.shoe_id.toString() === productId);
-
-  console.log('Found Product:', product); // Debugging
+  // Find the product that matches the productId
+  const product = products.find(product => product.shoeDetails.shoe_id.toString() === productId);
 
   if (!product) {
     return <div>Product not found</div>;
   }
 
-  const { brand, shoe_type, color, size, price } = product.shoeDetails;
-  const { isPopular, inStock, onSale } = product.additionalFeatures;
+  const { brand, shoe_type, color, size, price, additionalFeatures } = product.shoeDetails;
 
   return (
-    <div className="container">
-      <h2>Product Details</h2>
-      <div className="card">
-        <div className="card-body">
-          <h5 className="card-title">Brand: {brand}</h5>
-          <div className="card-text">Type: {shoe_type}</div>
-          <div className="card-text">Color: {color}</div>
-          <div className="card-text">Size: {size}</div>
-          <div className="card-text">Price: $ {price}</div>
-          <div className="card-text">Additional Features:</div>
-          <ul>
-            <li>Popular: {isPopular ? "Yes" : "No"}</li>
-            <li>In Stock: {inStock ? "Yes" : "No"}</li>
-            <li>On Sale: {onSale ? "Yes" : "No"}</li>
-          </ul>
-          <button className="btn btn-primary" onClick={() => addToCart(product)}>Add to Cart</button>
-        </div>
+    <div className="product-details">
+      <h2>{brand}</h2>
+      <p>Type: {shoe_type}</p>
+      <p>Color: {color}</p>
+      <p>Size: {size}</p>
+      <p>Price: ${price}</p>
+      <div>
+        <h3>Additional Features:</h3>
+        <p>Popular: {additionalFeatures.isPopular ? "Yes" : "No"}</p>
+        <p>In Stock: {additionalFeatures.inStock ? "Yes" : "No"}</p>
+        <p>On Sale: {additionalFeatures.onSale ? "Yes" : "No"}</p>
       </div>
+      <button onClick={() => addToCart(product)} className="btn btn-primary">
+        Add to Cart
+      </button>
     </div>
   );
 };
